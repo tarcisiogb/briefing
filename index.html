@@ -4,14 +4,14 @@
 <meta charset="UTF-8">
 <meta property="og:title" content="Daily News · Briefing de Mercado">
 <meta property="og:description" content="Notícias diárias sobre cartões, pagamentos, marketplace, varejo, tag veicular, bancos, fintechs e loyalty.">
-<meta property="og:image" content="https://tarcisiogb.github.io/briefing/og-image.png">
+<meta property="og:image" content="https://tarcisiogb.github.io/dailynews/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:url" content="https://tarcisiogb.github.io/briefing">
+<meta property="og:url" content="https://tarcisiogb.github.io/dailynews">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Daily News · Briefing de Mercado">
-<meta name="twitter:image" content="https://tarcisiogb.github.io/briefing/og-image.png">
+<meta name="twitter:image" content="https://tarcisiogb.github.io/dailynews/og-image.png">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -115,6 +115,7 @@
 
 <div class="tabs" id="tabs-bar"></div>
 
+<div id="hist-panel" style="display:none;background:#0D1117;border-left:1px solid #1F2937;border-right:1px solid #1F2937;border-bottom:1px solid #1F2937;margin:0 10px 16px;border-radius:0 0 12px 12px;"></div>
 <div class="content" id="content-area">
   <div class="state-msg"><div class="icon" style="animation:spin 1s linear infinite">⟳</div><div class="txt">Carregando briefing...</div></div>
 </div>
@@ -124,7 +125,7 @@
 <script>
 // ── CONFIGURAÇÃO ─────────────────────────────────────
 const GITHUB_USER = 'tarcisiogb';  // ← altere aqui
-const GITHUB_REPO = 'briefing';
+const GITHUB_REPO = 'dailynews';
 const BASE = `https://${GITHUB_USER}.github.io/${GITHUB_REPO}`;
 // ─────────────────────────────────────────────────────
 
@@ -139,7 +140,6 @@ const TEMAS = [
   {id:'loyalty',    label:'🎯 Loyalty'},
   {id:'ia',         label:'🤖 IA'},
   {id:'socios',     label:'🏢 Sócios'},
-  {id:'_historico', label:'📅 Histórico'},
 ];
 
 // Cores das cross-tags por tema
@@ -189,13 +189,21 @@ let globalData = null;
 let globalHistorico = [];
 
 function renderTabs(){
-  document.getElementById('tabs-bar').innerHTML = TEMAS.map(t=>
+  const tabsHtml = TEMAS.map(t=>
     `<div class="tab" id="tab-${t.id}" onclick="showTab('${t.id}')">${esc(t.label)}</div>`
   ).join('');
+  // Adiciona aba de histórico separada no final
+  document.getElementById('tabs-bar').innerHTML = tabsHtml +
+    `<div class="tab" id="tab-_historico" onclick="showHistorico()">📅 Histórico</div>`;
 }
 
 function showTab(id){
   activeTab=id;
+  // Garante que histórico fica oculto
+  const hp = document.getElementById('hist-panel');
+  const ca = document.getElementById('content-area');
+  if(hp) hp.style.display='none';
+  if(ca) ca.style.display='block';
   document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
   document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));
   const te=document.getElementById('tab-'+id); if(te) te.classList.add('active');
@@ -251,22 +259,7 @@ function renderContent(data){
 
   const area=document.getElementById('content-area');
   area.innerHTML = TEMAS.map(tema => {
-    if(tema.id==='_historico'){
-      const items = globalHistorico.map((e,i)=>
-        `<div class="hist-item${i===0?' hist-current':''}" onclick="loadEdicao('${e.arquivo}','${esc(e.label)}')">
-          <div>
-            <div class="hist-label">${esc(e.label)}</div>
-            <div class="hist-sub">${esc(e.arquivo.replace('.json','').replace(/(\d{4})-(\d{2})-(\d{2})/,'$3/$2/$1'))}</div>
-          </div>
-          <div class="hist-arr">›</div>
-        </div>`).join('') || '<div class="empty">Nenhuma edição anterior</div>';
-      return `<div class="section" id="sec-_historico"><div class="hist-section">
-        <div style="padding:12px 16px 8px;font-size:11px;color:#4B5563;font-family:monospace;border-bottom:1px solid #1F2937">
-          Clique em uma edição para carregar no app
-        </div>
-        ${items}
-      </div></div>`;
-    }
+
 
     const sec=(data.temas||{})[tema.id];
     if(!sec) return `<div class="section" id="sec-${tema.id}"></div>`;
@@ -312,6 +305,39 @@ function renderContent(data){
   showTab(activeTab||TEMAS[0].id);
 }
 
+function showHistorico(){
+  // Desativa todos os temas
+  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+  document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));
+  document.getElementById('tab-_historico').classList.add('active');
+
+  // Mostra painel de histórico (fora do content-area)
+  const panel = document.getElementById('hist-panel');
+  const contentArea = document.getElementById('content-area');
+  contentArea.style.display = 'none';
+  panel.style.display = 'block';
+
+  // Renderiza lista
+  const items = globalHistorico.map((e,i)=>
+    `<div class="hist-item${i===0?' hist-current':''}" onclick="loadEdicao('${e.arquivo}','${esc(e.label)}')">
+      <div>
+        <div class="hist-label">${esc(e.label)}</div>
+        <div class="hist-sub">${esc(e.arquivo.replace('.json','').replace(/(\d{4})-(\d{2})-(\d{2})/,'$3/$2/$1'))}</div>
+      </div>
+      <div class="hist-arr">›</div>
+    </div>`
+  ).join('') || '<div class="empty">Nenhuma edição anterior</div>';
+
+  panel.innerHTML = `
+    <div class="hist-section">
+      <div style="padding:12px 16px 8px;font-size:11px;color:#4B5563;font-family:monospace;border-bottom:1px solid #1F2937">
+        Clique em uma edição para abrir
+      </div>
+      ${items}
+    </div>`;
+  activeTab = '_historico';
+}
+
 async function load(){
   try{
     const idx=await fetch(`${BASE}/dados/index.json?t=${Date.now()}`).then(r=>{if(!r.ok)throw new Error('HTTP '+r.status);return r.json();});
@@ -328,7 +354,9 @@ async function load(){
 }
 
 async function loadEdicao(arquivo, label){
-  // Volta para o primeiro tema de conteúdo
+  // Esconde painel de histórico, mostra content-area
+  document.getElementById('hist-panel').style.display = 'none';
+  document.getElementById('content-area').style.display = 'block';
   activeTab = TEMAS[0].id;
 
   const area = document.getElementById('content-area');
@@ -336,8 +364,6 @@ async function loadEdicao(arquivo, label){
 
   // Atualiza header
   document.getElementById('hdr-date').textContent = 'Edição de ' + label;
-
-  // Mostra aba de conteúdo (sai do histórico)
   showTab(TEMAS[0].id);
 
   try {
