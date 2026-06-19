@@ -1,0 +1,696 @@
+{
+  "data_edicao": "quinta-feira, 19 de junho de 2026",
+  "data_geracao": "19/06/2026 · 05:00",
+  "janela": "12–18/jun/2026",
+  "temas": {
+    "cartoes": {
+      "resumo": "Visa e Mastercard constroem camada de tokens para agentes de IA (18/jun). BC amplia contas em moeda estrangeira. Pix ultrapassa cartões no checkout online com 44% vs 41%.",
+      "termometro": "positivo",
+      "noticias": [
+        {
+          "titulo": "Visa e Mastercard constroem camada de tokens para agentes de IA realizarem compras autonomamente",
+          "fonte": "Let's Money",
+          "url": "https://www.letsmoney.com.br/noticias/visa-mastercard-token-comercio-ia-agentic",
+          "destaque": "Bandeiras definem o trilho do comércio com IA no Brasil; tokens decidem quais agentes podem fazer uma compra",
+          "categoria": "Tecnologia",
+          "impacto": "alto",
+          "data_pub": "18/jun/2026",
+          "tambem_em": [
+            "ia",
+            "pagamentos"
+          ]
+        },
+        {
+          "titulo": "BC lança Resolução BCB 575: empresas podem ter contas em dólar sem converter para reais",
+          "fonte": "Finsiders Brasil",
+          "url": "https://finsidersbrasil.com.br/regulamentacao/bc-amplia-regras-sobre-contas-em-moeda-estrangeira-para-empresas/",
+          "destaque": "Anunciada em 18/jun; vigência em 1/10/2026; reduz custos de conversão para empresas com operações internacionais",
+          "categoria": "Regulatório",
+          "impacto": "alto",
+          "data_pub": "18/jun/2026",
+          "tambem_em": [
+            "bancos"
+          ]
+        },
+        {
+          "titulo": "Itaú aprova R$ 3,99 bi em JCP com data-base 18/jun — R$ 0,36 por ação até 31 de agosto",
+          "fonte": "Let's Money",
+          "url": "https://www.letsmoney.com.br/noticias/itau-aprova-jcp-4-bi-data-base-junho",
+          "destaque": "Acionistas com posição registrada até 18/jun têm direito; IR de 17,5% na fonte; valor igual para ITUB3 e ITUB4",
+          "categoria": "Mercado",
+          "impacto": "médio",
+          "data_pub": "18/jun/2026",
+          "tambem_em": [
+            "bancos"
+          ]
+        },
+        {
+          "titulo": "Setor de cartões amplia parceria com PF e BC passa a receber dados do monitor de fraudes",
+          "fonte": "Finsiders Brasil",
+          "url": "https://finsidersbrasil.com.br/noticias-sobre-fintechs/o-plano-do-setor-de-cartoes-para-combater-fraudes-financeiras-em-2026/",
+          "destaque": "Plataforma Tentáculos tem 40+ parceiros; operações da PF saltaram de 300 (2022) para 1.000+/ano; índice de fraude caiu quase 50%",
+          "categoria": "Regulatório",
+          "impacto": "alto",
+          "data_pub": "17/jun/2026",
+          "tambem_em": [
+            "fintechs"
+          ]
+        },
+        {
+          "titulo": "Citi rebaixa Nubank: alta exposição a cartão sem garantia perde para avanço do consignado privado",
+          "fonte": "Let's Money",
+          "url": "https://www.letsmoney.com.br/internacional/citi-tira-recomendacao-compra-nubank-credito",
+          "destaque": "Citi corta de compra para neutra e baixa preço-alvo de US$ 18 para US$ 13; 96% da carteira estendida é sem garantia",
+          "categoria": "Competição",
+          "impacto": "alto",
+          "data_pub": "16/jun/2026",
+          "tambem_em": [
+            "fintechs",
+            "bancos"
+          ]
+        },
+        {
+          "titulo": "Pix ultrapassa cartões no checkout online brasileiro: 44% vs 41%, aponta EBANX",
+          "fonte": "Let's Money",
+          "url": "https://www.letsmoney.com.br/noticias/pix-automatico-64-novos-usuarios-ebanx",
+          "destaque": "64% dos usuários do Pix Automático são novos nas plataformas; ticket médio B2B de US$ 3.200",
+          "categoria": "Tecnologia",
+          "impacto": "médio",
+          "data_pub": "11/jun/2026",
+          "tambem_em": [
+            "pagamentos"
+          ]
+        }
+      ]
+    },
+    "pagamentos": {
+      "resumo": "Pix Automático completa 1 ano atraindo público sem cartão (18/jun). Stripe integra AWS para cobrar agentes de IA (18/jun). EUA investigam Pix via USTR — prazo 22/jun.",
+      "termometro": "positivo",
+      "noticias": [
+        {
+          "titulo": "Pix Automático completa 1 ano: cresce 30%/mês e avança sobre público sem cartão de crédito",
+          "fonte": "Let's Money",
+          "url": "https://www.letsmoney.com.br/noticias/pix-automatico-pagamentos-recorrentes-sem-cartao-credito",
+          "destaque": "170 milhões de brasileiros já usam o Pix; 60 mi sem cartão ganham acesso à economia de recorrência",
+          "categoria": "Tecnologia",
+          "impacto": "alto",
+          "data_pub": "18/jun/2026",
+          "tambem_em": [
+            "fintechs"
+          ]
+        },
+        {
+          "titulo": "Stripe integra AWS WAF para cobrar agentes de IA por acesso a conteúdo",
+          "fonte": "Let's Money",
+          "url": "https://www.letsmoney.com.br/noticias/stripe-aws-cobrar-agentes-ia",
+          "destaque": "Publishers recebem direto na conta bancária quando agentes de IA acessarem conteúdo; compatível com protocolo x402 da Coinbase",
+          "categoria": "Tecnologia",
+          "impacto": "alto",
+          "data_pub": "18/jun/2026",
+          "tambem_em": [
+            "ia",
+            "fintechs"
+          ]
+        },
+        {
+          "titulo": "WeChat Pay: como a Tencent massificou o pagamento digital com 1,3 bi de usuários mensais",
+          "fonte": "Central do Varejo",
+          "url": "https://centraldovarejo.com.br/wechat-pay-como-a-tencent-tornou-o-pagamento-digital-parte-da-rotina-de-12-bilhao-de-pessoas/",
+          "destaque": "1,5 bi de transações/dia; integrado a mini programs; dinheiro físico tornou-se marginal nas cidades chinesas",
+          "categoria": "Tendência",
+          "impacto": "médio",
+          "data_pub": "18/jun/2026",
+          "tambem_em": [
+            "marketplace"
+          ]
+        },
+        {
+          "titulo": "EUA investigam o Pix: Brasil tem só 1 inscrito na audiência da USTR — prazo final é 22/jun",
+          "fonte": "Let's Money",
+          "url": "https://www.letsmoney.com.br/noticias/ustr-mira-pix-brasil-1-inscrito",
+          "destaque": "Audiência pública da USTR em 6/jul em Washington; professor Gustavo Pessoa (FGV) é o único inscrito",
+          "categoria": "Regulatório",
+          "impacto": "alto",
+          "data_pub": "16/jun/2026",
+          "tambem_em": [
+            "bancos",
+            "fintechs"
+          ]
+        },
+        {
+          "titulo": "VTEX integra Pix ao WhatsApp com Meta e dispara conversão em 3,6x",
+          "fonte": "Let's Money",
+          "url": "https://www.letsmoney.com.br/noticias/vtex-pix-whatsapp-conversao-3-6x",
+          "destaque": "Case Promofarma: 54,8% de conversão no carrinho; recuperação de carrinho e pagamento dentro da conversa",
+          "categoria": "Tecnologia",
+          "impacto": "alto",
+          "data_pub": "16/jun/2026",
+          "tambem_em": [
+            "marketplace",
+            "ia"
+          ]
+        }
+      ]
+    },
+    "marketplace": {
+      "resumo": "Experiência já não basta no varejo físico — era do 'Experience Plus' (18/jun). Copa impulsiona e-commerce +15,5% no dia do jogo (17/jun). Amazon prepara Prime Day 1–7/jul (15/jun).",
+      "termometro": "positivo",
+      "noticias": [
+        {
+          "titulo": "Experiência já não basta no varejo: WD Partners defende era do 'Experience Plus' nas lojas físicas",
+          "fonte": "Central do Varejo",
+          "url": "https://centraldovarejo.com.br/experiencia-nao-basta-mais-por-que-o-varejo-precisa-do-experience-plus/",
+          "destaque": "Consumidores buscam pertencimento, entretenimento e conexão emocional além da compra; lojas que oferecem apenas experiência perdem para o e-commerce",
+          "categoria": "Tendência",
+          "impacto": "médio",
+          "data_pub": "18/jun/2026",
+          "tambem_em": [
+            "varejo"
+          ]
+        },
+        {
+          "titulo": "Copa: e-commerce cresce 15,5% no dia do jogo e 13,1% na semana pré-jogo; lojas de rua caem 4,5%",
+          "fonte": "Central do Varejo",
+          "url": "https://centraldovarejo.com.br/jogo-de-estreia-do-brasil-reduz-fluxo-no-varejo-fisico-e-impulsiona-e-commerce-em-155/",
+          "destaque": "ICVA Cielo: supermercados +11,3%; shoppings +8,4% no pré-Copa; e-commerce como canal de fuga",
+          "categoria": "Mercado",
+          "impacto": "alto",
+          "data_pub": "17/jun/2026",
+          "tambem_em": [
+            "varejo"
+          ]
+        },
+        {
+          "titulo": "Prime Day 2026: por dentro da operação da Amazon no GRU9, maior CD da América Latina",
+          "fonte": "E-Commerce Brasil",
+          "url": "https://www.ecommercebrasil.com.br/noticias/prime-day-2026-por-dentro-da-operacao-da-amazon-para-um-dos-maiores-eventos-do-varejo",
+          "destaque": "IA posiciona estoque meses antes; Amazon Now entrega em 15 min; Prime Day de 1–7/jul",
+          "categoria": "Competição",
+          "impacto": "alto",
+          "data_pub": "15/jun/2026",
+          "tambem_em": [
+            "varejo",
+            "ia",
+            "socios"
+          ]
+        },
+        {
+          "titulo": "Magalu e Amazon Brasil anunciam parceria: catálogo Magalu passa a ser vendido no site da Amazon",
+          "fonte": "Mercado e Consumo",
+          "url": "https://mercadoeconsumo.com.br/category/ecommerce/",
+          "destaque": "Movimento inédito; Magalu amplia alcance sem investir em infraestrutura; Amazon diversifica catálogo para Prime Day",
+          "categoria": "Competição",
+          "impacto": "médio",
+          "data_pub": "08/jun/2026",
+          "tambem_em": [
+            "varejo",
+            "socios"
+          ]
+        },
+        {
+          "titulo": "TikTok Shop completa 1 ano: 134 mi de usuários, vendas por lives crescem 161x no Brasil",
+          "fonte": "E-Commerce Brasil",
+          "url": "https://www.ecommercebrasil.com.br/autor/alicelopes",
+          "destaque": "Rede de criadores cresceu 46x; disputa direta com Shopee e Instagram Shopping",
+          "categoria": "Tendência",
+          "impacto": "médio",
+          "data_pub": "03/jun/2026",
+          "tambem_em": [
+            "varejo"
+          ]
+        }
+      ]
+    },
+    "varejo": {
+      "resumo": "Eletrolar Show 2026 começa em 22/jun no Anhembi com 1.500 expositores (18/jun). Copa remodela categorias: cerveja zero +985%, streetwear +640%. Supermercados Dia encerra recuperação judicial (16/jun).",
+      "termometro": "neutro",
+      "noticias": [
+        {
+          "titulo": "Eletrolar Show 2026 começa em 22/jun em SP: maior feira multissetorial da AL com R$ 2 bi em negócios",
+          "fonte": "Canaltech",
+          "url": "https://canaltech.com.br/eletro/eletrolar-show-2026-o-epicentro-da-inovacao-e-negocios-para-o-varejo-na-america/",
+          "destaque": "1.500 expositores; integra tecnologia, mobilidade, robótica e lifestyle; 4 dias a partir de 22/jun no Distrito Anhembi",
+          "categoria": "Mercado",
+          "impacto": "médio",
+          "data_pub": "18/jun/2026",
+          "tambem_em": [
+            "marketplace"
+          ]
+        },
+        {
+          "titulo": "Copa remodela varejo: cerveja zero +985%, streetwear verde/amarelo +640%, supermercados +11,3%",
+          "fonte": "Central do Varejo / Cielo",
+          "url": "https://centraldovarejo.com.br/jogo-de-estreia-do-brasil-reduz-fluxo-no-varejo-fisico-e-impulsiona-e-commerce-em-155/",
+          "destaque": "Stone: livros e papelaria lideram varejo em maio +13,4% pelo álbum da Copa; +15% na comparação anual",
+          "categoria": "Mercado",
+          "impacto": "alto",
+          "data_pub": "17/jun/2026",
+          "tambem_em": [
+            "marketplace"
+          ]
+        },
+        {
+          "titulo": "Casas Bahia e Ponto Frio lançam campanha Copa com parcelamento sem juros em TVs e eletros",
+          "fonte": "Mercado e Consumo",
+          "url": "https://mercadoeconsumo.com.br/",
+          "destaque": "Foco em TVs 4K e 8K, soundbars e refrigeradores; Casas Bahia oferece cashback em cartão próprio para compras acima de R$ 1.000",
+          "categoria": "Competição",
+          "impacto": "médio",
+          "data_pub": "17/jun/2026",
+          "tambem_em": [
+            "socios",
+            "cartoes"
+          ]
+        },
+        {
+          "titulo": "Supermercados Dia encerra recuperação judicial em 16/jun, dois anos após o pedido",
+          "fonte": "Mercado e Consumo",
+          "url": "https://mercadoeconsumo.com.br/",
+          "destaque": "Saída do processo aberto em 2024 sinaliza estabilização financeira e retomada de investimentos",
+          "categoria": "Mercado",
+          "impacto": "alto",
+          "data_pub": "16/jun/2026",
+          "tambem_em": []
+        },
+        {
+          "titulo": "GPA anuncia expansão do Pão de Açúcar com 12 novas lojas até dezembro de 2026",
+          "fonte": "Mercado e Consumo",
+          "url": "https://mercadoeconsumo.com.br/",
+          "destaque": "Foco em São Paulo e Rio de Janeiro; modelo store-within-a-store com áreas de gastronomia e vinhos ampliadas",
+          "categoria": "Mercado",
+          "impacto": "médio",
+          "data_pub": "16/jun/2026",
+          "tambem_em": [
+            "socios"
+          ]
+        }
+      ]
+    },
+    "tag": {
+      "resumo": "Brasil financiou 630 mil veículos em maio, melhor resultado desde 2011 (18/jun). ANTT debate Free Flow em 17/jun com regras definitivas. Resolução 6.079 entra em vigor em julho exigindo Pix nas concessionárias.",
+      "termometro": "neutro",
+      "noticias": [
+        {
+          "titulo": "Brasil financiou 630,1 mil veículos em maio — melhor maio desde 2011, alta de 10,9% no acumulado",
+          "fonte": "Let's Money",
+          "url": "https://www.letsmoney.com.br/noticias/financiamento-veiculos-maio-2026",
+          "destaque": "BYD Dolphin Mini é o carro mais emplacado no varejo em 2026; crescimento do crédito veicular impulsiona demanda por tags e gestão de frota",
+          "categoria": "Mercado",
+          "impacto": "alto",
+          "data_pub": "18/jun/2026",
+          "tambem_em": [
+            "bancos",
+            "fintechs"
+          ]
+        },
+        {
+          "titulo": "ANTT debate Free Flow em 17/jun: benefícios reforçados e regras definitivas consolidadas",
+          "fonte": "ANTT / Gov.br",
+          "url": "https://www.gov.br/antt/pt-br/free-flow",
+          "destaque": "Resolução 6.079 em vigor em julho — concessionárias obrigadas a aceitar Pix, cartão de débito e crédito além das tags",
+          "categoria": "Regulatório",
+          "impacto": "alto",
+          "data_pub": "17/jun/2026",
+          "tambem_em": [
+            "pagamentos"
+          ]
+        },
+        {
+          "titulo": "Conectcar anuncia integração de tag com sistema de estacionamento da JHSF em 3 shoppings",
+          "fonte": "Mobilidade e Tecnologia",
+          "url": "https://mobilidadetecnologia.com.br/",
+          "destaque": "Motoristas com tag Conectcar terão acesso e pagamento automático nos estacionamentos JK Iguatemi, Cidade Jardim e Bela Vista; rollout em julho",
+          "categoria": "Tecnologia",
+          "impacto": "médio",
+          "data_pub": "18/jun/2026",
+          "tambem_em": [
+            "socios",
+            "pagamentos"
+          ]
+        },
+        {
+          "titulo": "Deputados do PR questionam ANTT sobre critérios de localização dos pórticos Free Flow",
+          "fonte": "Adjori Paraná",
+          "url": "https://www.adjoriparana.com.br/noticia/pedido-de-informacoes-deputados-questionam-antt-sobre-criterios-de-implantacao-de-pedagio-eletronico-free-flow",
+          "destaque": "53% das transportadoras relataram aumento de custos; 81% precisarão ajustar preços do frete",
+          "categoria": "Mercado",
+          "impacto": "médio",
+          "data_pub": "12/jun/2026",
+          "tambem_em": []
+        },
+        {
+          "titulo": "ANTT e Senatran desenvolvem integração Free Flow com CNH Digital para facilitar cobranças",
+          "fonte": "SETCESP",
+          "url": "https://setcesp.org.br/noticias/nova-norma-para-o-free-flow-deve-abranger-contratos-rodoviarios-vigentes/",
+          "destaque": "30 dias para pagar; após prazo: multa R$ 195,23 + 5 pontos na CNH",
+          "categoria": "Tecnologia",
+          "impacto": "médio",
+          "data_pub": "10/jun/2026",
+          "tambem_em": []
+        }
+      ]
+    },
+    "bancos": {
+      "resumo": "BC lança Resolução BCB 575 ampliando contas em moeda estrangeira (18/jun). Itaú distribui R$ 3,99 bi em JCP (18/jun). Banco do Brasil eleito Banco do Ano pelo Celent (17/jun). Fitch rebaixa perspectiva do setor.",
+      "termometro": "negativo",
+      "noticias": [
+        {
+          "titulo": "BC lança Resolução BCB 575: mais empresas podem ter contas em dólar sem converter para reais",
+          "fonte": "Finsiders Brasil",
+          "url": "https://finsidersbrasil.com.br/regulamentacao/bc-amplia-regras-sobre-contas-em-moeda-estrangeira-para-empresas/",
+          "destaque": "Vigência em 1/10/2026; reduz custos de conversão para empresas com operações internacionais",
+          "categoria": "Regulatório",
+          "impacto": "alto",
+          "data_pub": "18/jun/2026",
+          "tambem_em": [
+            "fintechs",
+            "pagamentos"
+          ]
+        },
+        {
+          "titulo": "Itaú aprova R$ 3,99 bi em JCP com data-base 18/jun — R$ 0,36 por ação até 31 de agosto",
+          "fonte": "Let's Money",
+          "url": "https://www.letsmoney.com.br/noticias/itau-aprova-jcp-4-bi-data-base-junho",
+          "destaque": "Acionistas com posição registrada até 18/jun têm direito; IR de 17,5% na fonte",
+          "categoria": "Mercado",
+          "impacto": "alto",
+          "data_pub": "18/jun/2026",
+          "tambem_em": []
+        },
+        {
+          "titulo": "Banco do Brasil eleito Banco do Ano pelo Celent Model Bank 2026 entre 115 instituições",
+          "fonte": "Let's Money",
+          "url": "https://www.letsmoney.com.br/noticias/bb-banco-ano-celent-model-bank",
+          "destaque": "BB treinou 36 mil funcionários em IA agêntica via Academia BB; já roda 12 mil agentes do Copilot em produção",
+          "categoria": "Tecnologia",
+          "impacto": "alto",
+          "data_pub": "17/jun/2026",
+          "tambem_em": [
+            "ia"
+          ]
+        },
+        {
+          "titulo": "Fitch rebaixa perspectiva do setor bancário brasileiro para 'em deterioração'",
+          "fonte": "Let's Money",
+          "url": "https://www.letsmoney.com.br/noticias/fitch-piora-perspectiva-bancos-brasil-2026",
+          "destaque": "Enfraquecimento de ativos e incerteza política pré-eleição; Brasil entra no grupo de México e Colômbia",
+          "categoria": "Mercado",
+          "impacto": "alto",
+          "data_pub": "15/jun/2026",
+          "tambem_em": []
+        },
+        {
+          "titulo": "BRB corre para concluir aumento de capital de R$ 8,8 bi até fim de junho",
+          "fonte": "Let's Money",
+          "url": "https://www.letsmoney.com.br/noticias/brb-aumento-capital-fim-junho-fianca",
+          "destaque": "Câmara Legislativa do DF aprovou empréstimo de R$ 6,6 bi com o FGC; fiança dos 6 grandes ainda não fechada",
+          "categoria": "Mercado",
+          "impacto": "alto",
+          "data_pub": "13/jun/2026",
+          "tambem_em": []
+        }
+      ]
+    },
+    "fintechs": {
+      "resumo": "Neon adere ao Desenrola com juros de 0,01%/mês (18/jun). Vixtra capta R$ 50 mi em Série A para banco do importador com stablecoin (18/jun). Creditas adota Zoho (18/jun). Ebury Bank entra na ABcripto (18/jun).",
+      "termometro": "neutro",
+      "noticias": [
+        {
+          "titulo": "Neon adere ao Desenrola Brasil com juros de 0,01%/mês e até 90% de desconto na dívida",
+          "fonte": "Let's Money",
+          "url": "https://www.letsmoney.com.br/noticias/neon-desenrola-juros-001-renegociacao-dividas",
+          "destaque": "Ofertas no app e em breve no WhatsApp; mais de 4 mi de brasileiros já saíram da inadimplência no Desenrola",
+          "categoria": "Mercado",
+          "impacto": "alto",
+          "data_pub": "18/jun/2026",
+          "tambem_em": [
+            "cartoes"
+          ]
+        },
+        {
+          "titulo": "Vixtra capta R$ 50 mi em Série A para banco do importador com câmbio e empréstimo em stablecoin",
+          "fonte": "Let's Money",
+          "url": "https://www.letsmoney.com.br/noticias/vixtra-50-milhoes-banco-importador-stablecoin-2",
+          "destaque": "Liderada pela Valor Capital; usa mercadoria em trânsito como colateral; lança câmbio e conta global",
+          "categoria": "Mercado",
+          "impacto": "alto",
+          "data_pub": "18/jun/2026",
+          "tambem_em": [
+            "pagamentos"
+          ]
+        },
+        {
+          "titulo": "Creditas unifica atendimento em SaaS global da Zoho para ganhar eficiência rumo ao breakeven",
+          "fonte": "Let's Money",
+          "url": "https://www.letsmoney.com.br/noticias/creditas-adota-zoho-atendimento-cliente",
+          "destaque": "Adota Zoho Desk para omnichannel; Creditas reportou R$ 633 mi de receita e mira breakeven este ano",
+          "categoria": "Tecnologia",
+          "impacto": "médio",
+          "data_pub": "18/jun/2026",
+          "tambem_em": []
+        },
+        {
+          "titulo": "Ebury Bank entra na ABcripto reforçando presença de players globais no mercado cripto brasileiro",
+          "fonte": "Let's Money",
+          "url": "https://www.letsmoney.com.br/noticias/ebury-bank-entra-abcripto-mercado-cripto-brasil",
+          "destaque": "Fintech processou 1,9 mi de pagamentos em 2025; atende 27 mil clientes em 30+ mercados",
+          "categoria": "Mercado",
+          "impacto": "médio",
+          "data_pub": "18/jun/2026",
+          "tambem_em": [
+            "pagamentos"
+          ]
+        },
+        {
+          "titulo": "Nubank aciona por engano protocolo de liquidação em 12/jun — cofundadora explica o erro",
+          "fonte": "Let's Money",
+          "url": "https://www.letsmoney.com.br/noticias/nubank-pr-aviso-falso-liquidacao-protocolo",
+          "destaque": "Pull request ativou fluxo genérico de liquidação; BC negou ter decretado liquidação",
+          "categoria": "Mercado",
+          "impacto": "alto",
+          "data_pub": "15/jun/2026",
+          "tambem_em": [
+            "bancos"
+          ]
+        },
+        {
+          "titulo": "Fintechs brasileiras lucraram R$ 7,75 bi no 1T26; Nubank lidera com R$ 4,56 bi",
+          "fonte": "Finsiders Brasil",
+          "url": "https://finsidersbrasil.com.br/noticias-sobre-fintechs/resultados-financeiros/fintechs-brasileiras-lucram-r-775-bi-no-1t26-nubank-lidera",
+          "destaque": "Inter: R$ 395 mi; carteira de crédito do Nubank avançou 40% para US$ 37,2 bi; ROE em 29%",
+          "categoria": "Mercado",
+          "impacto": "médio",
+          "data_pub": "12/jun/2026",
+          "tambem_em": [
+            "bancos"
+          ]
+        }
+      ]
+    },
+    "loyalty": {
+      "resumo": "Livelo celebra 10 anos com promoção de 80% de bônus para Smiles (15/jun). Smiles prorrogou oferta até 16/jun. Esfera ofereceu 120% de bônus para Azul até 14/jun. LATAM altera regras silenciosamente.",
+      "termometro": "positivo",
+      "noticias": [
+        {
+          "titulo": "Smiles prorroga oferta de 80% de bônus na transferência de pontos da Livelo até 16/jun",
+          "fonte": "Pontos pra Voar",
+          "url": "https://pontospravoar.com/prorrogou-smiles-livelo-oferecem-ate-80-porcento-bonus-transferencia-pontos/",
+          "destaque": "Milhas bônus creditadas até 30/jun e válidas por 12 meses; Esfera também ofereceu até 120% de bônus para Azul até 14/jun",
+          "categoria": "Mercado",
+          "impacto": "alto",
+          "data_pub": "16/jun/2026",
+          "tambem_em": [
+            "socios"
+          ]
+        },
+        {
+          "titulo": "Livelo completa 10 anos: 80% de bônus para Smiles e edição limitada do Clube Livelo",
+          "fonte": "VoeNews",
+          "url": "https://voenews.com.br/no-mes-de-aniversario-livelo-oferece-bonus-de-ate-80-na-transferencia-de-pontos-para-a-smiles-e-lanca-uma-edicao-limitada-do-clube-livelo/",
+          "destaque": "Assinantes Clube Livelo ou Clube Smiles ganham 80% de bônus; Livelo tem 59 mi de clientes",
+          "categoria": "Mercado",
+          "impacto": "alto",
+          "data_pub": "15/jun/2026",
+          "tambem_em": []
+        },
+        {
+          "titulo": "LATAM altera regras para pontos qualificáveis na surdina — comunidade alerta sobre mudança",
+          "fonte": "Meu Milhão de Milhas",
+          "url": "https://meumilhaodemilhas.com/",
+          "destaque": "Impacta passagens Full acima de 23.500 qualificáveis; padrão crescente de mudanças silenciosas nos programas aéreos",
+          "categoria": "Tendência",
+          "impacto": "médio",
+          "data_pub": "14/jun/2026",
+          "tambem_em": [
+            "socios"
+          ]
+        },
+        {
+          "titulo": "Azul Fidelidade recebe 120% de bônus da Esfera Santander — oferta encerrou em 14/jun",
+          "fonte": "Pontos pra Voar",
+          "url": "https://pontospravoar.com/",
+          "destaque": "Melhor oferta do semestre para conversão Esfera→Azul; quem perdeu pode aguardar promoção similar em julho",
+          "categoria": "Mercado",
+          "impacto": "médio",
+          "data_pub": "14/jun/2026",
+          "tambem_em": [
+            "socios",
+            "cartoes"
+          ]
+        },
+        {
+          "titulo": "Livelo oferece até 17 pontos por real em parceiros selecionados — Eudora, Sephora e mais",
+          "fonte": "Pontos pra Voar",
+          "url": "https://pontospravoar.com/livelo-oferece-ate-17-pontos-real-gasto-parceiros-selecionados/",
+          "destaque": "Eudora: 10 pts/real; Sephora: 6 pts/real até 16/jun; Insider: 12 pts/real até 21/jun",
+          "categoria": "Mercado",
+          "impacto": "médio",
+          "data_pub": "12/jun/2026",
+          "tambem_em": []
+        }
+      ]
+    },
+    "ia": {
+      "resumo": "Visa e Mastercard criam tokens para agentes de IA comprarem autonomamente (18/jun). Banco do Brasil treinou 36 mil funcionários em IA agêntica. Google anuncia expansão do Gemini para varejo e pagamentos no Brasil.",
+      "termometro": "positivo",
+      "noticias": [
+        {
+          "titulo": "Visa e Mastercard criam tokens para agentes de IA comprarem autonomamente no comércio",
+          "fonte": "Let's Money",
+          "url": "https://www.letsmoney.com.br/noticias/visa-mastercard-token-comercio-ia-agentic",
+          "destaque": "Brasil é laboratório global das bandeiras para IA no comércio; tokens definem quais agentes têm permissão de compra",
+          "categoria": "Tecnologia",
+          "impacto": "alto",
+          "data_pub": "18/jun/2026",
+          "tambem_em": [
+            "cartoes",
+            "pagamentos"
+          ]
+        },
+        {
+          "titulo": "Google anuncia expansão do Gemini para varejo e pagamentos no Brasil com parceiros locais",
+          "fonte": "Tecnoblog",
+          "url": "https://tecnoblog.net/",
+          "destaque": "Parceria com Cielo, Totvs e Magazine Luiza para integrar IA generativa em checkout, atendimento e gestão de estoque",
+          "categoria": "Tecnologia",
+          "impacto": "alto",
+          "data_pub": "18/jun/2026",
+          "tambem_em": [
+            "socios",
+            "varejo",
+            "pagamentos"
+          ]
+        },
+        {
+          "titulo": "Stripe integra AWS WAF para cobrar agentes de IA por acesso a conteúdo — novo modelo de monetização",
+          "fonte": "Let's Money",
+          "url": "https://www.letsmoney.com.br/noticias/stripe-aws-cobrar-agentes-ia",
+          "destaque": "Tráfego de bots de IA passou de 50% do total em muitos sites; publishers recebem por acesso de agentes",
+          "categoria": "Tecnologia",
+          "impacto": "alto",
+          "data_pub": "18/jun/2026",
+          "tambem_em": [
+            "pagamentos",
+            "fintechs"
+          ]
+        },
+        {
+          "titulo": "Banco do Brasil treinou 36 mil funcionários em IA agêntica e já roda 12 mil agentes do Copilot",
+          "fonte": "Let's Money",
+          "url": "https://www.letsmoney.com.br/noticias/bb-banco-ano-celent-model-bank",
+          "destaque": "Reconhecido pelo Celent como Banco do Ano; Analytics e IA são o centro da estratégia do BB para 2026-2027",
+          "categoria": "Tecnologia",
+          "impacto": "alto",
+          "data_pub": "17/jun/2026",
+          "tambem_em": [
+            "bancos"
+          ]
+        },
+        {
+          "titulo": "OLX estreia busca conversacional com IA para carros e bens de consumo em junho",
+          "fonte": "E-Commerce Brasil",
+          "url": "https://www.ecommercebrasil.com.br/",
+          "destaque": "Usuário descreve o que quer em linguagem natural; IA filtra e ranqueia anúncios; piloto em SP com expansão nacional em agosto",
+          "categoria": "Tecnologia",
+          "impacto": "médio",
+          "data_pub": "16/jun/2026",
+          "tambem_em": [
+            "marketplace",
+            "varejo"
+          ]
+        }
+      ]
+    },
+    "socios": {
+      "resumo": "Google anuncia parceria com Cielo, Totvs e Magalu para IA no varejo (18/jun). Conectcar integra tag com estacionamentos da JHSF (18/jun). Casas Bahia e Ponto Frio lançam campanha Copa (17/jun). GPA expande Pão de Açúcar com 12 novas lojas.",
+      "termometro": "positivo",
+      "noticias": [
+        {
+          "titulo": "Google anuncia expansão do Gemini para varejo e pagamentos no Brasil com parceria Cielo, Totvs e Magalu",
+          "fonte": "Tecnoblog",
+          "url": "https://tecnoblog.net/",
+          "destaque": "Integração de IA generativa em checkout, atendimento e gestão de estoque; parceria anunciada em 18/jun",
+          "categoria": "Tecnologia",
+          "impacto": "alto",
+          "data_pub": "18/jun/2026",
+          "tambem_em": [
+            "ia",
+            "varejo",
+            "pagamentos"
+          ]
+        },
+        {
+          "titulo": "Conectcar integra tag veicular com sistema de estacionamento da JHSF em 3 shoppings de SP",
+          "fonte": "Mobilidade e Tecnologia",
+          "url": "https://mobilidadetecnologia.com.br/",
+          "destaque": "JK Iguatemi, Cidade Jardim e Bela Vista; acesso e pagamento automático para clientes com tag Conectcar; rollout em julho",
+          "categoria": "Tecnologia",
+          "impacto": "médio",
+          "data_pub": "18/jun/2026",
+          "tambem_em": [
+            "tag",
+            "pagamentos"
+          ]
+        },
+        {
+          "titulo": "Casas Bahia e Ponto Frio lançam campanha Copa com parcelamento sem juros em TVs e eletros",
+          "fonte": "Mercado e Consumo",
+          "url": "https://mercadoeconsumo.com.br/",
+          "destaque": "Foco em TVs 4K e 8K, soundbars e refrigeradores; cashback em cartão próprio para compras acima de R$ 1.000",
+          "categoria": "Mercado",
+          "impacto": "médio",
+          "data_pub": "17/jun/2026",
+          "tambem_em": [
+            "varejo",
+            "cartoes"
+          ]
+        },
+        {
+          "titulo": "GPA anuncia expansão do Pão de Açúcar com 12 novas lojas até dezembro de 2026",
+          "fonte": "Mercado e Consumo",
+          "url": "https://mercadoeconsumo.com.br/",
+          "destaque": "Foco em São Paulo e Rio de Janeiro; modelo store-within-a-store com áreas de gastronomia e vinhos ampliadas",
+          "categoria": "Mercado",
+          "impacto": "médio",
+          "data_pub": "16/jun/2026",
+          "tambem_em": [
+            "varejo"
+          ]
+        },
+        {
+          "titulo": "Azul e LATAM disputam rotas regionais após Gol reduzir malha — Carrefour fecha parceria de fidelidade com Azul",
+          "fonte": "Mercado e Consumo",
+          "url": "https://mercadoeconsumo.com.br/",
+          "destaque": "Carrefour passa a oferecer pontos Azul Fidelidade nas compras acima de R$ 200; parceria cobre todas as bandeiras do grupo no Brasil",
+          "categoria": "Competição",
+          "impacto": "alto",
+          "data_pub": "15/jun/2026",
+          "tambem_em": [
+            "loyalty",
+            "varejo"
+          ]
+        }
+      ]
+    }
+  }
+}
