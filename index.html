@@ -103,12 +103,14 @@
 
   footer{text-align:center;padding:16px 16px 32px;color:#1F2937;font-size:10px;font-family:monospace;line-height:1.8}
   @keyframes spin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+.toast{position:fixed;bottom:32px;left:50%;transform:translateX(-50%);background:#0D1117;border:1px solid #1F2937;border-radius:10px;padding:12px 20px;font-size:12px;font-family:monospace;color:#F9FAFB;z-index:999;opacity:0;transition:opacity .3s;pointer-events:none;white-space:nowrap}
+.toast.show{opacity:1}
 </style>
 </head>
 <body>
 
 <div class="header">
-  <div class="agent-row"><div class="dot"></div><span class="agent-label">AGENTE ATIVO · BRIEFING DIÁRIO 05:00</span></div>
+  <div class="agent-row"><div class="dot"></div><span class="agent-label">AGENTE ATIVO · SEG · QUA · SEX · 05:00</span></div>
   <h1>Briefing de Mercado</h1>
   <div class="header-meta"><span class="header-date" id="hdr-date">Carregando...</span></div>
 </div>
@@ -377,8 +379,86 @@ async function loadEdicao(arquivo, label){
   }
 }
 
+// ── Atualização manual via GitHub Actions ────────────────────────
+const GH_USER = 'tarcisiogb';
+const GH_REPO = 'dailynews';
+const GH_WORKFLOW = 'briefing-diario.yml';
+
+function showToast(msg, duration=3000){
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(()=>t.classList.remove('show'), duration);
+}
+
+async function triggerUpdate(){
+  const btn   = document.getElementById('btn-update');
+  const icon  = document.getElementById('btn-icon');
+  const label = document.getElementById('btn-label');
+
+  // Pega token salvo ou pede
+  let token = localStorage.getItem('gh_token');
+  if(!token){
+    token = prompt('Cole seu GitHub Personal Access Token (permissão: workflow):');
+    if(!token) return;
+    localStorage.setItem('gh_token', token.trim());
+    token = token.trim();
+  }
+
+  // Desabilita botão
+  btn.style.opacity = '0.5';
+  btn.style.pointerEvents = 'none';
+  icon.style.animation = 'spin 1s linear infinite';
+  label.textContent = 'Aguarde...';
+
+  try {
+    const resp = await fetch(
+      `https://api.github.com/repos/${GH_USER}/${GH_REPO}/actions/workflows/${GH_WORKFLOW}/dispatches`,
+      {
+        method: 'POST',
+        headers: {
+          'Authorization': `Bearer ${token}`,
+          'Accept': 'application/vnd.github+json',
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ ref: 'main' }),
+      }
+    );
+
+    if(resp.status === 204){
+      showToast('✅ Atualização iniciada! Pronto em ~3 min.', 5000);
+      label.textContent = 'Em andamento...';
+      // Recarrega após 3 minutos
+      setTimeout(()=>{
+        showToast('🔄 Recarregando briefing...');
+        setTimeout(()=>location.reload(), 2000);
+      }, 180000);
+    } else if(resp.status === 401){
+      localStorage.removeItem('gh_token');
+      showToast('❌ Token inválido. Tente novamente.', 4000);
+      btn.style.opacity = '1';
+      btn.style.pointerEvents = 'auto';
+      icon.style.animation = '';
+      label.textContent = 'Atualizar';
+    } else {
+      showToast(`❌ Erro ${resp.status}. Tente novamente.`, 4000);
+      btn.style.opacity = '1';
+      btn.style.pointerEvents = 'auto';
+      icon.style.animation = '';
+      label.textContent = 'Atualizar';
+    }
+  } catch(e) {
+    showToast('❌ Erro de conexão.', 4000);
+    btn.style.opacity = '1';
+    btn.style.pointerEvents = 'auto';
+    icon.style.animation = '';
+    label.textContent = 'Atualizar';
+  }
+}
+
 renderTabs();
 load();
 </script>
+<div class="toast" id="toast"></div>
 </body>
 </html>
