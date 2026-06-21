@@ -111,7 +111,13 @@
 
 <div class="header">
   <div class="agent-row"><div class="dot"></div><span class="agent-label">AGENTE ATIVO · SEG · QUA · SEX · 05:00</span></div>
-  <h1>Briefing de Mercado</h1>
+  <div style="display:flex;justify-content:space-between;align-items:flex-start">
+    <h1>Daily News</h1>
+    <button id="btn-update" onclick="triggerUpdate()"
+      style="background:#0D1117;border:1px solid #1F2937;border-radius:8px;color:#10B981;font-size:11px;font-family:monospace;padding:6px 12px;cursor:pointer;display:flex;align-items:center;gap:5px;margin-top:2px;white-space:nowrap">
+      <span id="btn-icon">⟳</span><span id="btn-label">Atualizar</span>
+    </button>
+  </div>
   <div class="header-meta"><span class="header-date" id="hdr-date">Carregando...</span></div>
 </div>
 
@@ -274,7 +280,7 @@ function renderContent(data){
 
     const yHTML = yesterday.length
       ? yesterday.map(itemHTML).join('')
-      : '<div class="empty">Nenhuma notícia de ontem ainda</div>';
+      : '<div class="empty">Nenhuma notícia recente ainda</div>';
 
     const wHTML = week.length
       ? week.map(itemHTML).join('')
