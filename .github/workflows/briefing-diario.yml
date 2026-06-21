@@ -34,7 +34,9 @@ jobs:
         run: |
           git config user.name  "Daily News Bot"
           git config user.email "bot@dailynews"
-          git pull --rebase origin main
+          git fetch origin main
+          git checkout main
+          git reset --soft origin/main
           git add dados/
           git diff --cached --quiet || git commit -m "Briefing $(date +'%d/%m/%Y')"
-          git push
+          git push origin main
