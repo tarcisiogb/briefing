@@ -38,8 +38,11 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
-          git config user.name  "Daily News Bot"
+          git config user.name "Daily News Bot"
           git config user.email "bot@dailynews"
+          git stash
+          git pull --rebase origin main
+          git stash pop
           git add dados/
           git diff --cached --quiet || git commit -m "Briefing $(date +'%d/%m/%Y')"
           git push https://x-access-token:${GH_TOKEN}@github.com/tarcisiogb/dailynews.git main
