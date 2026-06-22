@@ -1,485 +1,1248 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta property="og:title" content="Daily News · Briefing de Mercado">
-<meta property="og:description" content="Notícias diárias sobre cartões, pagamentos, marketplace, varejo, tag veicular, bancos, fintechs e loyalty.">
-<meta property="og:image" content="https://tarcisiogb.github.io/dailynews/og-image.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:url" content="https://tarcisiogb.github.io/dailynews">
-<meta property="og:type" content="website">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Daily News · Briefing de Mercado">
-<meta name="twitter:image" content="https://tarcisiogb.github.io/dailynews/og-image.png">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="apple-mobile-web-app-title" content="Briefing">
-<meta name="theme-color" content="#030712">
-<link rel="apple-touch-icon" href="apple-touch-icon.png">
-<title>Daily News · Briefing de Mercado</title>
-<style>
-  *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
-  body{background:#030712;color:#F9FAFB;font-family:system-ui,-apple-system,sans-serif;min-height:100vh;padding-bottom:env(safe-area-inset-bottom)}
-
-  /* HEADER */
-  .header{background:#030712;border-bottom:1px solid #111827;padding:52px 20px 14px;position:sticky;top:0;z-index:100}
-  .agent-row{display:flex;align-items:center;gap:7px;margin-bottom:3px}
-  .dot{width:6px;height:6px;border-radius:50%;background:#10B981;box-shadow:0 0 7px #10B981;animation:pulse 2s infinite}
-  @keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
-  .agent-label{font-size:10px;color:#10B981;font-family:monospace;letter-spacing:.1em}
-  h1{font-size:20px;font-weight:700}
-  .header-meta{display:flex;justify-content:space-between;align-items:center;margin-top:2px}
-  .header-date{font-size:11px;color:#6B7280;font-family:monospace}
-
-  /* TOP TABS: temas */
-  .tabs{display:flex;overflow-x:auto;padding:10px 20px 0;gap:4px;background:#030712;border-bottom:1px solid #111827;scrollbar-width:none}
-  .tabs::-webkit-scrollbar{display:none}
-  .tab{flex-shrink:0;padding:7px 13px;border-radius:8px 8px 0 0;font-size:12px;font-weight:500;color:#6B7280;background:transparent;border:1px solid transparent;border-bottom:none;cursor:pointer;white-space:nowrap}
-  .tab.active{background:#0D1117;border-color:#1F2937;color:#F9FAFB;font-weight:600}
-
-  /* CONTENT */
-  .content{background:#0D1117;border-left:1px solid #1F2937;border-right:1px solid #1F2937;border-bottom:1px solid #1F2937;margin:0 10px;border-radius:0 0 12px 12px;padding:0;min-height:200px;margin-bottom:16px}
-  .section{display:none}.section.active{display:block}
-
-  /* SECTION HEADER */
-  .sec-header{padding:14px 16px 10px;border-bottom:1px solid #1F2937}
-  .sec-title{font-size:15px;font-weight:700;display:flex;align-items:center;gap:8px;margin-bottom:4px}
-  .sec-resumo{color:#9CA3AF;font-size:12px;line-height:1.6}
-  .sec-termo{display:inline-block;font-size:10px;font-weight:700;font-family:monospace;padding:2px 8px;border-radius:4px;margin-top:6px}
-  .positivo{color:#10B981;background:#022c22;border:1px solid #065F46}
-  .neutro{color:#F59E0B;background:#1c1400;border:1px solid #3d2e00}
-  .negativo{color:#EF4444;background:#1a0a0a;border:1px solid #3b1111}
-
-  /* SUB-TABS: Ontem / Semana */
-  .sub-tabs{display:flex;padding:10px 16px 0;gap:6px;border-bottom:1px solid #1F2937}
-  .sub-tab{padding:6px 14px;border-radius:6px 6px 0 0;font-size:11px;font-weight:600;cursor:pointer;border:1px solid transparent;border-bottom:none;white-space:nowrap}
-  .sub-tab.yesterday{color:#10B981;border-color:transparent}
-  .sub-tab.yesterday.active{background:#022c22;border-color:#065F46;color:#10B981}
-  .sub-tab.week{color:#6B7280;border-color:transparent}
-  .sub-tab.week.active{background:#111827;border-color:#1F2937;color:#9CA3AF}
-  .sub-content{display:none;padding:0 16px 12px}
-  .sub-content.active{display:block}
-
-  /* EMPTY STATE */
-  .empty{padding:20px 0;text-align:center;color:#374151;font-size:12px;font-family:monospace}
-
-  /* DAY BADGE */
-  .day-label{font-size:9px;font-family:monospace;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#10B981;padding:10px 0 6px;border-top:1px solid #1F2937;margin-top:4px}
-  .day-label:first-child{border-top:none;margin-top:0;padding-top:10px}
-
-  /* NEWS ITEMS */
-  .item{display:flex;gap:12px;padding:12px 0;border-bottom:1px dashed #1a2a1a}
-  .sub-content.week .item{border-bottom-color:#1F2937}
-  .item:last-child{border-bottom:none}
-  .num{color:#374151;font-size:10px;font-family:monospace;min-width:18px;padding-top:2px;flex-shrink:0}
-  .body{flex:1;display:flex;flex-direction:column;gap:5px}
-  .meta{display:flex;gap:6px;align-items:center;flex-wrap:wrap}
-  .cat{font-size:9px;font-weight:700;font-family:monospace;text-transform:uppercase}
-  .cat-reg{color:#818CF8}.cat-merc{color:#38BDF8}.cat-tec{color:#A78BFA}.cat-comp{color:#FB7185}.cat-tend{color:#34D399}
-  .badge{font-size:8px;font-weight:700;padding:2px 5px;border-radius:3px;color:#fff;font-family:monospace}
-  .badge-alto{background:#EF4444}.badge-medio{background:#F59E0B}.badge-baixo{background:#10B981}
-  .dt{font-size:9px;font-family:monospace;padding:1px 5px;border-radius:3px;font-weight:600;color:#6B7280}
-  a.news{color:#E2E8F0;font-size:14px;font-weight:600;line-height:1.45;text-decoration:none;display:block}
-  a.news:hover,a.news:active{color:#60A5FA}
-  .dest{color:#6B7280;font-size:12px;line-height:1.5;border-left:2px solid #1F2937;padding-left:8px;font-style:italic}
-  .fonte{color:#4B5563;font-size:10px;font-family:monospace}
-
-  /* HISTORY TAB */
-  .hist-section{padding:14px 16px}
-  .hist-item{display:flex;justify-content:space-between;align-items:center;padding:13px 0;border-bottom:1px solid #1F2937;text-decoration:none}
-  .hist-item:last-child{border-bottom:none}
-  .hist-label{font-size:13px;font-weight:600;color:#F9FAFB}
-  .hist-sub{font-size:10px;color:#4B5563;font-family:monospace;margin-top:2px}
-  .hist-arr{color:#374151;font-size:16px}
-  .hist-current .hist-label{color:#60A5FA}
-
-  /* STATE */
-  .state-msg{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:60px 20px;gap:14px;color:#4B5563}
-  .state-msg .icon{font-size:32px}
-  .state-msg .txt{font-size:13px;font-family:monospace;text-align:center}
-  .state-msg .err{color:#EF4444;font-size:11px;font-family:monospace;margin-top:4px}
-
-  footer{text-align:center;padding:16px 16px 32px;color:#1F2937;font-size:10px;font-family:monospace;line-height:1.8}
-  @keyframes spin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
-.toast{position:fixed;bottom:32px;left:50%;transform:translateX(-50%);background:#0D1117;border:1px solid #1F2937;border-radius:10px;padding:12px 20px;font-size:12px;font-family:monospace;color:#F9FAFB;z-index:999;opacity:0;transition:opacity .3s;pointer-events:none;white-space:nowrap}
-.toast.show{opacity:1}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>Rotina Kids 👶</title>
+  <link rel="apple-touch-icon" sizes="512x512" href="apple-touch-icon.png">
+  <link rel="shortcut icon" href="apple-touch-icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://tarcisiogb.github.io/rotina-kids/">
+  <meta property="og:title" content="Rotina Kids 👶">
+  <meta property="og:description" content="Acompanhe o sono, saúde e rotina de Lucas e Clara — juntos, de qualquer dispositivo.">
+  <meta property="og:image" content="https://tarcisiogb.github.io/rotina-kids/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Rotina Kids 👶">
+  <meta name="twitter:description" content="Acompanhe o sono, saúde e rotina de Lucas e Clara — juntos, de qualquer dispositivo.">
+  <meta name="twitter:image" content="https://tarcisiogb.github.io/rotina-kids/og-image.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#F5F3EE;--card:#FFFFFF;--green:#2D6A4F;--green-l:#52B788;--green-x:#D8F3DC;--amber:#E76F28;--amber-l:#FFF0E6;--red:#C0392B;--red-l:#FDE8E8;--blue:#1A6B9A;--blue-l:#E8F4FD;--purple:#6B3FA0;--purple-l:#F0E8FF;--lucas:#1A6B9A;--lucas-l:#E8F4FD;--clara:#6B3FA0;--clara-l:#F0E8FF;--txt:#1A1A1A;--muted:#666;--border:#E2DFD9;--yellow-l:#FFFBEA;}
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:'DM Sans',sans-serif;font-size:15px;background:var(--bg);color:var(--txt);padding-bottom:88px;}
+    h1,h2,h3{font-family:'DM Serif Display',serif;font-weight:400;}
+    #loginScreen{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:100vh;padding:24px;background:var(--green);}
+    .login-box{background:#fff;border-radius:20px;padding:32px 24px;max-width:340px;width:100%;text-align:center;}
+    .login-box h1{font-size:26px;color:var(--green);margin-bottom:6px;}
+    .login-box p{font-size:14px;color:var(--muted);margin-bottom:24px;line-height:1.5;}
+    .btn-google{display:flex;align-items:center;justify-content:center;gap:10px;background:#fff;border:1.5px solid var(--border);border-radius:10px;padding:13px 20px;font-size:14px;font-weight:600;cursor:pointer;width:100%;font-family:inherit;}
+    .topbar{background:var(--green);color:#fff;padding:14px 16px 12px;position:sticky;top:0;z-index:200;}
+    .topbar-row{display:flex;align-items:center;justify-content:space-between;}
+    .topbar h1{font-size:19px;}
+    .topbar-sub{font-size:12px;opacity:.7;margin-top:1px;}
+    .btn-signout{background:rgba(255,255,255,.2);border:none;color:#fff;border-radius:8px;padding:6px 12px;font-size:12px;font-weight:600;cursor:pointer;font-family:inherit;}
+    .tabs{display:flex;background:#fff;border-bottom:1px solid var(--border);overflow-x:auto;scrollbar-width:none;position:sticky;top:64px;z-index:190;}
+    .tabs::-webkit-scrollbar{display:none;}
+    .tab{padding:11px 14px;font-size:13px;font-weight:500;color:var(--muted);cursor:pointer;white-space:nowrap;border-bottom:2px solid transparent;flex-shrink:0;transition:all .18s;}
+    .tab.on{color:var(--green);border-bottom-color:var(--green);}
+    .sec{display:none;padding:14px;}
+    .sec.on{display:block;}
+    .card{background:var(--card);border-radius:12px;border:1px solid var(--border);padding:14px;margin-bottom:10px;}
+    .card-title{font-family:'DM Serif Display',serif;font-size:17px;margin-bottom:4px;}
+    .card-sub{font-size:12px;color:var(--muted);margin-bottom:10px;}
+    input,select,textarea{font-family:inherit;font-size:13px;border:1.5px solid var(--border);border-radius:8px;padding:9px 12px;width:100%;color:var(--txt);background:#fff;}
+    input:focus,select:focus,textarea:focus{outline:none;border-color:var(--green-l);}
+    label{font-size:12px;font-weight:600;color:var(--muted);display:block;margin-bottom:4px;margin-top:12px;}
+    label:first-child{margin-top:0;}
+    .btn{display:flex;align-items:center;justify-content:center;gap:6px;border:none;border-radius:10px;padding:10px 16px;font-size:13px;font-weight:600;cursor:pointer;font-family:inherit;width:100%;}
+    .btn:disabled{opacity:.6;cursor:not-allowed;}
+    .btn-primary{background:var(--green);color:#fff;}
+    .btn-amber{background:var(--amber);color:#fff;}
+    .btn-outline{background:#fff;border:1.5px solid var(--border);color:var(--txt);}
+    .btn-sm{padding:6px 12px;font-size:12px;width:auto;}
+    .spin{display:inline-block;animation:spin 1s linear infinite;}
+    @keyframes spin{to{transform:rotate(360deg);}}
+    .sono-quick{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px;}
+    .sono-card{border-radius:14px;padding:16px;cursor:pointer;border:2px solid transparent;text-align:center;transition:all .2s;}
+    .sono-card-moon{background:var(--blue-l);border-color:#C2D9ED;}
+    .sono-card-moon:hover{border-color:var(--blue);}
+    .sono-card-sun{background:var(--amber-l);border-color:#FDDCBF;}
+    .sono-card-sun:hover{border-color:var(--amber);}
+    .sono-card-icon{font-size:28px;margin-bottom:6px;}
+    .sono-card-label{font-size:13px;font-weight:600;color:var(--txt);}
+    .sono-card-sub{font-size:11px;color:var(--muted);margin-top:2px;}
+    .child-pick{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:12px;}
+    .child-btn{border:2px solid var(--border);border-radius:10px;padding:10px;font-size:13px;font-weight:600;cursor:pointer;font-family:inherit;background:#fff;color:var(--muted);transition:all .2s;}
+    .child-btn.lucas.on{background:var(--lucas-l);border-color:var(--lucas);color:var(--lucas);}
+    .child-btn.clara.on{background:var(--clara-l);border-color:var(--clara);color:var(--clara);}
+    .open-sleep{border-radius:10px;padding:10px 14px;font-size:13px;margin-bottom:10px;display:flex;align-items:center;gap:8px;}
+    .open-sleep-lucas{background:var(--lucas-l);color:var(--lucas);}
+    .open-sleep-clara{background:var(--clara-l);color:var(--clara);}
+    .badge{font-size:11px;font-weight:600;padding:3px 8px;border-radius:20px;}
+    .badge-ok{background:var(--green-x);color:#1B4332;}
+    .badge-warn{background:var(--yellow-l);color:#7A5800;}
+    .badge-err{background:var(--red-l);color:var(--red);}
+    .badge-lucas{background:var(--lucas-l);color:var(--lucas);}
+    .badge-clara{background:var(--clara-l);color:var(--clara);}
+    /* QUEM FEZ DORMIR */
+    .quem-pick{display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px;margin-top:8px;}
+    .quem-btn{border:1.5px solid var(--border);border-radius:8px;padding:8px 4px;font-size:12px;font-weight:600;cursor:pointer;font-family:inherit;background:#fff;color:var(--muted);transition:all .2s;text-align:center;}
+    .quem-btn.on{background:var(--green-x);border-color:var(--green);color:var(--green);}
+    /* COMPARATIVO FILTROS */
+    .filtro-periodo{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px;}
+    .filtro-btn{border:1.5px solid var(--border);border-radius:8px;padding:6px 12px;font-size:12px;font-weight:600;cursor:pointer;font-family:inherit;background:#fff;color:var(--muted);transition:all .2s;}
+    .filtro-btn.on{background:var(--green);color:#fff;border-color:var(--green);}
+    .periodo-custom{display:none;gap:8px;margin-bottom:12px;align-items:center;}
+    .periodo-custom.show{display:flex;}
+    .periodo-custom input{flex:1;}
+    /* EVOLUÇÃO MÊS A MÊS */
+    .evolucao-table{width:100%;border-collapse:collapse;font-size:12px;}
+    .evolucao-table th{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;color:var(--muted);padding:6px 8px;text-align:left;border-bottom:1px solid var(--border);}
+    .evolucao-table td{padding:8px 8px;border-bottom:1px solid var(--border);vertical-align:middle;}
+    .evolucao-table tr:last-child td{border-bottom:none;}
+    /* COMP CHART */
+    .comp-legend{display:flex;gap:12px;margin-bottom:8px;font-size:11px;font-weight:600;}
+    .comp-legend span{display:flex;align-items:center;gap:4px;}
+    .comp-legend .dot{width:10px;height:10px;border-radius:50%;}
+    .comp-days{display:flex;gap:4px;align-items:flex-end;height:90px;}
+    .comp-day{flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;}
+    .comp-bars{display:flex;gap:2px;align-items:flex-end;width:100%;height:72px;}
+    .comp-bar{flex:1;border-radius:3px 3px 0 0;min-height:3px;transition:height .4s;}
+    .comp-bar-lucas{background:var(--lucas);}
+    .comp-bar-clara{background:var(--clara);}
+    .comp-bar-empty{background:#EAE7E1;}
+    .comp-daylabel{font-size:9px;color:var(--muted);text-align:center;margin-top:2px;}
+    .stats-comp{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:10px;}
+    .stat-comp{background:var(--card);border-radius:12px;border:1px solid var(--border);padding:12px;}
+    .stat-comp-header{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;margin-bottom:8px;}
+    .stat-comp-header.lucas{color:var(--lucas);}
+    .stat-comp-header.clara{color:var(--clara);}
+    .stat-n{font-family:'DM Serif Display',serif;font-size:30px;line-height:1;}
+    .stat-n-lucas{color:var(--lucas);}
+    .stat-n-clara{color:var(--clara);}
+    .stat-d{font-size:11px;color:var(--muted);margin-top:2px;}
+    /* TIMELINE */
+    .tl-item{display:flex;gap:12px;margin-bottom:12px;align-items:flex-start;}
+    .tl-dot{width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0;margin-top:2px;}
+    .tl-dot-lucas-sleep{background:var(--lucas-l);}
+    .tl-dot-clara-sleep{background:var(--clara-l);}
+    .tl-dot-sick{background:var(--red-l);}
+    .tl-content{flex:1;}
+    .tl-title{font-size:13px;font-weight:600;}
+    .tl-date{font-size:11px;color:var(--muted);}
+    .tl-body{font-size:12px;color:var(--muted);margin-top:2px;line-height:1.5;}
+    /* HEALTH */
+    .med-item{display:flex;align-items:center;gap:10px;padding:8px 0;border-bottom:1px solid var(--border);}
+    .med-item:last-child{border-bottom:none;}
+    .med-icon{width:30px;height:30px;background:var(--amber-l);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0;}
+    .med-info{flex:1;}
+    .med-name{font-size:13px;font-weight:600;}
+    .med-detail{font-size:11px;color:var(--muted);}
+    .btn-del{background:none;border:none;color:var(--red);cursor:pointer;font-size:15px;padding:4px;}
+    .btn-edit{background:none;border:none;color:var(--blue);cursor:pointer;font-size:15px;padding:4px;}
+    .sick-card{border-left:3px solid var(--red);}
+    .ciclo-item{font-size:12px;color:var(--muted);padding:3px 0;display:flex;align-items:center;gap:6px;}
+    .ciclo-dot{width:6px;height:6px;border-radius:50%;background:var(--muted);flex-shrink:0;}
+    .sec-label{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:1px;color:var(--muted);margin:18px 0 8px;}
+    .sec-label:first-child{margin-top:2px;}
+    .row{display:flex;justify-content:space-between;align-items:center;gap:8px;}
+    /* AI BOX */
+    .ai-box{background:var(--purple-l);border:1px solid #D4C0F0;border-radius:12px;padding:14px;margin-bottom:10px;}
+    .ai-box h3{font-size:15px;color:var(--purple);margin-bottom:4px;}
+    .ai-box-periodo{font-size:11px;color:var(--purple);opacity:.8;margin-bottom:8px;}
+    .ai-box p{font-size:13px;line-height:1.6;color:#3D2060;}
+    .ai-date{font-size:11px;color:var(--purple);opacity:.7;margin-top:6px;}
+    .toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#222;color:#fff;padding:10px 18px;border-radius:20px;font-size:13px;z-index:999;opacity:0;pointer-events:none;transition:opacity .3s;white-space:nowrap;}
+    .toast.show{opacity:1;}
+    .modal-bg{display:none;position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:500;align-items:flex-end;}
+    .modal-bg.open{display:flex;}
+    .modal{background:#fff;border-radius:20px 20px 0 0;padding:20px;width:100%;max-height:92vh;overflow-y:auto;}
+    .modal-title{font-family:'DM Serif Display',serif;font-size:19px;margin-bottom:16px;}
+    .modal-close{float:right;background:none;border:none;font-size:20px;cursor:pointer;color:var(--muted);}
+    .empty{text-align:center;padding:28px 16px;color:var(--muted);}
+    .empty-icon{font-size:32px;margin-bottom:6px;}
+    .empty p{font-size:13px;}
+    .time-now{font-size:28px;font-family:'DM Serif Display',serif;color:var(--green);text-align:center;padding:8px 0;}
+    .time-sub{font-size:12px;color:var(--muted);text-align:center;margin-bottom:12px;}
+    .meta-tag{font-size:11px;color:var(--muted);background:var(--bg);border-radius:6px;padding:2px 7px;display:inline-block;}
+  </style>
 </head>
 <body>
 
-<div class="header">
-  <div class="agent-row"><div class="dot"></div><span class="agent-label">AGENTE ATIVO · SEG · QUA · SEX · 05:00</span></div>
-  <div style="display:flex;justify-content:space-between;align-items:flex-start">
-    <h1>Daily News</h1>
-    <button id="btn-update" onclick="triggerUpdate()"
-      style="background:#0D1117;border:1px solid #1F2937;border-radius:8px;color:#10B981;font-size:11px;font-family:monospace;padding:6px 12px;cursor:pointer;display:flex;align-items:center;gap:5px;margin-top:2px;white-space:nowrap">
-      <span id="btn-icon">⟳</span>
-      <span id="btn-label">Atualizar</span>
-      <span style="font-size:8px;background:#1a0a0a;color:#EF4444;border:1px solid #3b1111;border-radius:3px;padding:1px 5px;margin-left:2px">ADMIN</span>
+<div id="loginScreen">
+  <div class="login-box">
+    <h1>Rotina Kids 👶</h1>
+    <p>Acompanhe o sono, saúde e rotina de Lucas e Clara.</p>
+    <button class="btn-google" onclick="loginGoogle()">
+      <img src="https://www.google.com/favicon.ico" style="width:20px;height:20px;" alt="">
+      Entrar com Google
     </button>
   </div>
-  <div class="header-meta"><span class="header-date" id="hdr-date">Carregando...</span></div>
 </div>
 
-<div class="tabs" id="tabs-bar"></div>
-
-<div id="hist-panel" style="display:none;background:#0D1117;border-left:1px solid #1F2937;border-right:1px solid #1F2937;border-bottom:1px solid #1F2937;margin:0 10px 16px;border-radius:0 0 12px 12px;"></div>
-<div class="content" id="content-area">
-  <div class="state-msg"><div class="icon" style="animation:spin 1s linear infinite">⟳</div><div class="txt">Carregando briefing...</div></div>
-</div>
-
-<footer id="footer-txt"></footer>
-
-<script>
-// ── CONFIGURAÇÃO ─────────────────────────────────────
-const GITHUB_USER = 'tarcisiogb';  // ← altere aqui
-const GITHUB_REPO = 'dailynews';
-const BASE = `https://${GITHUB_USER}.github.io/${GITHUB_REPO}`;
-// ─────────────────────────────────────────────────────
-
-const TEMAS = [
-  {id:'cartoes',    label:'💳 Cartões'},
-  {id:'pagamentos', label:'📲 Pagamentos'},
-  {id:'marketplace',label:'🛒 Marketplace'},
-  {id:'varejo',     label:'🏪 Varejo'},
-  {id:'tag',        label:'🚗 Tag Veicular'},
-  {id:'bancos',     label:'🏦 Bancos'},
-  {id:'fintechs',   label:'⚡ Fintechs'},
-  {id:'loyalty',    label:'🎯 Loyalty'},
-  {id:'ia',         label:'🤖 IA'},
-  {id:'socios',     label:'🏢 Sócios'},
-];
-
-// Cores das cross-tags por tema
-const TEMA_CORES = {
-  cartoes:     {bg:'#EFF6FF', border:'#BFDBFE', text:'#1D4ED8'},
-  pagamentos:  {bg:'#F0FDFA', border:'#99F6E4', text:'#0F766E'},
-  marketplace: {bg:'#FFF7ED', border:'#FED7AA', text:'#C2410C'},
-  varejo:      {bg:'#F0FDF4', border:'#BBF7D0', text:'#15803D'},
-  tag:         {bg:'#FEF9C3', border:'#FDE68A', text:'#A16207'},
-  bancos:      {bg:'#EFF6FF', border:'#BFDBFE', text:'#1E40AF'},
-  fintechs:    {bg:'#FAF5FF', border:'#E9D5FF', text:'#7C3AED'},
-  loyalty:     {bg:'#FFF1F2', border:'#FECDD3', text:'#BE123C'},
-  ia:          {bg:'#F0FDF4', border:'#6EE7B7', text:'#065F46'},
-  socios:      {bg:'#F5F3FF', border:'#DDD6FE', text:'#5B21B6'},
-};
-
-const CAT = {Regulatório:'cat-reg',Mercado:'cat-merc',Tecnologia:'cat-tec',Competição:'cat-comp',Tendência:'cat-tend'};
-const IMP = {alto:'badge-alto',médio:'badge-medio',baixo:'badge-baixo'};
-const TERMO_LBL = {positivo:'↑ POSITIVO',neutro:'→ NEUTRO',negativo:'↓ NEGATIVO'};
-const months = {jan:1,fev:2,mar:3,abr:4,mai:5,jun:6,jul:7,ago:8,set:9,out:10,nov:11,dez:12};
-
-function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
-
-function parseDate(d){
-  const m=String(d).match(/^(\d{1,2})\/(\w{3})\/(\d{4})$/);
-  if(!m) return null;
-  return new Date(+m[3],(months[m[2].toLowerCase()]||1)-1,+m[1]);
-}
-
-function isYesterday(d){
-  // Janela de 2 dias (período recente)
-  const pub=parseDate(d); if(!pub) return false;
-  const cutoff=new Date(); cutoff.setDate(cutoff.getDate()-2); cutoff.setHours(0,0,0,0);
-  const today=new Date(); today.setHours(0,0,0,0);
-  return pub>=cutoff && pub<today;
-}
-
-function isThisWeek(d){
-  // Semana = entre 2 e 7 dias atrás (o que não é "recente")
-  const pub=parseDate(d); if(!pub) return false;
-  const cutoff=new Date(); cutoff.setDate(cutoff.getDate()-7); cutoff.setHours(0,0,0,0);
-  const recente=new Date(); recente.setDate(recente.getDate()-2); recente.setHours(0,0,0,0);
-  return pub>=cutoff && pub<recente;
-}
-
-let activeTab = null;
-let activeSubTab = {}; // per-section
-let globalData = null;
-let globalHistorico = [];
-
-function renderTabs(){
-  const tabsHtml = TEMAS.map(t=>
-    `<div class="tab" id="tab-${t.id}" onclick="showTab('${t.id}')">${esc(t.label)}</div>`
-  ).join('');
-  // Adiciona aba de histórico separada no final
-  document.getElementById('tabs-bar').innerHTML = tabsHtml +
-    `<div class="tab" id="tab-_historico" onclick="showHistorico()">📅 Histórico</div>`;
-}
-
-function showTab(id){
-  activeTab=id;
-  // Garante que histórico fica oculto
-  const hp = document.getElementById('hist-panel');
-  const ca = document.getElementById('content-area');
-  if(hp) hp.style.display='none';
-  if(ca) ca.style.display='block';
-  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
-  document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));
-  const te=document.getElementById('tab-'+id); if(te) te.classList.add('active');
-  const se=document.getElementById('sec-'+id); if(se) se.classList.add('active');
-}
-
-function showSubTab(secId, which){
-  activeSubTab[secId]=which;
-  ['yesterday','week'].forEach(w=>{
-    const st=document.getElementById(`subtab-${secId}-${w}`);
-    const sc=document.getElementById(`subcontent-${secId}-${w}`);
-    if(st) st.classList.toggle('active', w===which);
-    if(sc) sc.classList.toggle('active', w===which);
-  });
-}
-
-function itemHTML(n, i){
-  const catCls = CAT[n.categoria]||'cat-merc';
-  const impCls = IMP[n.impacto]||'badge-medio';
-
-  // Cross-tags clicáveis
-  let crossHTML = '';
-  if (n.tambem_em && n.tambem_em.length) {
-    crossHTML = n.tambem_em.map(tid => {
-      const t = TEMAS.find(x => x.id === tid);
-      if (!t) return '';
-      const cor = TEMA_CORES[tid] || {bg:'#F3F4F6', border:'#D1D5DB', text:'#374151'};
-      return `<span onclick="showTab('${tid}')" style="display:inline-flex;align-items:center;gap:3px;font-size:9px;font-family:monospace;background:${cor.bg};border:0.5px solid ${cor.border};border-radius:4px;padding:2px 7px;color:${cor.text};cursor:pointer" title="Ver também em ${t.label}">↗ ${t.label}</span>`;
-    }).join('');
-  }
-
-  return `<div class="item">
-    <span class="num">${String(i+1).padStart(2,'0')}</span>
-    <div class="body">
-      <div class="meta">
-        <span class="cat ${esc(catCls)}">${esc(n.categoria)}</span>
-        <span class="badge ${esc(impCls)}">${esc((n.impacto||'').toUpperCase())}</span>
-        <span class="dt">${esc(n.data_pub)}</span>
-        ${crossHTML}
-      </div>
-      <a class="news" href="${esc(n.url)}" target="_blank" rel="noopener">${esc(n.titulo)} ↗</a>
-      <div class="dest">${esc(n.destaque)}</div>
-      <div class="fonte">📰 ${esc(n.fonte)}</div>
+<div id="appScreen" style="display:none;">
+  <div class="topbar">
+    <div class="topbar-row">
+      <div><h1>Rotina Kids 👶</h1><div class="topbar-sub" id="topbarSub">—</div></div>
+      <button class="btn-signout" onclick="signOut()">Sair</button>
     </div>
-  </div>`;
-}
+  </div>
 
-function renderContent(data){
-  globalData=data;
-  document.getElementById('hdr-date').textContent='Edição de '+(data.data_edicao||'');
-  document.getElementById('footer-txt').textContent=
-    `Briefing de Mercado · ${data.data_geracao||''} · Datas verificadas diretamente nas matérias`;
+  <div class="tabs">
+    <div class="tab on" onclick="tab('sono',this)">😴 Sono</div>
+    <div class="tab"    onclick="tab('saude',this)">🏥 Saúde</div>
+    <div class="tab"    onclick="tab('comparativo',this)">📊 Comparativo</div>
+    <div class="tab"    onclick="tab('historico',this)">📋 Histórico</div>
+    <div class="tab"    onclick="tab('resumo',this)">✨ Resumo IA</div>
+  </div>
 
-  const area=document.getElementById('content-area');
-  area.innerHTML = TEMAS.map(tema => {
-
-
-    const sec=(data.temas||{})[tema.id];
-    if(!sec) return `<div class="section" id="sec-${tema.id}"></div>`;
-
-    const noticias=sec.noticias||[];
-    const yesterday=noticias.filter(n=>isYesterday(n.data_pub));
-    const week=noticias.filter(n=>isThisWeek(n.data_pub));
-
-    const yHTML = yesterday.length
-      ? yesterday.map(itemHTML).join('')
-      : '<div class="empty">Nenhuma notícia recente ainda</div>';
-
-    const wHTML = week.length
-      ? week.map(itemHTML).join('')
-      : '<div class="empty">Nenhuma notícia adicional esta semana</div>';
-
-    const yCount = yesterday.length ? `<span style="font-size:10px;background:#022c22;color:#10B981;border:1px solid #065F46;border-radius:10px;padding:1px 7px;font-family:monospace;margin-left:6px">${yesterday.length}</span>` : '';
-    const wCount = week.length ? `<span style="font-size:10px;background:#111827;color:#6B7280;border:1px solid #1F2937;border-radius:10px;padding:1px 7px;font-family:monospace;margin-left:6px">${week.length}</span>` : '';
-
-    const defaultSub = yesterday.length ? 'yesterday' : 'week';
-
-    return `<div class="section" id="sec-${tema.id}">
-      <div class="sec-header">
-        <div class="sec-title">${esc(tema.label)}</div>
-        <div class="sec-resumo">${esc(sec.resumo)}</div>
-        <span class="sec-termo ${esc(sec.termometro)}">${TERMO_LBL[sec.termometro]||'→ NEUTRO'}</span>
+  <!-- SONO -->
+  <div id="sec-sono" class="sec on">
+    <div id="open-sleep-alerts"></div>
+    <div class="sec-label">Registrar agora</div>
+    <div class="sono-quick">
+      <div class="sono-card sono-card-moon" onclick="abrirModalSono('dormiu')">
+        <div class="sono-card-icon">🌙</div>
+        <div class="sono-card-label">Dormiu</div>
+        <div class="sono-card-sub">Registrar hora de dormir</div>
       </div>
-      <div class="sub-tabs">
-        <div class="sub-tab yesterday${defaultSub==='yesterday'?' active':''}" id="subtab-${tema.id}-yesterday"
-          onclick="showSubTab('${tema.id}','yesterday')">🟢 Recentes${yCount}</div>
-        <div class="sub-tab week${defaultSub==='week'?' active':''}" id="subtab-${tema.id}-week"
-          onclick="showSubTab('${tema.id}','week')">Esta semana${wCount}</div>
+      <div class="sono-card sono-card-sun" onclick="abrirModalSono('acordou')">
+        <div class="sono-card-icon">☀️</div>
+        <div class="sono-card-label">Acordou</div>
+        <div class="sono-card-sub">Registrar hora de acordar</div>
       </div>
-      <div class="sub-content${defaultSub==='yesterday'?' active':''}" id="subcontent-${tema.id}-yesterday">
-        ${yHTML}
+    </div>
+    <div class="sec-label">Últimas noites</div>
+    <div id="list-sono-lucas" style="margin-bottom:6px;"></div>
+    <div id="list-sono-clara"></div>
+  </div>
+
+  <!-- SAÚDE -->
+  <div id="sec-saude" class="sec">
+    <div class="sec-label">Registrar episódio</div>
+    <div class="card">
+      <div class="child-pick">
+        <button class="child-btn lucas" id="saude-btn-lucas" onclick="selectSaudeChild('lucas')">👦 Lucas</button>
+        <button class="child-btn clara"  id="saude-btn-clara"  onclick="selectSaudeChild('clara')">👧 Clara</button>
       </div>
-      <div class="sub-content${defaultSub==='week'?' active':''}" id="subcontent-${tema.id}-week">
-        ${wHTML}
+      <label>Data de início</label>
+      <input type="date" id="inp-doenca-inicio">
+      <label>Data de fim <span style="font-weight:400;color:var(--muted)">(deixe vazio se ainda está doente)</span></label>
+      <input type="date" id="inp-doenca-fim">
+      <label>Condição / Sintomas</label>
+      <input type="text" id="inp-doenca-cond" placeholder="Ex: gripe, febre 38.5°C, tosse...">
+      <label>Observações <span style="font-weight:400">(opcional)</span></label>
+      <textarea id="inp-doenca-obs" rows="2" placeholder="Como está se sentindo, comportamento..."></textarea>
+      <div style="margin-top:12px;">
+        <button class="btn btn-outline btn-sm" style="width:auto;" onclick="abrirModalRemedio()">+ Adicionar remédio</button>
       </div>
-    </div>`;
-  }).join('');
-
-  showTab(activeTab||TEMAS[0].id);
-}
-
-function showHistorico(){
-  // Desativa todos os temas
-  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
-  document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));
-  document.getElementById('tab-_historico').classList.add('active');
-
-  // Mostra painel de histórico (fora do content-area)
-  const panel = document.getElementById('hist-panel');
-  const contentArea = document.getElementById('content-area');
-  contentArea.style.display = 'none';
-  panel.style.display = 'block';
-
-  // Renderiza lista
-  const items = globalHistorico.map((e,i)=>
-    `<div class="hist-item${i===0?' hist-current':''}" onclick="loadEdicao('${e.arquivo}','${esc(e.label)}')">
-      <div>
-        <div class="hist-label">${esc(e.label)}</div>
-        <div class="hist-sub">${esc(e.arquivo.replace('.json','').replace(/(\d{4})-(\d{2})-(\d{2})/,'$3/$2/$1'))}</div>
+      <div id="remedios-preview" style="margin-top:8px;"></div>
+      <div style="margin-top:12px;">
+        <button class="btn btn-amber" onclick="registrarDoenca()">💾 Salvar episódio</button>
       </div>
-      <div class="hist-arr">›</div>
-    </div>`
-  ).join('') || '<div class="empty">Nenhuma edição anterior</div>';
+    </div>
+    <div class="sec-label">Episódios — Lucas</div>
+    <div id="list-doencas-lucas"></div>
+    <div class="sec-label">Episódios — Clara</div>
+    <div id="list-doencas-clara"></div>
+  </div>
 
-  panel.innerHTML = `
-    <div class="hist-section">
-      <div style="padding:12px 16px 8px;font-size:11px;color:#4B5563;font-family:monospace;border-bottom:1px solid #1F2937">
-        Clique em uma edição para abrir
+  <!-- COMPARATIVO -->
+  <div id="sec-comparativo" class="sec">
+    <div class="sec-label">Período</div>
+    <div class="filtro-periodo">
+      <button class="filtro-btn on" onclick="setPeriodo('semana',this)">Esta semana</button>
+      <button class="filtro-btn" onclick="setPeriodo('mes',this)">Este mês</button>
+      <button class="filtro-btn" onclick="setPeriodo('tudo',this)">Tudo</button>
+      <button class="filtro-btn" onclick="setPeriodo('custom',this)">Personalizado</button>
+    </div>
+    <div class="periodo-custom" id="periodo-custom">
+      <input type="date" id="filtro-de" onchange="renderComparativo()">
+      <span style="font-size:12px;color:var(--muted);">até</span>
+      <input type="date" id="filtro-ate" onchange="renderComparativo()">
+    </div>
+
+    <div class="sec-label">Sono comparativo</div>
+    <div class="card">
+      <div class="comp-legend">
+        <span><div class="dot" style="background:var(--lucas);"></div> Lucas</span>
+        <span><div class="dot" style="background:var(--clara);"></div> Clara</span>
       </div>
-      ${items}
-    </div>`;
-  activeTab = '_historico';
-}
+      <div class="comp-days" id="chart-comp-sono"></div>
+    </div>
 
-async function load(){
-  try{
-    const idx=await fetch(`${BASE}/dados/index.json?t=${Date.now()}`).then(r=>{if(!r.ok)throw new Error('HTTP '+r.status);return r.json();});
-    globalHistorico=idx.edicoes||[];
-    const latest=(idx.edicoes||[])[0];
-    if(!latest) throw new Error('Nenhuma edição publicada');
-    const data=await fetch(`${BASE}/dados/${latest.arquivo}?t=${Date.now()}`).then(r=>{if(!r.ok)throw new Error('HTTP '+r.status);return r.json();});
-    renderContent(data);
-  }catch(e){
-    document.getElementById('content-area').innerHTML=
-      `<div class="state-msg"><div class="icon">⚠</div><div class="txt">Não foi possível carregar o briefing.</div><div class="err">${e.message}</div></div>`;
-    document.getElementById('hdr-date').textContent='Erro ao carregar';
-  }
-}
+    <div class="sec-label">Médias no período</div>
+    <div class="stats-comp">
+      <div class="stat-comp">
+        <div class="stat-comp-header lucas">👦 Lucas</div>
+        <div class="stat-n stat-n-lucas" id="stat-media-lucas">—</div>
+        <div class="stat-d">média horas/noite</div>
+        <div style="margin-top:8px;"><div class="stat-n stat-n-lucas" id="stat-noites-lucas" style="font-size:20px;">—</div><div class="stat-d">noites registradas</div></div>
+        <div style="margin-top:8px;"><div class="stat-n stat-n-lucas" id="stat-despertares-lucas" style="font-size:20px;">—</div><div class="stat-d">média despertares/noite</div></div>
+      </div>
+      <div class="stat-comp">
+        <div class="stat-comp-header clara">👧 Clara</div>
+        <div class="stat-n stat-n-clara" id="stat-media-clara">—</div>
+        <div class="stat-d">média horas/noite</div>
+        <div style="margin-top:8px;"><div class="stat-n stat-n-clara" id="stat-noites-clara" style="font-size:20px;">—</div><div class="stat-d">noites registradas</div></div>
+        <div style="margin-top:8px;"><div class="stat-n stat-n-clara" id="stat-despertares-clara" style="font-size:20px;">—</div><div class="stat-d">média despertares/noite</div></div>
+      </div>
+    </div>
 
-async function loadEdicao(arquivo, label){
-  // Esconde painel de histórico, mostra content-area
-  document.getElementById('hist-panel').style.display = 'none';
-  document.getElementById('content-area').style.display = 'block';
-  activeTab = TEMAS[0].id;
+    <div class="sec-label">Quem vai nas interrupções noturnas</div>
+    <div class="card" id="card-quem-interrup"></div>
 
-  const area = document.getElementById('content-area');
-  area.innerHTML = '<div class="state-msg"><div class="icon" style="animation:spin 1s linear infinite">⟳</div><div class="txt">Carregando edição de '+label+'...</div></div>';
+    <div class="sec-label">Quem colocou para dormir</div>
+    <div class="card" id="card-quem-dormiu"></div>
 
-  // Atualiza header
-  document.getElementById('hdr-date').textContent = 'Edição de ' + label;
-  showTab(TEMAS[0].id);
+    <div class="sec-label">Saúde</div>
+    <div class="stats-comp">
+      <div class="stat-comp">
+        <div class="stat-comp-header lucas">👦 Lucas</div>
+        <div class="stat-n stat-n-lucas" id="stat-doencas-lucas">—</div><div class="stat-d">episódios</div>
+        <div style="margin-top:8px;"><div class="stat-n stat-n-lucas" id="stat-remedios-lucas" style="font-size:20px;">—</div><div class="stat-d">remédios</div></div>
+      </div>
+      <div class="stat-comp">
+        <div class="stat-comp-header clara">👧 Clara</div>
+        <div class="stat-n stat-n-clara" id="stat-doencas-clara">—</div><div class="stat-d">episódios</div>
+        <div style="margin-top:8px;"><div class="stat-n stat-n-clara" id="stat-remedios-clara" style="font-size:20px;">—</div><div class="stat-d">remédios</div></div>
+      </div>
+    </div>
 
-  try {
-    const data = await fetch(BASE+'/dados/'+arquivo+'?t='+Date.now())
-      .then(r=>{ if(!r.ok) throw new Error('HTTP '+r.status); return r.json(); });
-    renderContent(data);
-  } catch(e) {
-    area.innerHTML = '<div class="state-msg"><div class="icon">⚠</div><div class="txt">Erro ao carregar edição.</div><div class="err">'+e.message+'</div></div>';
-  }
-}
+    <div class="sec-label">Horário médio de dormir e acordar</div>
+    <div class="card" id="card-horarios"></div>
 
-// ── Atualização manual via GitHub Actions ────────────────────────
-const GH_USER = 'tarcisiogb';
-const GH_REPO = 'dailynews';
-const GH_WORKFLOW = 'briefing-diario.yml';
+    <div class="sec-label">Evolução mês a mês</div>
+    <div class="card" style="overflow-x:auto;" id="card-evolucao"></div>
 
-function showToast(msg, duration=3000){
-  const t = document.getElementById('toast');
-  t.textContent = msg;
-  t.classList.add('show');
-  setTimeout(()=>t.classList.remove('show'), duration);
-}
+    <div class="sec-label">Perfil das crianças</div>
+    <div class="stats-comp" id="card-perfil"></div>
+  </div>
 
-const ADMIN_PASS = '214563';
+  <!-- HISTÓRICO -->
+  <div id="sec-historico" class="sec">
+    <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px;">
+      <button class="btn btn-sm btn-outline on-filter" onclick="setFiltro('todos',this)">Todos</button>
+      <button class="btn btn-sm btn-outline" onclick="setFiltro('lucas',this)">👦 Lucas</button>
+      <button class="btn btn-sm btn-outline" onclick="setFiltro('clara',this)">👧 Clara</button>
+      <button class="btn btn-sm btn-outline" onclick="setFiltro('sono',this)">😴 Sono</button>
+      <button class="btn btn-sm btn-outline" onclick="setFiltro('saude',this)">🏥 Saúde</button>
+    </div>
+    <div id="timeline-historico"></div>
+  </div>
 
-async function triggerUpdate(){
-  const btn   = document.getElementById('btn-update');
-  const icon  = document.getElementById('btn-icon');
-  const label = document.getElementById('btn-label');
+  <!-- RESUMO IA -->
+  <div id="sec-resumo" class="sec">
+    <div class="card">
+      <div class="card-title">✨ Resumo semanal com IA</div>
+      <div class="card-sub">Análise comparativa dos padrões de sono e saúde de Lucas e Clara.</div>
+      <button class="btn btn-primary" id="btn-resumo" onclick="gerarResumo()">Gerar resumo desta semana</button>
+    </div>
+    <div id="resumo-content"></div>
+  </div>
+</div>
 
-  // Verifica senha admin
-  const passOk = sessionStorage.getItem('admin_ok');
-  if(!passOk){
-    const entrada = prompt('Senha de administrador:');
-    if(!entrada) return;
-    if(entrada !== ADMIN_PASS){
-      showToast('❌ Senha incorreta.', 3000);
+<!-- MODAL SONO (novo + edição) -->
+<div class="modal-bg" id="modal-sono">
+  <div class="modal">
+    <button class="modal-close" onclick="fecharModal('modal-sono')">✕</button>
+    <div class="modal-title" id="modal-sono-title">🌙 Dormiu agora</div>
+    <div class="time-now" id="modal-time-display">00:00</div>
+    <div class="time-sub" id="modal-time-sub"></div>
+    <div class="child-pick" id="sono-child-pick">
+      <button class="child-btn lucas" id="sono-btn-lucas" onclick="selectSonoChild('lucas')">👦 Lucas</button>
+      <button class="child-btn clara"  id="sono-btn-clara"  onclick="selectSonoChild('clara')">👧 Clara</button>
+    </div>
+    <label>Hora <span style="font-weight:400">(pré-preenchida com agora)</span></label>
+    <input type="datetime-local" id="inp-sono-hora">
+    <div id="sono-quem-wrap" style="margin-top:12px;">
+      <label>Quem colocou para dormir <span style="font-weight:400">(opcional)</span></label>
+      <div class="quem-pick">
+        <button class="quem-btn" onclick="selectQuem('Aline',this)">🧑‍🦱 Aline</button>
+        <button class="quem-btn" onclick="selectQuem('Tarcísio',this)">👨 Tarcísio</button>
+        <button class="quem-btn" onclick="selectQuem('Outro',this)">👤 Outro</button>
+      </div>
+    </div>
+    <label>Observação <span style="font-weight:400">(opcional)</span></label>
+    <textarea id="inp-sono-obs" rows="2" placeholder="Ex: dormiu agitado, acordou no meio da noite..."></textarea>
+    <div id="sono-modal-aviso" style="margin-top:10px;display:none;"></div>
+    <div style="margin-top:16px;">
+      <button class="btn btn-primary" onclick="confirmarSono()">Confirmar</button>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL EDITAR SONO -->
+<div class="modal-bg" id="modal-edit-sono">
+  <div class="modal">
+    <button class="modal-close" onclick="fecharModal('modal-edit-sono')">✕</button>
+    <div class="modal-title">✏️ Editar registro de sono</div>
+    <input type="hidden" id="edit-sono-child">
+    <input type="hidden" id="edit-sono-id">
+    <label>Dormiu</label>
+    <input type="datetime-local" id="edit-sono-dormiu">
+    <label>Acordou</label>
+    <input type="datetime-local" id="edit-sono-acordou">
+    <label>Quem colocou para dormir</label>
+    <div class="quem-pick" style="margin-top:6px;">
+      <button class="quem-btn" id="edit-quem-Aline"    onclick="selectEditQuem('Aline',this)">🧑‍🦱 Aline</button>
+      <button class="quem-btn" id="edit-quem-Tarcísio" onclick="selectEditQuem('Tarcísio',this)">👨 Tarcísio</button>
+      <button class="quem-btn" id="edit-quem-Outro"    onclick="selectEditQuem('Outro',this)">👤 Outro</button>
+    </div>
+    <label>Observação</label>
+    <textarea id="edit-sono-obs" rows="2"></textarea>
+    <div style="margin-top:16px;display:grid;grid-template-columns:1fr 1fr;gap:8px;">
+      <button class="btn btn-outline" onclick="fecharModal('modal-edit-sono')">Cancelar</button>
+      <button class="btn btn-primary" onclick="salvarEdicaoSono()">Salvar</button>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL EDITAR DOENÇA -->
+<div class="modal-bg" id="modal-edit-doenca">
+  <div class="modal">
+    <button class="modal-close" onclick="fecharModal('modal-edit-doenca')">✕</button>
+    <div class="modal-title">✏️ Editar episódio de saúde</div>
+    <input type="hidden" id="edit-doenca-child">
+    <input type="hidden" id="edit-doenca-id">
+    <label>Data de início</label>
+    <input type="date" id="edit-doenca-inicio">
+    <label>Data de fim <span style="font-weight:400">(opcional)</span></label>
+    <input type="date" id="edit-doenca-fim">
+    <label>Condição / Sintomas</label>
+    <input type="text" id="edit-doenca-cond">
+    <label>Observações</label>
+    <textarea id="edit-doenca-obs" rows="2"></textarea>
+    <div style="margin-top:16px;display:grid;grid-template-columns:1fr 1fr;gap:8px;">
+      <button class="btn btn-outline" onclick="fecharModal('modal-edit-doenca')">Cancelar</button>
+      <button class="btn btn-primary" onclick="salvarEdicaoDoenca()">Salvar</button>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL REMEDIO -->
+<div class="modal-bg" id="modal-remedio">
+  <div class="modal">
+    <button class="modal-close" onclick="fecharModal('modal-remedio')">✕</button>
+    <div class="modal-title">💊 Adicionar Remédio</div>
+    <label>Nome do remédio</label>
+    <input type="text" id="inp-med-nome" placeholder="Ex: Ibuprofeno, Dipirona...">
+    <label>Dose</label>
+    <input type="text" id="inp-med-dose" placeholder="Ex: 5ml, 1 comprimido...">
+    <label>Horário da dose</label>
+    <input type="time" id="inp-med-hora">
+    <label>Duração do tratamento</label>
+    <input type="text" id="inp-med-duracao" placeholder="Ex: 3 dias, 5 dias...">
+    <div style="margin-top:16px;">
+      <button class="btn btn-primary" onclick="adicionarRemedio()">Adicionar</button>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<!-- FIREBASE -->
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+  import { getAuth, GoogleAuthProvider, signInWithPopup, signOut as fbSignOut, onAuthStateChanged }
+    from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
+  import { getFirestore, doc, onSnapshot, setDoc }
+    from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyBk1-7n7rw_i4Cl1Osjd8gwLmaovzr6zQc",
+    authDomain: "rotina-kids-4f221.firebaseapp.com",
+    projectId: "rotina-kids-4f221",
+    storageBucket: "rotina-kids-4f221.firebasestorage.app",
+    messagingSenderId: "734286080832",
+    appId: "1:734286080832:web:96be6442aeb2665b5968a5"
+  };
+  window.FUNCTION_URL = "https://gerarresumo-liez2rj5ta-rj.a.run.app";
+
+  const app = initializeApp(firebaseConfig);
+  const auth = getAuth(app);
+  const db   = getFirestore(app);
+  const provider = new GoogleAuthProvider();
+
+  window.loginGoogle = async () => {
+    try { await signInWithPopup(auth, provider); }
+    catch(e) { showToast("Erro ao entrar: " + e.message); }
+  };
+  window.signOut = async () => {
+    await fbSignOut(auth);
+    document.getElementById('loginScreen').style.display = 'flex';
+    document.getElementById('appScreen').style.display  = 'none';
+  };
+
+  onAuthStateChanged(auth, async (user) => {
+    if (!user) {
+      document.getElementById('loginScreen').style.display = 'flex';
+      document.getElementById('appScreen').style.display  = 'none';
       return;
     }
-    sessionStorage.setItem('admin_ok', '1');
-  }
+    document.getElementById('loginScreen').style.display = 'none';
+    document.getElementById('appScreen').style.display  = 'block';
+    document.getElementById('topbarSub').textContent = user.displayName || user.email;
+    window._fbUser = user;
+    window._userName = user.displayName || user.email;
 
-  // Pega token salvo ou pede (só na primeira vez no dispositivo)
-  let token = localStorage.getItem('gh_token');
-  if(!token){
-    token = prompt('Cole seu GitHub Personal Access Token (permissão: workflow) — só será pedido uma vez neste dispositivo:');
-    if(!token) return;
-    localStorage.setItem('gh_token', token.trim());
-    token = token.trim();
-  }
+    const ref = doc(db, 'familias', 'rotina-kids', 'dados', 'estado');
+    onSnapshot(ref, (snap) => {
+      window.ST = snap.exists() ? snap.data() : {};
+      window.ST.lucas = window.ST.lucas || {};
+      window.ST.lucas.sono    = window.ST.lucas.sono    || [];
+      window.ST.lucas.doencas = window.ST.lucas.doencas || [];
+      window.ST.lucas.nome = 'Lucas'; window.ST.lucas.sexo = 'masculino'; window.ST.lucas.nascimento = '2020-11-06';
+      window.ST.clara = window.ST.clara || {};
+      window.ST.clara.sono    = window.ST.clara.sono    || [];
+      window.ST.clara.doencas = window.ST.clara.doencas || [];
+      window.ST.clara.nome = 'Clara'; window.ST.clara.sexo = 'feminino'; window.ST.clara.nascimento = '2023-11-03';
+      window.ST.resumos = window.ST.resumos || [];
+      renderAll();
+    });
 
-  // Desabilita botão durante execução
-  btn.style.opacity = '0.5';
-  btn.style.pointerEvents = 'none';
-  icon.style.animation = 'spin 1s linear infinite';
-  label.textContent = 'Aguarde...';
+    window.saveState = async () => {
+      const ref = doc(db, 'familias', 'rotina-kids', 'dados', 'estado');
+      await setDoc(ref, window.ST, { merge: true });
+    };
+  });
+</script>
 
-  try {
-    const resp = await fetch(
-      `https://api.github.com/repos/${GH_USER}/${GH_REPO}/actions/workflows/${GH_WORKFLOW}/dispatches`,
-      {
-        method: 'POST',
-        headers: {
-          'Authorization': `Bearer ${token}`,
-          'Accept': 'application/vnd.github+json',
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ ref: 'main' }),
-      }
-    );
+<script>
+window.ST = {};
+window._sonoTipo   = 'dormiu';
+window._sonoChild  = null;
+window._sonoQuem   = null;
+window._editQuem   = null;
+window._saudeChild = 'lucas';
+window._filtroHistorico = 'todos';
+window._remediosPendentes = [];
+window._clockInterval = null;
+window._periodo = 'semana';
 
-    if(resp.status === 204){
-      showToast('✅ Atualização iniciada! Pronto em ~3 min.', 5000);
-      label.textContent = 'Em andamento...';
-      setTimeout(()=>{
-        showToast('🔄 Recarregando briefing...');
-        setTimeout(()=>location.reload(), 2000);
-      }, 180000);
-    } else if(resp.status === 401){
-      localStorage.removeItem('gh_token');
-      showToast('❌ Token inválido. Cole novamente.', 4000);
-      btn.style.opacity = '1';
-      btn.style.pointerEvents = 'auto';
-      icon.style.animation = '';
-      label.textContent = 'Atualizar';
+// ── UTILS ─────────────────────────────────────────────
+function calcIdade(nascStr) {
+  if (!nascStr) return '—';
+  const nasc = new Date(nascStr + 'T12:00'), hoje = new Date();
+  let anos = hoje.getFullYear() - nasc.getFullYear();
+  let meses = hoje.getMonth() - nasc.getMonth();
+  if (meses < 0) { anos--; meses += 12; }
+  if (anos === 0) return `${meses}m`;
+  if (meses === 0) return `${anos}a`;
+  return `${anos}a ${meses}m`;
+}
+function calcH(de, ate) {
+  if (!de || !ate) return 0;
+  return Math.max(0, Math.round(((new Date(ate) - new Date(de)) / 3600000) * 10) / 10);
+}
+function getNorma(r) {
+  if (r.ciclos) return r;
+  return { id:r.id, data: r.dormiu?r.dormiu.slice(0,10):(r.acordou?r.acordou.slice(0,10):null), ciclos:[{dormiu:r.dormiu||null,acordou:r.acordou||null}], duracaoTotal:r.duracaoH||null, interrompida:false, obs:r.obs||'', quem:r.quem||null, registradoPor:r.registradoPor||null };
+}
+function duracaoNorma(r) {
+  const n = getNorma(r);
+  if (n.duracaoTotal) return n.duracaoTotal;
+  return Math.round(n.ciclos.reduce((sum,c)=>sum+calcH(c.dormiu,c.acordou),0)*10)/10;
+}
+function getOpenSleep(child) {
+  const sono = window.ST[child]?.sono || [];
+  for (const r of sono) {
+    if (r.ciclos) {
+      const ultimo = r.ciclos[r.ciclos.length-1];
+      if (ultimo.dormiu && !ultimo.acordou) return { registro:r, cicloIdx:r.ciclos.length-1 };
     } else {
-      showToast(`❌ Erro ${resp.status}. Tente novamente.`, 4000);
-      btn.style.opacity = '1';
-      btn.style.pointerEvents = 'auto';
-      icon.style.animation = '';
-      label.textContent = 'Atualizar';
+      if (r.dormiu && !r.acordou) return { registro:r, cicloIdx:0, antigo:true };
     }
-  } catch(e) {
-    showToast('❌ Erro de conexão.', 4000);
-    btn.style.opacity = '1';
-    btn.style.pointerEvents = 'auto';
-    icon.style.animation = '';
-    label.textContent = 'Atualizar';
+  }
+  return null;
+}
+
+// Retorna o registro da noite em curso para um dado horário de "dormiu"
+// Regra: pertence à mesma noite se o horário for antes das 12:00 do dia seguinte ao início da noite
+function getNoiteEmCurso(child, horaStr) {
+  const sono = window.ST[child]?.sono || [];
+  const horaRegistro = new Date(horaStr);
+  for (const r of sono) {
+    if (!r.ciclos) continue;
+    const primeiroCiclo = r.ciclos[0];
+    if (!primeiroCiclo?.dormiu) continue;
+    const inicioDaNoite = new Date(primeiroCiclo.dormiu);
+    // Limite: 12:00 do dia seguinte ao início da noite
+    const limite = new Date(inicioDaNoite);
+    limite.setDate(limite.getDate() + 1);
+    limite.setHours(12, 0, 0, 0);
+    if (horaRegistro > inicioDaNoite && horaRegistro < limite) {
+      return r;
+    }
+  }
+  return null;
+}
+function periodoRange() {
+  const hoje = new Date();
+  const fmt = d => d.toISOString().slice(0,10);
+  if (window._periodo === 'semana') {
+    const ini = new Date(hoje); ini.setDate(hoje.getDate()-6);
+    return { de: fmt(ini), ate: fmt(hoje) };
+  }
+  if (window._periodo === 'mes') {
+    return { de: fmt(new Date(hoje.getFullYear(), hoje.getMonth(), 1)), ate: fmt(hoje) };
+  }
+  if (window._periodo === 'custom') {
+    return { de: document.getElementById('filtro-de').value||'2000-01-01', ate: document.getElementById('filtro-ate').value||fmt(hoje) };
+  }
+  return { de: '2000-01-01', ate: fmt(hoje) };
+}
+function inPeriodo(dateStr, range) {
+  if (!dateStr) return false;
+  const d = dateStr.slice(0,10);
+  return d >= range.de && d <= range.ate;
+}
+function fmtDT(s){if(!s)return'';try{const d=new Date(s);return d.toLocaleDateString('pt-BR',{weekday:'short',day:'2-digit',month:'2-digit',year:'2-digit'})+' '+d.toLocaleTimeString('pt-BR',{hour:'2-digit',minute:'2-digit'});}catch{return s;}}
+function fmtDate(s){if(!s)return'';try{return new Date(s+'T12:00').toLocaleDateString('pt-BR',{weekday:'short',day:'2-digit',month:'2-digit',year:'2-digit'});}catch{return s;}}
+function fmtTime(s){if(!s)return'';try{return new Date(s).toLocaleTimeString('pt-BR',{hour:'2-digit',minute:'2-digit'});}catch{return s;}}
+function minToTime(m){const h=Math.floor(((m%1440)+1440)%1440/60),mn=((m%1440)+1440)%1440%60;return String(h).padStart(2,'0')+':'+String(mn).padStart(2,'0');}
+function localISOString(){const n=new Date(),p=x=>String(x).padStart(2,'0');return `${n.getFullYear()}-${p(n.getMonth()+1)}-${p(n.getDate())}T${p(n.getHours())}:${p(n.getMinutes())}`;}
+function showToast(msg){const el=document.getElementById('toast');el.textContent=msg;el.classList.add('show');setTimeout(()=>el.classList.remove('show'),2400);}
+function fecharModal(id){document.getElementById(id).classList.remove('open');if(id==='modal-sono')clearInterval(window._clockInterval);}
+document.querySelectorAll('.modal-bg').forEach(m=>{m.addEventListener('click',e=>{if(e.target===m){m.classList.remove('open');clearInterval(window._clockInterval);}});});
+
+// ── NAV ───────────────────────────────────────────────
+function tab(id, el) {
+  document.querySelectorAll('.sec').forEach(s=>s.classList.remove('on'));
+  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('on'));
+  document.getElementById('sec-'+id).classList.add('on');
+  el.classList.add('on');
+}
+function setFiltro(f, el) {
+  window._filtroHistorico = f;
+  document.querySelectorAll('.on-filter').forEach(b=>b.classList.remove('on-filter'));
+  el.classList.add('on-filter');
+  renderHistorico();
+}
+function setPeriodo(p, el) {
+  window._periodo = p;
+  document.querySelectorAll('.filtro-btn').forEach(b=>b.classList.remove('on'));
+  el.classList.add('on');
+  document.getElementById('periodo-custom').classList.toggle('show', p==='custom');
+  renderComparativo();
+}
+
+// ── RENDER ALL ────────────────────────────────────────
+function renderAll() {
+  renderOpenSleepAlerts();
+  renderListSono();
+  renderDoencas();
+  renderComparativo();
+  renderHistorico();
+  renderResumos();
+}
+
+// ── SONO ALERTS ───────────────────────────────────────
+function renderOpenSleepAlerts() {
+  const el = document.getElementById('open-sleep-alerts');
+  let html = '';
+  ['lucas','clara'].forEach(child => {
+    const open = getOpenSleep(child);
+    if (open) {
+      const nome = child==='lucas'?'Lucas':'Clara';
+      const ciclo = open.registro.ciclos ? open.registro.ciclos[open.cicloIdx] : open.registro;
+      html += `<div class="open-sleep open-sleep-${child}">🌙 <b>${nome}</b> dormiu às ${fmtTime(ciclo.dormiu)} — aguardando acordar</div>`;
+    }
+  });
+  el.innerHTML = html;
+}
+
+// ── SONO MODAL ────────────────────────────────────────
+function abrirModalSono(tipo) {
+  window._sonoTipo  = tipo;
+  window._sonoChild = null;
+  window._sonoQuem  = null;
+  document.getElementById('modal-sono-title').textContent = tipo==='dormiu'?'🌙 Dormiu agora':'☀️ Acordou agora';
+  document.getElementById('inp-sono-hora').value = localISOString();
+  document.getElementById('inp-sono-obs').value  = '';
+  document.getElementById('sono-modal-aviso').style.display = 'none';
+  document.getElementById('sono-btn-lucas').classList.remove('on');
+  document.getElementById('sono-btn-clara').classList.remove('on');
+  document.querySelectorAll('.quem-btn').forEach(b=>b.classList.remove('on'));
+  // Mostrar campo "quem" sempre no dormiu (primeiro ciclo ou retorno)
+  document.getElementById('sono-quem-wrap').style.display = tipo==='dormiu'?'block':'none';
+
+  if (tipo==='acordou') {
+    const lOpen=getOpenSleep('lucas'), cOpen=getOpenSleep('clara');
+    if (lOpen&&!cOpen) selectSonoChild('lucas');
+    else if (cOpen&&!lOpen) selectSonoChild('clara');
+  }
+  clearInterval(window._clockInterval);
+  atualizarRelogio();
+  window._clockInterval = setInterval(atualizarRelogio, 10000);
+  document.getElementById('modal-sono').classList.add('open');
+}
+
+function atualizarRelogio() {
+  const now = new Date();
+  document.getElementById('modal-time-display').textContent = now.toLocaleTimeString('pt-BR',{hour:'2-digit',minute:'2-digit'});
+  document.getElementById('modal-time-sub').textContent = now.toLocaleDateString('pt-BR',{weekday:'long',day:'numeric',month:'long'});
+}
+
+function selectSonoChild(child) {
+  window._sonoChild = child;
+  document.getElementById('sono-btn-lucas').classList.toggle('on', child==='lucas');
+  document.getElementById('sono-btn-clara').classList.toggle('on', child==='clara');
+  const aviso = document.getElementById('sono-modal-aviso');
+  const nome = child==='lucas'?'Lucas':'Clara';
+  if (window._sonoTipo==='acordou') {
+    const open = getOpenSleep(child);
+    if (!open) {
+      aviso.innerHTML=`<div style="background:var(--yellow-l);border-radius:8px;padding:10px;font-size:12px;color:#7A5800;">⚠️ Sem ciclo aberto para ${nome}.</div>`;
+    } else {
+      const ciclo = open.registro.ciclos?open.registro.ciclos[open.cicloIdx]:open.registro;
+      aviso.innerHTML=`<div style="background:var(--green-x);border-radius:8px;padding:10px;font-size:12px;color:#1B4332;">✓ Encerrando ciclo — dormiu às ${fmtTime(ciclo.dormiu)}</div>`;
+    }
+    aviso.style.display='block';
+  } else {
+    // Verifica noite em curso pela regra das 12h
+    const horaAtual = document.getElementById('inp-sono-hora').value || localISOString();
+    const noiteEmCurso = getNoiteEmCurso(child, horaAtual);
+    if (noiteEmCurso) {
+      const inicioDaNoite = noiteEmCurso.ciclos[0]?.dormiu;
+      const totalCiclos = noiteEmCurso.ciclos.length;
+      aviso.innerHTML=`<div style="background:var(--blue-l);border-radius:8px;padding:10px;font-size:12px;color:var(--blue);">ℹ️ Será adicionado como ciclo ${totalCiclos+1} da noite iniciada às ${fmtTime(inicioDaNoite)}.</div>`;
+      aviso.style.display='block';
+    } else { aviso.style.display='none'; }
   }
 }
 
-renderTabs();
-load();
+function selectQuem(quem, el) {
+  window._sonoQuem = window._sonoQuem===quem ? null : quem;
+  document.querySelectorAll('#modal-sono .quem-btn').forEach(b=>b.classList.remove('on'));
+  if (window._sonoQuem) el.classList.add('on');
+}
+
+function confirmarSono() {
+  if (!window._sonoChild) { showToast('Selecione Lucas ou Clara'); return; }
+  const hora = document.getElementById('inp-sono-hora').value;
+  const obs  = document.getElementById('inp-sono-obs').value.trim();
+  if (!hora) { showToast('Informe o horário'); return; }
+  const child = window.ST[window._sonoChild];
+  child.sono  = child.sono || [];
+  const nome  = window._sonoChild==='lucas'?'Lucas':'Clara';
+  const meta  = { registradoPor: window._userName || null };
+
+  if (window._sonoTipo==='dormiu') {
+    // Verifica se pertence à noite em curso (regra: antes das 12h do dia seguinte ao início)
+    const noiteEmCurso = getNoiteEmCurso(window._sonoChild, hora);
+    if (noiteEmCurso) {
+      // Adiciona novo ciclo à noite existente, com quem individual
+      noiteEmCurso.ciclos.push({ dormiu:hora, acordou:null, quem:window._sonoQuem });
+      noiteEmCurso.interrompida = true;
+    } else {
+      // Nova noite
+      child.sono.unshift({ id:Date.now(), data:hora.slice(0,10), ciclos:[{dormiu:hora,acordou:null,quem:window._sonoQuem}], duracaoTotal:null, interrompida:false, obs, ...meta });
+    }
+    showToast('🌙 '+nome+' dormiu registrado!');
+  } else {
+    const open = getOpenSleep(window._sonoChild);
+    if (open) {
+      if (open.antigo) {
+        open.registro.acordou  = hora;
+        open.registro.duracaoH = calcH(open.registro.dormiu, hora);
+        if (obs) open.registro.obs = (open.registro.obs?open.registro.obs+' | ':'')+obs;
+      } else {
+        open.registro.ciclos[open.cicloIdx].acordou = hora;
+        const total = open.registro.ciclos.reduce((sum,c)=>sum+calcH(c.dormiu,c.acordou),0);
+        open.registro.duracaoTotal = Math.round(total*10)/10;
+        if (obs) open.registro.obs = (open.registro.obs?open.registro.obs+' | ':'')+obs;
+        open.registro.registradoPor = window._userName || null;
+      }
+    } else {
+      child.sono.unshift({ id:Date.now(), data:hora.slice(0,10), ciclos:[{dormiu:null,acordou:hora}], duracaoTotal:null, interrompida:false, obs, ...meta });
+    }
+    showToast('☀️ '+nome+' acordou registrado!');
+  }
+  window.saveState();
+  fecharModal('modal-sono');
+}
+
+// ── EDITAR SONO ───────────────────────────────────────
+function editarSono(child, id) {
+  const r = window.ST[child].sono.find(x=>x.id===id);
+  if (!r) return;
+  const n = getNorma(r);
+  const c0 = n.ciclos[0];
+  document.getElementById('edit-sono-child').value   = child;
+  document.getElementById('edit-sono-id').value      = id;
+  document.getElementById('edit-sono-dormiu').value  = c0.dormiu  ? c0.dormiu.slice(0,16)  : '';
+  document.getElementById('edit-sono-acordou').value = c0.acordou ? c0.acordou.slice(0,16) : '';
+  document.getElementById('edit-sono-obs').value     = n.obs || '';
+  window._editQuem = n.quem || null;
+  document.querySelectorAll('#modal-edit-sono .quem-btn').forEach(b=>{
+    b.classList.toggle('on', b.dataset.quem===window._editQuem);
+  });
+  // Marcar botão correto
+  ['Aline','Tarcísio','Outro'].forEach(q=>{
+    document.getElementById('edit-quem-'+q)?.classList.toggle('on', q===window._editQuem);
+  });
+  document.getElementById('modal-edit-sono').classList.add('open');
+}
+
+function selectEditQuem(quem, el) {
+  window._editQuem = window._editQuem===quem ? null : quem;
+  document.querySelectorAll('#modal-edit-sono .quem-btn').forEach(b=>b.classList.remove('on'));
+  if (window._editQuem) el.classList.add('on');
+}
+
+function salvarEdicaoSono() {
+  const child   = document.getElementById('edit-sono-child').value;
+  const id      = Number(document.getElementById('edit-sono-id').value);
+  const dormiu  = document.getElementById('edit-sono-dormiu').value;
+  const acordou = document.getElementById('edit-sono-acordou').value;
+  const obs     = document.getElementById('edit-sono-obs').value.trim();
+  const r = window.ST[child].sono.find(x=>x.id===id);
+  if (!r) return;
+
+  if (r.ciclos) {
+    r.ciclos[0].dormiu  = dormiu  || null;
+    r.ciclos[0].acordou = acordou || null;
+    r.duracaoTotal = dormiu&&acordou ? Math.round(calcH(dormiu,acordou)*10)/10 : null;
+    r.data = dormiu ? dormiu.slice(0,10) : (acordou ? acordou.slice(0,10) : r.data);
+    r.obs  = obs;
+    r.quem = window._editQuem;
+  } else {
+    r.dormiu  = dormiu  || null;
+    r.acordou = acordou || null;
+    r.duracaoH= dormiu&&acordou ? Math.round(calcH(dormiu,acordou)*10)/10 : null;
+    r.obs = obs;
+    r.quem = window._editQuem;
+  }
+  window.saveState().then(()=>showToast('✓ Registro atualizado!'));
+  fecharModal('modal-edit-sono');
+}
+
+// ── SONO LIST ─────────────────────────────────────────
+function renderListSono() { renderListSonoChild('lucas'); renderListSonoChild('clara'); }
+
+function renderListSonoChild(child) {
+  const nome = child==='lucas'?'👦 Lucas':'👧 Clara';
+  const sono = [...(window.ST[child]?.sono||[])].sort((a,b)=>{
+    const da=(getNorma(a).ciclos[0]?.dormiu||getNorma(a).data||'');
+    const db=(getNorma(b).ciclos[0]?.dormiu||getNorma(b).data||'');
+    return db.localeCompare(da);
+  }).slice(0,10);
+  const el = document.getElementById('list-sono-'+child);
+  if (!sono.length) {
+    el.innerHTML=`<div class="card"><div class="badge badge-${child}" style="margin-bottom:8px;">${nome}</div><div class="empty" style="padding:12px 0;"><div class="empty-icon">😴</div><p>Nenhum registro ainda.</p></div></div>`;
+    return;
+  }
+  el.innerHTML=`<div class="card"><div class="badge badge-${child}" style="margin-bottom:10px;">${nome}</div>`+
+    sono.map(r=>{
+      const n=getNorma(r), dur=duracaoNorma(r);
+      const emAberto=n.ciclos.some(c=>c.dormiu&&!c.acordou);
+      const durBadge=emAberto
+        ?`<span class="badge" style="background:#EEE;color:var(--muted);">em aberto</span>`
+        :dur?`<span class="badge ${dur>=10?'badge-ok':dur>=7?'badge-warn':'badge-err'}">${dur}h${n.interrompida?' 🔄':''}</span>`:'';
+      const c0=n.ciclos[0];
+      const ciclosHTML=n.ciclos.length>1
+        ?n.ciclos.map((c,i)=>{
+          const quemCiclo=c.quem?`<span class="meta-tag" style="margin-left:4px;">👤 ${c.quem}</span>`:'';
+          return `<div class="ciclo-item"><div class="ciclo-dot"></div>Ciclo ${i+1}: ${c.dormiu?'🌙 '+fmtTime(c.dormiu):'?'}${c.acordou?' → ☀️ '+fmtTime(c.acordou):'→ em aberto'} ${c.dormiu&&c.acordou?'('+calcH(c.dormiu,c.acordou)+'h)':''}${quemCiclo}</div>`;
+        }).join('')
+        :`${c0?.dormiu?`<div style="font-size:13px;">🌙 Dormiu: <b>${fmtDT(c0.dormiu)}</b></div>`:''}
+         ${c0?.acordou?`<div style="font-size:13px;">☀️ Acordou: <b>${fmtDT(c0.acordou)}</b></div>`:'<div style="font-size:12px;color:var(--muted);">☀️ Aguardando acordar…</div>'}`;
+      const metaHTML=[
+        n.quem?`👤 ${n.quem}`:'',
+        n.registradoPor?`📱 ${n.registradoPor}`:''
+      ].filter(Boolean).map(t=>`<span class="meta-tag">${t}</span>`).join(' ');
+      return `<div style="display:flex;align-items:flex-start;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--border);">
+        <div style="flex:1;">
+          ${n.ciclos.length>1?`<div style="font-size:12px;font-weight:600;color:var(--muted);margin-bottom:4px;">📅 ${fmtDate(n.data)} · ${n.ciclos.length} ciclos</div>`:''}
+          ${ciclosHTML}
+          ${metaHTML?`<div style="margin-top:4px;">${metaHTML}</div>`:''}
+          ${n.obs?`<div style="font-size:11px;color:var(--muted);margin-top:3px;">${n.obs}</div>`:''}
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:flex-end;gap:4px;margin-left:8px;">
+          ${durBadge}
+          <div style="display:flex;gap:2px;">
+            <button class="btn-edit" onclick="editarSono('${child}',${r.id})">✏️</button>
+            <button class="btn-del"  onclick="deletarSono('${child}',${r.id})">🗑</button>
+          </div>
+        </div>
+      </div>`;
+    }).join('')+'</div>';
+}
+
+function deletarSono(child, id) {
+  window.ST[child].sono=window.ST[child].sono.filter(r=>r.id!==id);
+  window.saveState().then(()=>showToast('Registro removido'));
+}
+
+// ── SAÚDE ─────────────────────────────────────────────
+function selectSaudeChild(child){window._saudeChild=child;document.getElementById('saude-btn-lucas').classList.toggle('on',child==='lucas');document.getElementById('saude-btn-clara').classList.toggle('on',child==='clara');}
+function abrirModalRemedio(){document.getElementById('modal-remedio').classList.add('open');['inp-med-nome','inp-med-dose','inp-med-hora','inp-med-duracao'].forEach(id=>document.getElementById(id).value='');}
+function adicionarRemedio(){const nome=document.getElementById('inp-med-nome').value.trim(),dose=document.getElementById('inp-med-dose').value.trim(),hora=document.getElementById('inp-med-hora').value,duracao=document.getElementById('inp-med-duracao').value.trim();if(!nome){showToast('Informe o nome do remédio');return;}window._remediosPendentes.push({nome,dose,hora,duracao});fecharModal('modal-remedio');renderRemediosPendentes();}
+function renderRemediosPendentes(){const el=document.getElementById('remedios-preview');el.innerHTML=window._remediosPendentes.map((m,i)=>`<div class="med-item"><div class="med-icon">💊</div><div class="med-info"><div class="med-name">${m.nome}</div><div class="med-detail">${[m.dose,m.hora,m.duracao].filter(Boolean).join(' · ')}</div></div><button class="btn-del" onclick="removerRemedioTemp(${i})">✕</button></div>`).join('');}
+function removerRemedioTemp(i){window._remediosPendentes.splice(i,1);renderRemediosPendentes();}
+
+function registrarDoenca(){
+  if(!window._saudeChild){showToast('Selecione Lucas ou Clara');return;}
+  const inicio=document.getElementById('inp-doenca-inicio').value,fim=document.getElementById('inp-doenca-fim').value,cond=document.getElementById('inp-doenca-cond').value.trim(),obs=document.getElementById('inp-doenca-obs').value.trim();
+  if(!inicio||!cond){showToast('Preencha a data e a condição');return;}
+  const child=window.ST[window._saudeChild];child.doencas=child.doencas||[];
+  child.doencas.push({id:Date.now(),inicio,fim:fim||null,cond,obs,remedios:[...window._remediosPendentes],registradoPor:window._userName||null});
+  window.saveState().then(()=>{showToast('✓ Episódio salvo!');['inp-doenca-inicio','inp-doenca-fim','inp-doenca-cond','inp-doenca-obs'].forEach(id=>document.getElementById(id).value='');window._remediosPendentes=[];renderRemediosPendentes();selectSaudeChild(window._saudeChild);});
+}
+
+function editarDoenca(child, id) {
+  const r = window.ST[child].doencas.find(x=>x.id===id);
+  if (!r) return;
+  document.getElementById('edit-doenca-child').value  = child;
+  document.getElementById('edit-doenca-id').value     = id;
+  document.getElementById('edit-doenca-inicio').value = r.inicio || '';
+  document.getElementById('edit-doenca-fim').value    = r.fim    || '';
+  document.getElementById('edit-doenca-cond').value   = r.cond   || '';
+  document.getElementById('edit-doenca-obs').value    = r.obs    || '';
+  document.getElementById('modal-edit-doenca').classList.add('open');
+}
+
+function salvarEdicaoDoenca() {
+  const child  = document.getElementById('edit-doenca-child').value;
+  const id     = Number(document.getElementById('edit-doenca-id').value);
+  const inicio = document.getElementById('edit-doenca-inicio').value;
+  const fim    = document.getElementById('edit-doenca-fim').value;
+  const cond   = document.getElementById('edit-doenca-cond').value.trim();
+  const obs    = document.getElementById('edit-doenca-obs').value.trim();
+  if (!inicio||!cond) { showToast('Preencha data e condição'); return; }
+  const r = window.ST[child].doencas.find(x=>x.id===id);
+  if (!r) return;
+  r.inicio=inicio; r.fim=fim||null; r.cond=cond; r.obs=obs;
+  window.saveState().then(()=>showToast('✓ Episódio atualizado!'));
+  fecharModal('modal-edit-doenca');
+}
+
+function renderDoencas(){renderDoencasChild('lucas');renderDoencasChild('clara');}
+
+function renderDoencasChild(child){
+  const nome=child==='lucas'?'👦 Lucas':'👧 Clara';
+  const regs=[...(window.ST[child]?.doencas||[])].sort((a,b)=>(b.inicio||'').localeCompare(a.inicio||'')).slice(0,10);
+  const el=document.getElementById('list-doencas-'+child);
+  if(!regs.length){el.innerHTML=`<div class="empty"><div class="empty-icon">✅</div><p>${nome} sem episódios registrados.</p></div>`;return;}
+  el.innerHTML=regs.map(r=>`
+    <div class="card sick-card">
+      <div class="row" style="margin-bottom:8px;">
+        <div><span class="badge badge-${child}">${nome}</span> <span class="badge ${r.fim?'badge-ok':'badge-err'}" style="margin-left:4px;">${r.fim?'Recuperado':'Em curso'}</span></div>
+        <div style="display:flex;gap:2px;">
+          <button class="btn-edit" onclick="editarDoenca('${child}',${r.id})">✏️</button>
+          <button class="btn-del"  onclick="deletarDoenca('${child}',${r.id})">🗑</button>
+        </div>
+      </div>
+      <div style="font-size:14px;font-family:'DM Serif Display',serif;">${r.cond}</div>
+      <div style="font-size:12px;color:var(--muted);margin:4px 0 8px;">📅 ${fmtDate(r.inicio)}${r.fim?' → '+fmtDate(r.fim):' (sem data de fim)'}</div>
+      ${r.obs?`<div style="font-size:12px;color:var(--muted);margin-bottom:6px;">${r.obs}</div>`:''}
+      ${r.registradoPor?`<div style="margin-bottom:6px;"><span class="meta-tag">📱 ${r.registradoPor}</span></div>`:''}
+      ${r.remedios?.length?r.remedios.map(m=>`<div class="med-item"><div class="med-icon">💊</div><div class="med-info"><div class="med-name">${m.nome}</div><div class="med-detail">${[m.dose,m.hora,m.duracao].filter(Boolean).join(' · ')}</div></div></div>`).join(''):''}
+    </div>`).join('');
+}
+
+function deletarDoenca(child,id){window.ST[child].doencas=window.ST[child].doencas.filter(r=>r.id!==id);window.saveState().then(()=>showToast('Registro removido'));}
+
+// ── COMPARATIVO ───────────────────────────────────────
+function renderComparativo() {
+  const range = periodoRange();
+  const lSono = (window.ST.lucas?.sono||[]).filter(r=>inPeriodo(getNorma(r).data||getNorma(r).ciclos[0]?.dormiu,range));
+  const cSono = (window.ST.clara?.sono||[]).filter(r=>inPeriodo(getNorma(r).data||getNorma(r).ciclos[0]?.dormiu,range));
+
+  // Gráfico — últimos 7 dias do período
+  const dias = ultimos7dias(range.ate);
+  document.getElementById('chart-comp-sono').innerHTML = dias.map(d=>{
+    const lR=lSono.find(r=>(getNorma(r).data||'').startsWith(d.key)&&duracaoNorma(r));
+    const cR=cSono.find(r=>(getNorma(r).data||'').startsWith(d.key)&&duracaoNorma(r));
+    const lH=lR?duracaoNorma(lR):0, cH=cR?duracaoNorma(cR):0;
+    return `<div class="comp-day"><div class="comp-bars">
+      <div class="comp-bar ${lH>0?'comp-bar-lucas':'comp-bar-empty'}" style="height:${Math.min(100,(lH/12)*100)}%;"></div>
+      <div class="comp-bar ${cH>0?'comp-bar-clara':'comp-bar-empty'}" style="height:${Math.min(100,(cH/12)*100)}%;"></div>
+    </div><div class="comp-daylabel">${d.label}</div></div>`;
+  }).join('');
+
+  const lCompl=lSono.filter(r=>duracaoNorma(r)>0), cCompl=cSono.filter(r=>duracaoNorma(r)>0);
+  const lMedia=lCompl.length?(lCompl.reduce((a,r)=>a+duracaoNorma(r),0)/lCompl.length).toFixed(1):'—';
+  const cMedia=cCompl.length?(cCompl.reduce((a,r)=>a+duracaoNorma(r),0)/cCompl.length).toFixed(1):'—';
+  document.getElementById('stat-media-lucas').textContent=lMedia!=='—'?lMedia+'h':'—';
+  document.getElementById('stat-media-clara').textContent=cMedia!=='—'?cMedia+'h':'—';
+  document.getElementById('stat-noites-lucas').textContent=lCompl.length;
+  document.getElementById('stat-noites-clara').textContent=cCompl.length;
+
+  // Média de despertares por noite (ciclos > 1 = noite interrompida, despertares = ciclos - 1)
+  function mediaDespertares(sono) {
+    const noitesComCiclos = sono.filter(r => getNorma(r).ciclos.length > 0);
+    if (!noitesComCiclos.length) return '—';
+    const totalDes = noitesComCiclos.reduce((sum,r) => {
+      const n = getNorma(r);
+      return sum + Math.max(0, n.ciclos.length - 1);
+    }, 0);
+    return (totalDes / noitesComCiclos.length).toFixed(1);
+  }
+  const lDes = mediaDespertares(lSono), cDes = mediaDespertares(cSono);
+  document.getElementById('stat-despertares-lucas').textContent = lDes !== '—' ? lDes+'x' : '—';
+  document.getElementById('stat-despertares-clara').textContent = cDes !== '—' ? cDes+'x' : '—';
+
+  // Quem vai nas interrupções noturnas (ciclos intermediários, não o primeiro)
+  function contarInterrupcoes(sono) {
+    const c = { Aline:0, 'Tarcísio':0, Outro:0, total:0 };
+    sono.forEach(r => {
+      const n = getNorma(r);
+      // Ciclos a partir do 2º são retornos ao sono após despertar
+      n.ciclos.slice(1).forEach(ciclo => {
+        if (ciclo.quem) { c[ciclo.quem] = (c[ciclo.quem]||0)+1; c.total++; }
+      });
+    });
+    return c;
+  }
+  const lInt = contarInterrupcoes(lSono), cInt = contarInterrupcoes(cSono);
+  function barInterrup(q, cor) {
+    if (!q.total) return '<span style="font-size:12px;color:var(--muted);">Sem dados de interrupções ainda</span>';
+    return ['Aline','Tarcísio','Outro'].map(n => {
+      const v = q[n]||0; if(!v) return '';
+      const pct = Math.round((v/q.total)*100);
+      return `<div style="display:flex;align-items:center;gap:6px;margin-bottom:4px;">
+        <div style="font-size:12px;width:64px;color:var(--muted);">${n}</div>
+        <div style="flex:1;background:#EAE7E1;border-radius:4px;height:8px;overflow:hidden;">
+          <div style="width:${pct}%;height:100%;background:${cor};border-radius:4px;"></div>
+        </div>
+        <div style="font-size:11px;font-weight:600;color:var(--muted);">${v}x (${pct}%)</div>
+      </div>`;
+    }).join('');
+  }
+  const elInterrup = document.getElementById('card-quem-interrup');
+  if (elInterrup) elInterrup.innerHTML = `
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+      <div><div style="font-size:11px;font-weight:600;color:var(--lucas);text-transform:uppercase;letter-spacing:.5px;margin-bottom:8px;">👦 Lucas</div>${barInterrup(lInt,'var(--lucas)')}</div>
+      <div><div style="font-size:11px;font-weight:600;color:var(--clara);text-transform:uppercase;letter-spacing:.5px;margin-bottom:8px;">👧 Clara</div>${barInterrup(cInt,'var(--clara)')}</div>
+    </div>`;
+
+  // Saúde
+  const lDoencas=(window.ST.lucas?.doencas||[]).filter(r=>inPeriodo(r.inicio,range));
+  const cDoencas=(window.ST.clara?.doencas||[]).filter(r=>inPeriodo(r.inicio,range));
+  document.getElementById('stat-doencas-lucas').textContent=lDoencas.length;
+  document.getElementById('stat-doencas-clara').textContent=cDoencas.length;
+  document.getElementById('stat-remedios-lucas').textContent=lDoencas.reduce((a,d)=>a+(d.remedios?.length||0),0);
+  document.getElementById('stat-remedios-clara').textContent=cDoencas.reduce((a,d)=>a+(d.remedios?.length||0),0);
+
+  // Quem fez dormir
+  function contarQuem(sono) {
+    const c={Aline:0,'Tarcísio':0,Outro:0,total:0};
+    sono.forEach(r=>{const n=getNorma(r);if(n.quem){c[n.quem]=(c[n.quem]||0)+1;c.total++;}});
+    return c;
+  }
+  const lQ=contarQuem(lSono), cQ=contarQuem(cSono);
+  function barQuem(q,total,cor) {
+    if(!total)return'<span style="font-size:12px;color:var(--muted);">—</span>';
+    return ['Aline','Tarcísio','Outro'].map(n=>{
+      const v=q[n]||0; if(!v)return'';
+      const pct=Math.round((v/total)*100);
+      return `<div style="display:flex;align-items:center;gap:6px;margin-bottom:4px;">
+        <div style="font-size:12px;width:64px;color:var(--muted);">${n}</div>
+        <div style="flex:1;background:#EAE7E1;border-radius:4px;height:8px;overflow:hidden;">
+          <div style="width:${pct}%;height:100%;background:${cor};border-radius:4px;"></div>
+        </div>
+        <div style="font-size:11px;font-weight:600;color:var(--muted);">${v}x</div>
+      </div>`;
+    }).join('');
+  }
+  document.getElementById('card-quem-dormiu').innerHTML=`
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+      <div><div style="font-size:11px;font-weight:600;color:var(--lucas);text-transform:uppercase;letter-spacing:.5px;margin-bottom:8px;">👦 Lucas</div>${barQuem(lQ,lQ.total,'var(--lucas)')}</div>
+      <div><div style="font-size:11px;font-weight:600;color:var(--clara);text-transform:uppercase;letter-spacing:.5px;margin-bottom:8px;">👧 Clara</div>${barQuem(cQ,cQ.total,'var(--clara)')}</div>
+    </div>`;
+
+  // Horários médios
+  function mediaH(sono,campo){
+    const vals=sono.filter(r=>{
+      const n=getNorma(r);
+      if(campo==='dormiu') return n.ciclos[0]&&n.ciclos[0].dormiu;
+      // Para acordou: pega o último ciclo com acordou preenchido (acordar definitivo)
+      return n.ciclos.some(c=>c.acordou);
+    }).map(r=>{
+      const n=getNorma(r);
+      let horario;
+      if(campo==='dormiu'){
+        horario=n.ciclos[0].dormiu;
+      } else {
+        // Último acordou da noite (não intermediário)
+        const ultCiclo=[...n.ciclos].reverse().find(c=>c.acordou);
+        horario=ultCiclo?.acordou;
+      }
+      if(!horario)return null;
+      const d=new Date(horario);
+      return d.getHours()*60+d.getMinutes();
+    }).filter(v=>v!==null);
+    return vals.length?minToTime(Math.round(vals.reduce((a,b)=>a+b,0)/vals.length)):'—';
+  }
+  document.getElementById('card-horarios').innerHTML=`<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+    <div><div style="font-size:11px;font-weight:600;color:var(--lucas);text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px;">👦 Lucas</div>
+      <div style="font-size:12px;color:var(--muted);">🌙 Dorme em média</div><div style="font-size:20px;font-family:'DM Serif Display',serif;color:var(--lucas);">${mediaH(lSono,'dormiu')}</div>
+      <div style="font-size:12px;color:var(--muted);margin-top:6px;">☀️ Acorda em média</div><div style="font-size:20px;font-family:'DM Serif Display',serif;color:var(--lucas);">${mediaH(lCompl,'acordou')}</div></div>
+    <div><div style="font-size:11px;font-weight:600;color:var(--clara);text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px;">👧 Clara</div>
+      <div style="font-size:12px;color:var(--muted);">🌙 Dorme em média</div><div style="font-size:20px;font-family:'DM Serif Display',serif;color:var(--clara);">${mediaH(cSono,'dormiu')}</div>
+      <div style="font-size:12px;color:var(--muted);margin-top:6px;">☀️ Acorda em média</div><div style="font-size:20px;font-family:'DM Serif Display',serif;color:var(--clara);">${mediaH(cCompl,'acordou')}</div></div>
+  </div>`;
+
+  // Evolução mês a mês
+  renderEvolucao();
+
+  // Perfil
+  document.getElementById('card-perfil').innerHTML=['lucas','clara'].map(child=>{
+    const c=window.ST[child];
+    return `<div class="stat-comp"><div class="stat-comp-header ${child}">${child==='lucas'?'👦':'👧'} ${c.nome}</div>
+      <div style="font-size:13px;color:var(--muted);">Nascimento</div><div style="font-size:14px;font-weight:600;color:var(--${child});">${fmtDate(c.nascimento)}</div>
+      <div style="font-size:13px;color:var(--muted);margin-top:6px;">Idade</div><div style="font-size:14px;font-weight:600;color:var(--${child});">${calcIdade(c.nascimento)}</div>
+      <div style="font-size:13px;color:var(--muted);margin-top:6px;">Sexo</div><div style="font-size:13px;font-weight:600;color:var(--${child});">${c.sexo==='masculino'?'♂ Masculino':'♀ Feminino'}</div>
+    </div>`;
+  }).join('');
+}
+
+function renderEvolucao() {
+  const allSono = [...(window.ST.lucas?.sono||[]).map(r=>({...getNorma(r),child:'lucas'})),
+                   ...(window.ST.clara?.sono||[]).map(r=>({...getNorma(r),child:'clara'}))];
+
+  // Agrupa por mês
+  const meses = {};
+  allSono.forEach(r => {
+    const data = r.data || r.ciclos[0]?.dormiu;
+    if (!data) return;
+    const mes = data.slice(0,7); // YYYY-MM
+    if (!meses[mes]) meses[mes] = {
+      lucas:{total:0,count:0,int:0,totalDespertares:0,totalNoites:0},
+      clara:{total:0,count:0,int:0,totalDespertares:0,totalNoites:0}
+    };
+    const dur = duracaoNorma(r);
+    if (dur>0) { meses[mes][r.child].total+=dur; meses[mes][r.child].count++; }
+    if (r.interrompida) meses[mes][r.child].int++;
+    const nCiclos = r.ciclos ? r.ciclos.length : 1;
+    meses[mes][r.child].totalDespertares += Math.max(0, nCiclos - 1);
+    meses[mes][r.child].totalNoites++;
+  });
+
+  const keys = Object.keys(meses).sort();
+  if (!keys.length) { document.getElementById('card-evolucao').innerHTML=`<div class="empty"><p>Sem dados suficientes.</p></div>`; return; }
+
+  const fmtMes = k => { const [y,m]=k.split('-'); return new Date(y,m-1,1).toLocaleDateString('pt-BR',{month:'short',year:'2-digit'}); };
+
+  document.getElementById('card-evolucao').innerHTML=`<table class="evolucao-table">
+    <thead><tr>
+      <th>Mês</th>
+      <th style="color:var(--lucas);">👦 Média</th>
+      <th style="color:var(--lucas);">Noites</th>
+      <th style="color:var(--lucas);">Despert.</th>
+      <th style="color:var(--clara);">👧 Média</th>
+      <th style="color:var(--clara);">Noites</th>
+      <th style="color:var(--clara);">Despert.</th>
+    </tr></thead>
+    <tbody>${keys.map(k=>{
+      const l=meses[k].lucas, c=meses[k].clara;
+      const lM=l.count?(l.total/l.count).toFixed(1):'—';
+      const cM=c.count?(c.total/c.count).toFixed(1):'—';
+      const lDes=l.totalNoites?(l.totalDespertares/l.totalNoites).toFixed(1):'—';
+      const cDes=c.totalNoites?(c.totalDespertares/c.totalNoites).toFixed(1):'—';
+      return `<tr>
+        <td style="font-weight:600;">${fmtMes(k)}</td>
+        <td style="color:var(--lucas);">${lM!=='—'?lM+'h':'—'}</td>
+        <td style="color:var(--lucas);">${l.count}</td>
+        <td style="color:var(--lucas);">${lDes!=='—'?lDes+'x':'—'}</td>
+        <td style="color:var(--clara);">${cM!=='—'?cM+'h':'—'}</td>
+        <td style="color:var(--clara);">${c.count}</td>
+        <td style="color:var(--clara);">${cDes!=='—'?cDes+'x':'—'}</td>
+      </tr>`;
+    }).join('')}</tbody>
+  </table>`;
+}
+
+// ── HISTÓRICO ─────────────────────────────────────────
+function renderHistorico() {
+  const f=window._filtroHistorico;
+  let items=[];
+  ['lucas','clara'].forEach(child=>{
+    const nome=child==='lucas'?'Lucas':'Clara';
+    if(f!=='saude'&&(f==='todos'||f===child||f==='sono')){
+      (window.ST[child]?.sono||[]).forEach(r=>{
+        const n=getNorma(r),dur=duracaoNorma(r),emAberto=n.ciclos.some(c=>c.dormiu&&!c.acordou);
+        const primDormiu=n.ciclos[0]?.dormiu,ultAcordou=[...n.ciclos].reverse().find(c=>c.acordou)?.acordou;
+        const meta=[n.quem?`👤 ${n.quem}`:'',n.registradoPor?`📱 ${n.registradoPor}`:''].filter(Boolean).join(' · ');
+        items.push({tipo:'sono',child,data:primDormiu||n.data||'',
+          titulo:emAberto?`${nome} — sono em aberto`:dur?`${nome} — ${dur}h${n.interrompida?' (interrompida)':''}`:nome,
+          detalhe:[primDormiu?`🌙 ${fmtDT(primDormiu)}`:'',ultAcordou?`→ ☀️ ${fmtDT(ultAcordou)}`:emAberto?'(aguardando acordar)':'',n.ciclos.length>1?`${n.ciclos.length} ciclos`:'',meta,n.obs||''].filter(Boolean).join('  ·  ')});
+      });
+    }
+    if(f!=='sono'&&(f==='todos'||f===child||f==='saude')){
+      (window.ST[child]?.doencas||[]).forEach(r=>{
+        const meta=r.registradoPor?`📱 ${r.registradoPor}`:'';
+        items.push({tipo:'saude',child,data:r.inicio+'T00:00',
+          titulo:`${nome} — ${r.cond}`,
+          detalhe:[`📅 ${fmtDate(r.inicio)}${r.fim?' → '+fmtDate(r.fim):''}`,`${r.remedios?.length||0} remédio(s)`,meta].filter(Boolean).join('  ·  ')});
+      });
+    }
+  });
+  items.sort((a,b)=>(b.data||'').localeCompare(a.data||''));
+  const el=document.getElementById('timeline-historico');
+  if(!items.length){el.innerHTML=`<div class="empty"><div class="empty-icon">📋</div><p>Nenhum registro encontrado.</p></div>`;return;}
+  el.innerHTML=items.slice(0,60).map(it=>`<div class="tl-item">
+    <div class="tl-dot ${it.tipo==='sono'?`tl-dot-${it.child}-sleep`:'tl-dot-sick'}">${it.tipo==='sono'?(it.child==='lucas'?'😴':'💤'):'🏥'}</div>
+    <div class="tl-content"><div class="tl-title">${it.titulo}</div><div class="tl-body">${it.detalhe}</div><div class="tl-date">${fmtDT(it.data)}</div></div>
+  </div>`).join('');
+}
+
+// ── RESUMO IA — HISTÓRICO COMPLETO ────────────────────
+async function gerarResumo() {
+  if(!window.FUNCTION_URL||window.FUNCTION_URL.includes('PASTE')){showToast('Configure o FUNCTION_URL');return;}
+  const btn=document.getElementById('btn-resumo');
+  btn.disabled=true; btn.innerHTML='<span class="spin">⟳</span> Gerando...';
+  try {
+    const range=periodoRange();
+    const token=await window._fbUser.getIdToken(true);
+    const payload={
+      periodo:{de:range.de,ate:range.ate},
+      lucas:{nome:'Lucas',nascimento:'2020-11-06',sexo:'masculino',sono:(window.ST.lucas?.sono||[]).slice(0,14).map(r=>getNorma(r)),doencas:(window.ST.lucas?.doencas||[]).slice(0,10)},
+      clara:{nome:'Clara',nascimento:'2023-11-03',sexo:'feminino', sono:(window.ST.clara?.sono||[]).slice(0,14).map(r=>getNorma(r)),doencas:(window.ST.clara?.doencas||[]).slice(0,10)}
+    };
+    const res=await fetch(window.FUNCTION_URL,{method:'POST',headers:{'Authorization':`Bearer ${token}`,'Content-Type':'application/json'},body:JSON.stringify(payload)});
+    const data=await res.json();
+    // Salva no histórico de análises
+    window.ST.resumos=window.ST.resumos||[];
+    window.ST.resumos.unshift({id:Date.now(),texto:data.resumo,geradoEm:new Date().toISOString(),periodoDe:range.de,periodoAte:range.ate});
+    if(window.ST.resumos.length>20) window.ST.resumos=window.ST.resumos.slice(0,20); // máx 20 análises
+    await window.saveState();
+    renderResumos();
+    showToast('✓ Resumo gerado!');
+  } catch(e){ showToast('Erro ao gerar resumo.'); }
+  finally{ btn.disabled=false; btn.innerHTML='Gerar resumo desta semana'; }
+}
+
+function renderResumos() {
+  const resumos=window.ST.resumos||[];
+  const el=document.getElementById('resumo-content');
+  if(!resumos.length){
+    el.innerHTML=`<div class="empty" style="margin-top:10px;"><div class="empty-icon">✨</div><p>Clique em "Gerar resumo" para obter a primeira análise.</p></div>`;
+    return;
+  }
+  el.innerHTML=resumos.map((r,i)=>`
+    <div class="ai-box" style="margin-top:10px;">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:4px;">
+        <h3>✨ Análise ${i===0?'mais recente':'#'+(i+1)}</h3>
+        <button onclick="deletarResumo(${r.id})" style="background:none;border:none;cursor:pointer;font-size:16px;color:var(--purple);opacity:.6;padding:0 0 0 8px;" title="Excluir análise">🗑</button>
+      </div>
+      <div class="ai-box-periodo">📅 Período: ${fmtDate(r.periodoDe)} → ${fmtDate(r.periodoAte)}</div>
+      <p>${r.texto.replace(/\n/g,'<br>')}</p>
+      <div class="ai-date">Gerado em ${fmtDT(r.geradoEm)}</div>
+    </div>`).join('');
+}
+
+function deletarResumo(id) {
+  window.ST.resumos = (window.ST.resumos||[]).filter(r => r.id !== id);
+  window.saveState().then(() => { showToast('Análise removida'); renderResumos(); });
+}
+
+// ── UTILS ─────────────────────────────────────────────
+function ultimos7dias(ate) {
+  const dias=[], fim=ate?new Date(ate+'T12:00'):new Date();
+  for(let i=6;i>=0;i--){
+    const d=new Date(fim); d.setDate(fim.getDate()-i);
+    dias.push({key:d.toISOString().slice(0,10),label:d.toLocaleDateString('pt-BR',{weekday:'short'}).slice(0,3)});
+  }
+  return dias;
+}
+
+selectSaudeChild('lucas');
 </script>
-<div class="toast" id="toast"></div>
 </body>
 </html>
