@@ -74,8 +74,10 @@ def google_search(query, num=8):
     try:
         with urllib.request.urlopen(url, timeout=10) as resp:
             data = json.loads(resp.read())
+        items = data.get("items", [])
+        print(f"    Google retornou {len(items)} resultados")
         results = []
-        for item in data.get("items", []):
+        for item in items:
             results.append({
                 "title":   item.get("title", ""),
                 "url":     item.get("link", ""),
@@ -83,6 +85,10 @@ def google_search(query, num=8):
                 "source":  item.get("displayLink", ""),
             })
         return results
+    except urllib.error.HTTPError as e:
+        body = e.read().decode()
+        print(f"    ⚠ Erro Google Search HTTP {e.code}: {body[:300]}")
+        return []
     except Exception as e:
         print(f"    ⚠ Erro Google Search: {e}")
         return []
