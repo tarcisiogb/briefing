@@ -128,16 +128,16 @@ def buscar_tema(tema_id, tema_label, tema_query, data_inicio, data_fim):
 
 def main():
     hoje      = date.today()
-    dois_dias = hoje - timedelta(days=2)
+    sete_dias = hoje - timedelta(days=7)
 
-    data_inicio_str = fmt_date(dois_dias)
+    data_inicio_str = fmt_date(sete_dias)
     data_fim_str    = fmt_date(hoje - timedelta(days=1))
     data_edicao = (f"{DIAS_PT.get(hoje.strftime('%A'), hoje.strftime('%A'))}, "
                    f"{hoje.day} de {MESES_PT.get(hoje.strftime('%B'), hoje.strftime('%B'))} de {hoje.year}")
 
     print(f"\n{'='*58}")
     print(f"Daily News — {data_edicao}")
-    print(f"Período: {data_inicio_str} a {data_fim_str}")
+    print(f"Período: {data_inicio_str} a {data_fim_str} (últimos 7 dias)")
     print(f"Modelo: Haiku 4.5 | Busca: Anthropic web_search")
     print(f"{'='*58}")
 
