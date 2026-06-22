@@ -19,6 +19,9 @@ jobs:
           fetch-depth: 0
           token: ${{ secrets.GH_TOKEN }}
 
+      - name: Sincronizar com repositório remoto
+        run: git pull origin main
+
       - name: Python
         uses: actions/setup-python@v5
         with:
@@ -40,9 +43,6 @@ jobs:
         run: |
           git config user.name "Daily News Bot"
           git config user.email "bot@dailynews"
-          git stash
-          git pull --rebase origin main
-          git stash pop
           git add dados/
           git diff --cached --quiet || git commit -m "Briefing $(date +'%d/%m/%Y')"
           git push https://x-access-token:${GH_TOKEN}@github.com/tarcisiogb/dailynews.git main
