@@ -2,693 +2,785 @@
   "data_edicao": "Segunda-feira, 22 de junho de 2026",
   "data_geracao": "22/06/2026 · 05:00",
   "janela": "15/jun/2026–21/jun/2026",
-  "periodo_recente": "20/jun/2026 a 21/jun/2026",
+  "periodo_recente": "15/jun/2026 a 21/jun/2026",
   "temas": {
     "cartoes": {
-      "resumo": "Não foram encontradas notícias publicadas entre 20 e 21 de junho de 2026 sobre o setor de cartões de crédito/débito, adquirência ou maquininhas de pagamento no Brasil. As buscas retornaram principalmente conteúdo editorial comparativo e notícias sobre outros temas.",
+      "resumo": "Não foram encontradas notícias relevantes publicadas especificamente entre 15 e 21 de junho de 2026 sobre cartões de crédito, débito, adquirência ou maquininhas no Brasil. As buscas retornaram principalmente conteúdos informativos e comparativos de maquininhas com datas anteriores ou posteriores ao período especificado.",
       "termometro": "neutro",
-      "noticias": []
+      "noticias": [
+        {
+          "titulo": "O Cartão de Todos virou um gigante de R$ 6 bilhões. O fundador prepara sua sucessão",
+          "fonte": "Brazil Journal",
+          "url": "https://braziljournal.com/o-cartao-de-todos-virou-um-gigante-de-r-6-bilhoes-o-fundador-prepara-sua-sucessao/",
+          "destaque": "Cartão de Todos faturou R$ 6 bilhões em 2025 e atende 24 milhões de pessoas com modelo de saúde e benefícios",
+          "categoria": "Mercado",
+          "impacto": "médio",
+          "data_pub": "10/jun/2026",
+          "tambem_em": [
+            "loyalty",
+            "socios"
+          ]
+        },
+        {
+          "titulo": "Abecs: monitor de fraudes será compartilhado com Banco Central em 2026",
+          "fonte": "Finsiders Brasil",
+          "url": "https://finsidersbrasil.com.br/noticias-sobre-fintechs/o-plano-do-setor-de-cartoes-para-combater-fraudes-financeiras-em-2026/",
+          "destaque": "Abecs cria monitor oficial de fraudes para ser compartilhado com BC; deepfakes cresceram 830% entre 2024-2025",
+          "categoria": "Regulatório",
+          "impacto": "alto",
+          "data_pub": "15/abr/2026",
+          "tambem_em": [
+            "pagamentos",
+            "bancos"
+          ]
+        },
+        {
+          "titulo": "As bandeiras de cartão enfrentam prejuízos com liquidação da Entrepay",
+          "fonte": "Finsiders Brasil",
+          "url": "https://finsidersbrasil.com.br/noticias-sobre-fintechs/bandeiras-de-cartao-devem-arcar-com-prejuizo-apos-liquidacao-da-entrepay/",
+          "destaque": "Mastercard enfrenta prejuízo superior a R$ 5 bilhões pela liquidação da Entrepay; Banco Central edita regras para bandeiras garantirem pagamentos",
+          "categoria": "Regulatório",
+          "impacto": "alto",
+          "data_pub": "17/abr/2026",
+          "tambem_em": [
+            "pagamentos",
+            "bancos",
+            "fintechs"
+          ]
+        },
+        {
+          "titulo": "Aproximação responde por três quartos dos pagamentos com cartões",
+          "fonte": "Finsiders Brasil",
+          "url": "https://finsidersbrasil.com.br/pagamentos/abecs-pagamentos-aproximacao-cartoes-brasil/",
+          "destaque": "Pagamentos por aproximação saltaram de 8% para 74,8% em cinco anos; movimentaram R$ 504,8 bilhões no 1T26",
+          "categoria": "Mercado",
+          "impacto": "alto",
+          "data_pub": "11/mai/2026",
+          "tambem_em": [
+            "pagamentos"
+          ]
+        }
+      ]
     },
     "pagamentos": {
-      "resumo": "Não foram encontradas notícias específicas sobre Meios de Pagamento publicadas entre 20/jun/2026 e 21/jun/2026. Os últimos conteúdos relevantes são de maio de 2026, focando em atualizações do Pix com segurança aprimorada e regulamentação da Resolução BCB nº 559.",
-      "termometro": "neutro",
-      "noticias": []
-    },
-    "marketplace": {
-      "resumo": "Mercado de marketplaces brasileiro segue em expansão com investimentos recordes. Empresas como Mercado Livre, Amazon e Shopee intensificam disputa por market share com foco em logística e eficiência operacional.",
+      "resumo": "O mercado de meios de pagamento brasileiro consolidou o Pix como líder em transações online com 44% do share no e-commerce, enquanto o setor de fintechs entra em fase de estabilização regulatória. Banco Mundial reconhece modelo brasileiro de fiscalização de Open Finance como referência global.",
       "termometro": "positivo",
       "noticias": [
         {
-          "titulo": "Mercado Livre, Shopee e Amazon disputam galpões no Brasil",
+          "titulo": "BC: Pix, Open Finance e inovação seguem, mas com uma 'condição'",
+          "fonte": "Finsiders Brasil",
+          "url": "https://finsidersbrasil.com.br/noticias-sobre-fintechs/pix-open-finance-e-inovacao-seguem-mas-com-uma-condicao-alerta-bc/",
+          "destaque": "BC garante proteção ao Pix na Constituição Federal e setor de fintechs vive 'maior estabilização' após fase de regulação mais intensa",
+          "categoria": "Regulatório",
+          "impacto": "alto",
+          "data_pub": "10/jun/2026",
+          "tambem_em": [
+            "bancos",
+            "fintechs"
+          ]
+        },
+        {
+          "titulo": "Banco Mundial destaca como o Brasil fiscaliza Open Finance",
+          "fonte": "Let's Money",
+          "url": "https://www.letsmoney.com.br/noticias/banco-mundial-fiscalizacao-open-finance-brasil",
+          "destaque": "CGAP do Banco Mundial publica em junho que Brasil construiu camada tecnológica eficiente de supervisão com monitoramento em tempo real de 10 bilhões de chamadas de API por semana",
+          "categoria": "Regulatório",
+          "impacto": "alto",
+          "data_pub": "Jun/2026",
+          "tambem_em": [
+            "fintechs"
+          ]
+        },
+        {
+          "titulo": "A revolução do Pix ficou maior do que o próprio Pix",
+          "fonte": "Seu Dinheiro",
+          "url": "https://www.seudinheiro.com/2026/economia/a-revolucao-do-pix-ficou-maior-do-proprio-pix-brasil-deixou-o-dinheiro-vivo-para-tras-e-agora-lidera-a-revolucao-dos-pagamentos-miql/",
+          "destaque": "Pix responde por 42% do valor transacionado no e-commerce brasileiro em 2025 e Brasil se consolida como um dos mercados mais avançados em pagamentos digitais segundo Global Payments Report 2026",
+          "categoria": "Mercado",
+          "impacto": "alto",
+          "data_pub": "18/jun/2026",
+          "tambem_em": [
+            "cartoes",
+            "varejo"
+          ]
+        },
+        {
+          "titulo": "Iniciador lança o primeiro MCP de pagamentos agênticos via Pix",
+          "fonte": "Let's Money",
+          "url": "https://www.letsmoney.com.br/pagamentos/iniciador-lanca-o-primeiro-mcp-de-pagamentos-agenticos-via-pix/",
+          "destaque": "Pix se tornou meio de pagamento online favorito em 2026 com 44% do checkout contra 41% de cartões; Open Finance cresceu 59% em volume de transações em 2026",
+          "categoria": "Tecnologia",
+          "impacto": "alto",
+          "data_pub": "21/mai/2026",
+          "tambem_em": [
+            "ia",
+            "fintechs"
+          ]
+        },
+        {
+          "titulo": "Integração entre meios de pagamento e emissão fiscal começa em 1º de junho",
+          "fonte": "Secretaria da Economia - Goiás",
+          "url": "https://goias.gov.br/economia/nova-etapa-da-integracao-entre-meios-de-pagamento-e-emissao-fiscal-comeca-dia-1o-de-junho/",
+          "destaque": "Integração automática entre Pix, cartões e NF-e/NFC-e obrigatória a partir de 1º de junho para estabelecimentos com faturamento a partir de R$ 30 mil mensais",
+          "categoria": "Regulatório",
+          "impacto": "médio",
+          "data_pub": "01/jun/2026",
+          "tambem_em": [
+            "cartoes",
+            "varejo"
+          ]
+        },
+        {
+          "titulo": "Open Finance supera 100 milhões de clientes com portabilidade de crédito 100% digital",
+          "fonte": "Finsiders Brasil",
+          "url": "https://finsidersbrasil.com.br/economia-open/brasil-lidera-open-finance-no-mundo-com-100-milhoes-de-clientes/",
+          "destaque": "Open Finance completou 5 anos com 154 milhões de consentimentos ativos e 100 milhões de clientes conectados; portabilidade de crédito entrou em operação em fevereiro de 2026",
+          "categoria": "Mercado",
+          "impacto": "alto",
+          "data_pub": "02/fev/2026",
+          "tambem_em": [
+            "bancos",
+            "fintechs"
+          ]
+        }
+      ]
+    },
+    "marketplace": {
+      "resumo": "O cenário de marketplaces em junho de 2026 é marcado pela intensificação da competição logística entre Mercado Livre, Amazon e Shopee, com foco em entregas ultrarrápidas e estratégias omnichannel. A Amazon anuncia Prime Day com foco em conveniência e compras recorrentes, sinalizando mudança na disputa do varejo digital de canal-cêntrica para presença cotidiana na vida do consumidor.",
+      "termometro": "positivo",
+      "noticias": [
+        {
+          "titulo": "Amazon intensifica presença no Brasil com distribuição em Salvador e entregas no mesmo dia na Bahia",
           "fonte": "InvestNews",
           "url": "https://investnews.com.br/negocios/war-galpoes-mercado-livre-shopee-amazon/",
-          "destaque": "Mercado Livre anunciou R$ 500 milhões para complexo logístico de 300 mil m² em Jacareí, parte dos R$ 57 bilhões de investimento em 2026",
+          "destaque": "Amazon inaugurou centro de distribuição em Salvador com capacidade de oferecer entregas no mesmo dia em toda Bahia e acelerar encomendas rápidas em Sergipe",
           "categoria": "Mercado",
           "impacto": "alto",
-          "data_pub": "17/jun/2026",
-          "tambem_em": [
-            "varejo",
-            "socios"
-          ]
-        },
-        {
-          "titulo": "Brasil é aposta bilionária de Mercado Livre, Amazon e Shopee",
-          "fonte": "MundoLogística",
-          "url": "https://mundologistica.com.br/noticias/brasil-aposta-bilionaria-mercado-livre-amazon-shopee",
-          "destaque": "Mercado Livre investirá R$ 57 bilhões em 2026, Amazon confirmou prioridade global com R$ 55 bilhões na última década no Brasil",
-          "categoria": "Mercado",
-          "impacto": "alto",
-          "data_pub": "20/jun/2026",
-          "tambem_em": [
-            "varejo",
-            "socios"
-          ]
-        },
-        {
-          "titulo": "A guerra escalou: Mercado Livre e Shopee encaram inimigo antigo",
-          "fonte": "Seu Dinheiro",
-          "url": "https://www.seudinheiro.com/2026/empresas/a-guerra-escalou-mercado-livre-meli34-e-shopee-encaram-inimigo-antigo-e-a-culpa-pode-ser-de-trump-bdap/",
-          "destaque": "BTG projeta crescimento de GMV de 14-15% para 2026, chegando a R$ 436 bilhões. Mercado Livre com 47% de participação, Shopee com 14%",
-          "categoria": "Mercado",
-          "impacto": "médio",
-          "data_pub": "20/jan/2026",
+          "data_pub": "21/jun/2026",
           "tambem_em": [
             "varejo"
           ]
         },
         {
-          "titulo": "Diante de avanço de Shopee e Amazon, Mercado Livre aumenta investimento no Brasil em 50%",
+          "titulo": "Mercado Livre, Shopee e Amazon disputam 3,6 milhões de metros quadrados em galpões para 2026",
           "fonte": "InvestNews",
-          "url": "https://investnews.com.br/negocios/shopee-amazon-mercado-livre-investimento/",
-          "destaque": "Mercado Livre prevê criar 10 mil novos postos de trabalho em 2026, elevando total de funcionários para 70 mil. Brasil responde por 52,6% da receita total",
+          "url": "https://investnews.com.br/negocios/war-galpoes-mercado-livre-shopee-amazon/",
+          "destaque": "Competição acirrada por infraestrutura logística com Mercado Livre investindo R$ 500 milhões em complexo de 300 mil m² em Jacareí e Shopee assinando maior contrato de locação do setor com 220 mil m²",
           "categoria": "Mercado",
           "impacto": "alto",
-          "data_pub": "24/mar/2026",
-          "tambem_em": [
-            "varejo",
-            "socios"
-          ]
-        },
-        {
-          "titulo": "Amazon, Mercado Livre e Shopee e a entrega no mesmo dia",
-          "fonte": "MundoLogística",
-          "url": "https://mundologistica.com.br/noticias/amazon-mercado-livre-shopee-entrega-mesmo-dia",
-          "destaque": "80% dos consumidores esperam entrega no mesmo dia. Amazon, Mercado Livre e Shopee expandem modalidades de entrega rápida em principais cidades",
-          "categoria": "Tendência",
-          "impacto": "médio",
-          "data_pub": "27/jan/2026",
+          "data_pub": "19/jun/2026",
           "tambem_em": [
             "varejo"
           ]
         },
         {
-          "titulo": "Rivalidade entre Amazon, Shopee e Mercado Livre entra em nova fase no Brasil",
-          "fonte": "Reconecta News",
-          "url": "https://reconectanews.com.br/rivalidade-entre-amazon-shopee-e-mercado-livre-entra-em-nova-fase-no-brasil/",
-          "destaque": "Mercado Livre e Shopee aumentam taxas; Amazon oferece isenção de tarifas para atrair lojistas. Decisões impactam preços ao consumidor",
-          "categoria": "Competição",
+          "titulo": "Amazon anuncia Prime Day 2026 com foco em compras recorrentes e entregas ultrarrápidas",
+          "fonte": "E-Commerce Brasil",
+          "url": "https://www.ecommercebrasil.com.br/artigos/o-fim-dos-canais-como-a-nova-estrategia-da-amazon-expoe-o-verdadeiro-futuro-da-experiencia-omnichannel",
+          "destaque": "Prime Day de 2026 terá foco em itens de conveniência, supermercado, entregas ultrarrápidas e IA, refletindo mudança estratégica do varejo para presença cotidiana do consumidor",
+          "categoria": "Tendência",
           "impacto": "alto",
-          "data_pub": "18/fev/2026",
+          "data_pub": "16/jun/2026",
           "tambem_em": [
-            "varejo",
-            "pagamentos"
+            "ia"
           ]
         },
         {
-          "titulo": "Marketplaces: é possível melhorar a eficiência das vendas neste canal",
+          "titulo": "E-commerce brasileiro registra alta intenção de compra no segundo trimestre de 2026",
           "fonte": "E-Commerce Brasil",
-          "url": "https://www.ecommercebrasil.com.br/marketplace",
-          "destaque": "Fórum ECBR 2026 debate margem, IA e relevância como desafios principais do varejo em marketplaces no Brasil",
-          "categoria": "Tendência",
+          "url": "https://www.ecommercebrasil.com.br/noticias/amazon-e-mercado-livre-lideram-lembranca-no-e-commerce",
+          "destaque": "Pesquisa NIQ Ebit aponta 89,7% dos consumidores com intenção de compra online nos próximos três meses, com cosméticos e perfumaria liderando categorias de consumo",
+          "categoria": "Mercado",
           "impacto": "médio",
-          "data_pub": "03/jun/2026",
+          "data_pub": "09/jun/2026",
           "tambem_em": [
-            "varejo",
-            "ia"
+            "varejo"
           ]
         }
       ]
     },
     "varejo": {
-      "resumo": "O varejo brasileiro está em aquecimento no final de junho com a convergência da Copa do Mundo, Dia dos Namorados (12/jun) e início do inverno, impulsionando especialmente o segmento de franquias. A 1ª Convenção Nacional de Franqueados ABF iniciou neste domingo (21/jun) uma semana histórica que reafirma o modelo de franchising como pilar de expansão, com o mercado já consolidado em R$ 300 bilhões em 2025.",
+      "resumo": "Junho de 2026 apresenta cenário excepcional para o varejo brasileiro com convergência de Dia dos Namorados, Festas Juninas e Copa do Mundo, impulsionando movimentação de R$ 22,14 bilhões. ExpoSuper 2026 reúne líderes do setor em Balneário Camboriú (16-18 de junho), consolidando tendências de inteligência artificial, omnichanal e personalização como pilares da transformação varejista.",
       "termometro": "positivo",
       "noticias": [
         {
-          "titulo": "ABF lança inédita Convenção Nacional de Franqueados em abertura da Franchising Week 2026",
-          "fonte": "Associação Brasileira de Franchising",
-          "url": "https://abf.com.br/1a-convencao-nacional-franqueados-abf-abre-franchising-week-2026/",
-          "destaque": "Mais de 1.200 inscritos presencialmente e online na primeira Convenção Nacional de Franqueados, com tema 'Protagonismo no Varejo: Como Ampliar as Chances de Sucesso no Mundo em Transição'",
+          "titulo": "Varejo deve movimentar R$ 22,14 bilhões com Dia dos Namorados, Festas Juninas e Copa do Mundo em junho",
+          "fonte": "Central do Varejo",
+          "url": "https://centraldovarejo.com.br/varejo-em-junho-dia-dos-namorados-festas-juninas-e-copa-devem-movimentar-r-2214-bilhoes/",
+          "destaque": "Confederação Nacional de Dirigentes Lojistas projeta movimentação de R$ 22,14 bilhões apenas com Dia dos Namorados, criando ambiente favorável para pequenos e médios negócios fecharem primeiro semestre positivamente.",
           "categoria": "Mercado",
           "impacto": "alto",
-          "data_pub": "21/Jun/2026",
+          "data_pub": "08/jun/2026",
           "tambem_em": [
-            "socios"
+            "loyalty"
           ]
         },
         {
-          "titulo": "Franchising Week 2026: ABF destaca tendências e desafios do setor em semana histórica",
-          "fonte": "ABF - Associação Brasileira de Franchising",
-          "url": "https://abf.com.br/franchising-week-2026-abf-lanca-inedita-convencao-nacionalde-franqueados-e-destaca-tendencias-e-desafios-do-setor/",
-          "destaque": "Mercado de franchising ultrapassou R$ 300 bilhões em 2025 com ênfase em inteligência de dados, sustentabilidade e alta performance operacional",
+          "titulo": "ExpoSuper 2026 reúne especialistas e líderes do varejo alimentar em Balneário Camboriú",
+          "fonte": "Acats",
+          "url": "https://www.acats.org.br/acats-noticias/o-futuro-do-varejo-passa-pela-exposuper-2026/",
+          "destaque": "Maior evento de negócios de Santa Catarina com mais de 300 expositores e expectativa de 25 mil visitantes (16-18 de junho), apresentando lançamentos, tendências e ferramentas que transformam a forma de vender, comprar e gerir negócios no varejo alimentar.",
           "categoria": "Tendência",
-          "impacto": "alto",
-          "data_pub": "21/Jun/2026",
+          "impacto": "médio",
+          "data_pub": "09/jun/2026",
           "tambem_em": [
             "ia"
           ]
         },
         {
-          "titulo": "Jogo do Brasil reduz fluxo físico e impulsiona e-commerce em 15,5% no varejo",
-          "fonte": "Central do Varejo",
-          "url": "https://centraldovarejo.com.br/jogo-de-estreia-do-brasil-reduz-fluxo-no-varejo-fisico-e-impulsiona-e-commerce-em-155/",
-          "destaque": "Copa do Mundo cria agenda única para varejo: supermercados crescem 11,3%, bares caem 14,6%, e-commerce sobe 15,5% no dia de jogo Brasil x Marrocos",
-          "categoria": "Mercado",
+          "titulo": "Carrefour e Mercado Livre participam de evento 'Transporte do Futuro' com foco em eficiência operacional",
+          "fonte": "Gazeta da Semana",
+          "url": "https://gazetadasemana.com.br/noticia/285838/evento-transporte-do-futuro-reune-lideres-de-empresas-como-adidas-mercado-livre-nestle-pepsico-magalu-e-carrefour",
+          "destaque": "Evento realizado pela nstech nos dias 17 e 18 de junho na Expo Center Norte reúne gigantes do varejo e supply chain para discutir melhorias em margens financeiras, valor ao cliente e operações eficientes e de alta performance.",
+          "categoria": "Competição",
           "impacto": "médio",
-          "data_pub": "18/Jun/2026",
+          "data_pub": "13/jun/2026",
+          "tambem_em": [
+            "marketplace",
+            "pagamentos"
+          ]
+        },
+        {
+          "titulo": "Varejo físico dominado por supermercados que crescem 17,21% no Carnaval 2026",
+          "fonte": "Mundo do Marketing",
+          "url": "https://mundodomarketing.com.br/varejo-em-2026-consumo-em-alta-jornada-hibrida-e-a-corrida-por-agilidade",
+          "destaque": "Supermercados e hipermercados lideraram crescimento com salto de 17,21% no faturamento durante Carnaval, sinalizando protagonismo das lojas físicas em ambiente progressivamente digital e retomada consistente da demanda em períodos sazonais.",
+          "categoria": "Mercado",
+          "impacto": "alto",
+          "data_pub": "20/fev/2026",
+          "tambem_em": [
+            "ia"
+          ]
+        },
+        {
+          "titulo": "Carrefour reforça presença no Brasil com plano de 70 novas lojas Atacadão até 2030",
+          "fonte": "Portal IN",
+          "url": "https://www.portalin.com.br/negocios/carrefour-anuncia-plano-para-abrir-70-lojas-do-atacadao-ate-2030/",
+          "destaque": "Carrefour posiciona Brasil entre três focos centrais de estratégia global e projeta abertura de 70 lojas Atacadão, duplicação de GMV digital e lançamento de marca própria 'Bulnez' com 500 itens até 2028, visando 20% de participação no varejo alimentar.",
+          "categoria": "Mercado",
+          "impacto": "alto",
+          "data_pub": "20/fev/2026",
           "tambem_em": [
             "marketplace"
           ]
         },
         {
-          "titulo": "Varejo pode movimentar R$ 22,14 bilhões com datas sazonais de junho e Copa do Mundo",
+          "titulo": "Inteligência Artificial transforma operações de supermercados com previsão de demanda e personalização",
           "fonte": "Central do Varejo",
-          "url": "https://centraldovarejo.com.br/varejo-em-junho-dia-dos-namorados-festas-juninas-e-copa-devem-movimentar-r-2214-bilhoes/",
-          "destaque": "Dia dos Namorados, festas juninas e Copa de 2026 devem injetar R$ 22,14 bilhões na economia brasileira, criando oportunidade para varejistas encerrarem H1 com resultados positivos",
-          "categoria": "Mercado",
+          "url": "https://centraldovarejo.com.br/ia-omnicanalidade-interiorizacao-e-mais-marcam-tendencias-do-franchising-em-2026-apontam-liderancas-da-abf/",
+          "destaque": "Lideranças da ABF apontam IA como pilar estratégico para 2026, com uso prático em integração entre canais físicos e digitais, automação de reposições e previsão de sazonalidade para aumentar rentabilidade no nível de unidade franqueada.",
+          "categoria": "Tecnologia",
           "impacto": "alto",
-          "data_pub": "15/Jun/2026",
-          "tambem_em": []
+          "data_pub": "18/fev/2026",
+          "tambem_em": [
+            "ia",
+            "loyalty"
+          ]
         },
         {
-          "titulo": "Microfranquias crescem 17% e reafirmam modelo de empreendedorismo assistido no Brasil",
-          "fonte": "ABF - Associação Brasileira de Franchising",
-          "url": "https://abf.com.br/espaco-microfranquias-da-abf-franchising-expo-2026amplia-acesso-ao-empreendedorismo-com-opcoes-de-investimento-inicial-a-partir-de-r-7-50000/",
-          "destaque": "Top 20 de microfranquias alcançou 21.030 operações em 2025, crescimento de 17% em relação ao ano anterior, evidenciando consolidação do formato como porta de entrada",
+          "titulo": "Consumidor brasileiro busca maior valor além do preço, impulsionando transformação na experiência de compra",
+          "fonte": "SuperVarejo",
+          "url": "https://www.supervarejo.com.br/varejo/tendencias-do-varejo-para-2026-mudam-a-experiencia-de-compra",
+          "destaque": "Análise aponta que 73% dos brasileiros que compram online visitam loja física da mesma marca, consolidando modelo omnichannel onde consumidores esperam jornadas fluidas, personalizadas e sem fricção entre canais físicos e digitais em 2026.",
           "categoria": "Tendência",
           "impacto": "médio",
-          "data_pub": "18/Jun/2026",
-          "tambem_em": []
+          "data_pub": "18/mai/2026",
+          "tambem_em": [
+            "marketplace"
+          ]
         },
         {
-          "titulo": "Varejo supermercadista entra em 2026 com perspectiva de aceleração impulsionada pela Copa",
-          "fonte": "Associação dos Supermercados do Estado do RJ",
-          "url": "https://asserj.com.br/en/w/varejo-supermercadista-entra-em-2026-com-perspectiva-de-acelera%C3%A7%C3%A3o-saiba-por-qu%C3%AA",
-          "destaque": "Bebidas alcoólicas, snacks, conveniência e carnes ganham força em 2026 com Copa do Mundo como catalisador, exigindo disciplina comercial e gestão inteligente de estoque",
+          "titulo": "E-commerce alimentar cresce com 15% dos brasileiros já realizando compras de supermercado online",
+          "fonte": "E-Commerce Brasil",
+          "url": "https://www.ecommercebrasil.com.br/artigos/varejo-digital-15-dos-brasileiros-ja-realizam-compras-de-supermercado-online",
+          "destaque": "Penetração do e-grocery consolida-se como parte da normalidade no Brasil, impulsionada por melhorias em embalagens, políticas de devolução e tempos de entrega, representando um marco importante na digitalização do varejo alimentar mais tradicional.",
           "categoria": "Mercado",
           "impacto": "médio",
-          "data_pub": "17/Jun/2026",
-          "tambem_em": []
-        },
-        {
-          "titulo": "Supermercados do Vale do Paraíba preparam inverno 2026 com expansão de espaços compartilhados",
-          "fonte": "SuperHiper",
-          "url": "https://www.superhiper.com.br/inverno-2026-collabs-esquentam-vendas-da-secao-bazar-no-vale-do-paraiba/",
-          "destaque": "Grupos Máximo e CVS inauguraram espaços Vestcasa entre 3 e 19 de junho visando maximizar fluxo do feriado de Corpus Christi, modelo que oferece margem 8-12% superior em relação a alimentos",
-          "categoria": "Tecnologia",
-          "impacto": "médio",
-          "data_pub": "19/Jun/2026",
-          "tambem_em": []
+          "data_pub": "04/set/2025",
+          "tambem_em": [
+            "marketplace"
+          ]
         }
       ]
     },
     "tag": {
-      "resumo": "A Bienal das Rodovias 2026 consolidou o Free Flow como elemento estruturante nas concessões rodoviárias federais, com ANTT projetando expansão massiva do pedágio eletrônico e novos projetos já previstos em lotes da Bahia, Rio Grande do Sul e Santa Catarina. O debate reforçou benefícios de fluidez de tráfego e cobrança proporcional, mas também apontou desafios na comunicação com usuários sobre formas de pagamento e prazos.",
-      "termometro": "positivo",
+      "resumo": "O período de 15-21 de junho de 2026 apresentou comunicações da ANTT sobre avanços em pedágio eletrônico e livre passagem. O cenário mantém-se em consolidação regulatória com expansão gradual do sistema Free Flow nas rodovias federais, mas enfrenta desafios políticos e de adoção por usuários.",
+      "termometro": "neutro",
       "noticias": [
         {
-          "titulo": "Na Bienal das Rodovias, ANTT projeta expansão do pedágio eletrônico no país",
-          "fonte": "Agência Nacional de Transportes Terrestres (ANTT)",
-          "url": "https://www.gov.br/antt/pt-br/assuntos/ultimas-noticias/na-bienal-das-rodovias-antt-projeta-expansao-do-pedagio-eletronico-no-pais",
-          "destaque": "Free Flow deixou de ser inovação tecnológica para se tornar elemento estruturante da nova geração de concessões rodoviárias federais",
+          "titulo": "ANTT apresenta avanços em pedágio eletrônico e proteção nas rodovias em Brasília",
+          "fonte": "ANTT - Agência Nacional de Transportes Terrestres",
+          "url": "https://www.gov.br/antt/pt-br/free-flow",
+          "destaque": "Agência apresentou avanços em pedágio eletrônico, proteção às mulheres nas rodovias, reconstrução de infraestrutura e sustentabilidade",
           "categoria": "Regulatório",
           "impacto": "alto",
-          "data_pub": "17/jun/2026",
+          "data_pub": "19/jun/2026",
           "tambem_em": [
             "pagamentos"
           ]
         },
         {
-          "titulo": "ANTT pauta futuro das concessões e inovação tecnológica na Bienal das Rodovias 2026",
-          "fonte": "SETCESP (Sindicato das Empresas de Transporte de Carga de São Paulo e Região)",
-          "url": "http://setcesp.org.br/noticias/antt-pauta-futuro-das-concessoes-e-inovacao-tecnologica-na-bienal-das-rodovias-2026/",
-          "destaque": "ANTT reforça debate sobre interoperabilidade e comunicação com usuários, garantindo que modernização seja inclusiva, eficiente e segura",
-          "categoria": "Tecnologia",
+          "titulo": "Free Flow debate reforça benefícios em fluidez de tráfego e segurança viária",
+          "fonte": "ANTT - Agência Nacional de Transportes Terrestres",
+          "url": "https://www.gov.br/antt/pt-br/free-flow",
+          "destaque": "Debate reforçou benefícios como maior fluidez no tráfego, redução de acidentes e cobrança proporcional ao trecho efetivamente percorrido",
+          "categoria": "Mercado",
           "impacto": "médio",
-          "data_pub": "16/jun/2026",
-          "tambem_em": [
-            "socios"
-          ]
-        },
-        {
-          "titulo": "Free Flow segue em vigor nas rodovias, pagamento continua obrigatório e não há suspensão de multas por evasão de pedágio",
-          "fonte": "Agência Nacional de Transportes Terrestres (ANTT)",
-          "url": "https://www.gov.br/antt/pt-br/assuntos/ultimas-noticias/free-flow-segue-em-vigor-nas-rodovias-pagamento-continua-obrigatorio-e-nao-ha-uspensao-de-multas-por-evasao-de-pedagio",
-          "destaque": "Free Flow é política pública em expansão alinhando o Brasil às melhores práticas internacionais de mobilidade e gestão de infraestrutura",
-          "categoria": "Regulatório",
-          "impacto": "médio",
-          "data_pub": "13/mar/2026",
-          "tambem_em": [
-            "pagamentos"
-          ]
-        },
-        {
-          "titulo": "Pedágio free flow vira tema de embate e passa a ser usado por aliados de Lula",
-          "fonte": "InfoMoney",
-          "url": "https://www.infomoney.com.br/politica/pedagio-free-flow-vira-tema-de-embate-e-passa-a-ser-usado-por-aliados-de-lula/",
-          "destaque": "Sete rodovias federais com sistema free flow já autorizado ou implantado, enquanto críticas políticas intensificam-se em estados sobre cobranças",
-          "categoria": "Competição",
-          "impacto": "alto",
           "data_pub": "17/jun/2026",
           "tambem_em": [
-            "socios"
+            "pagamentos"
           ]
         },
         {
           "titulo": "Free Flow amplia uso de tags, mas custo preocupa transporte",
           "fonte": "MundoLogística",
           "url": "https://mundologistica.com.br/noticias/tag-pagamento-automatico-free-flow-transporte",
-          "destaque": "Pesquisa IPTC revelou que 53% das transportadoras apontaram aumento nos custos com pedágio após implementação do Free Flow em 2025-2026",
+          "destaque": "Pesquisa IPTC dezembro 2025 revelou que 53% das transportadoras apontaram aumento nos custos com pedágio após implementação do Free Flow",
+          "categoria": "Mercado",
+          "impacto": "alto",
+          "data_pub": "16/jun/2026",
+          "tambem_em": [
+            "cartoes",
+            "pagamentos",
+            "socios"
+          ]
+        },
+        {
+          "titulo": "Free Flow em crise: pedágio eletrônico gera embate político",
+          "fonte": "CNN Brasil",
+          "url": "https://www.cnnbrasil.com.br/infra/free-flow-em-crise-pedagio-eletronico-gera-embate-politico/",
+          "destaque": "Ministério quer suspender multas e pontos na CNH para motoristas que não pagaram tarifa; sistema chamado de 'pedágio invisível' em SP",
+          "categoria": "Regulatório",
+          "impacto": "alto",
+          "data_pub": "30/mar/2026",
+          "tambem_em": []
+        },
+        {
+          "titulo": "Resolução ANTT nº 6.079/2026 estabelece novo marco regulatório para Free Flow",
+          "fonte": "Target Bank",
+          "url": "https://targetbank.com.br/blog-do-trecho/target-log/resolucao-antt-n-6079/",
+          "destaque": "Nova resolução impõe adaptações estruturais relevantes para concessionárias com exigências de múltiplos meios de pagamento e investimentos significativos",
+          "categoria": "Regulatório",
+          "impacto": "alto",
+          "data_pub": "08/abr/2026",
+          "tambem_em": [
+            "pagamentos"
+          ]
+        },
+        {
+          "titulo": "Motiva registra 70% de adesão às tags na BR-101 Rio-Santos",
+          "fonte": "MundoLogística",
+          "url": "https://mundologistica.com.br/noticias/tag-pagamento-automatico-free-flow-transporte",
+          "destaque": "Dados da Motiva revelam adesão de tags chegou a cerca de 70% na rodovia, aumentando de apenas 30% inicialmente",
           "categoria": "Mercado",
           "impacto": "médio",
-          "data_pub": "15/dez/2025",
+          "data_pub": "15/jun/2026",
           "tambem_em": [
             "cartoes",
             "pagamentos"
           ]
         },
         {
-          "titulo": "ANTT regulamenta o sistema free flow em rodovias federais concedidas à iniciativa privada",
-          "fonte": "Cescon Barrieu – Centro de Inteligência Jurídica",
-          "url": "https://cesconbarrieu.com.br/antt-regulamenta-o-sistema-free-flow-em-rodovias-federais-concedidas-a-iniciativa-privada/",
-          "destaque": "Resolução ANTT nº 6.079/2026 entra em vigor em julho com requisitos mínimos: disponibilidade de 98%, leitura de placas de 95% e confiabilidade de 99%",
+          "titulo": "Deputados paranaenses questionam ANTT sobre localização de pórticos Free Flow",
+          "fonte": "Portal News - Assembleia do Paraná",
+          "url": "https://www.adjoriparana.com.br/noticia/pedido-de-informacoes-deputados-questionam-antt-sobre-criterios-de-implantacao-de-pedagio-eletronico-free-flow",
+          "destaque": "Deputados questionam transparência e critérios técnicos de localização dos pórticos, preocupados com impactos em comunidades locais",
           "categoria": "Regulatório",
-          "impacto": "alto",
-          "data_pub": "27/mar/2026",
+          "impacto": "médio",
+          "data_pub": "30/jan/2026",
           "tambem_em": [
-            "socios"
-          ]
-        },
-        {
-          "titulo": "O futuro do Free Flow nas rodovias: veja como será a cobrança automática em 2026",
-          "fonte": "Blog Edenred Mobilidade",
-          "url": "https://blog.edenredmobilidade.com.br/gestao-de-frotas/futuro-do-free-flow-nas-rodovias/",
-          "destaque": "Expansão massiva de Free Flow prevista para região Sudeste em 2026, com Via Dutra e Rodoanel Mário Covas como principais implementações",
-          "categoria": "Tendência",
-          "impacto": "alto",
-          "data_pub": "19/jan/2026",
-          "tambem_em": [
-            "pagamentos",
             "socios"
           ]
         }
       ]
     },
     "bancos": {
-      "resumo": "O setor bancário brasileiro enfrenta perspectivas desafiadoras em 2026, com a Fitch Ratings rebaixando a projeção de 'neutra' para 'em deterioração' em junho, citando enfraquecimento dos ativos e incerteza política. Neobancos consolidam liderança no acesso ao crédito, mas enfrentam inadimplência crescente, com taxa de calotes subindo para 20,31% em 2025.",
+      "resumo": "Fitch rebaixou perspectiva do setor bancário brasileiro em 12 de junho devido ao enfraquecimento da qualidade dos ativos e incerteza política, gerando pressão sobre inadimplência e margens. Concomitantemente, bancos digitais assumem papel central no mercado de crédito, com inadimplência em alta, enquanto a categoria bancária realiza mobilizações sindicais para negociar condições de trabalho e direitos.",
       "termometro": "negativo",
       "noticias": [
         {
           "titulo": "Fitch piora perspectiva dos bancos do Brasil em 2026",
           "fonte": "Let's Money",
           "url": "https://www.letsmoney.com.br/noticias/fitch-piora-perspectiva-bancos-brasil-2026",
-          "destaque": "Fitch Ratings rebaixou a perspectiva do setor bancário brasileiro de 'neutra' para 'em deterioração'",
+          "destaque": "Fitch rebaixou perspectiva do setor bancário brasileiro de neutra para em deterioração, citando enfraquecimento da qualidade dos ativos e incerteza política.",
           "categoria": "Regulatório",
           "impacto": "alto",
           "data_pub": "12/jun/2026",
           "tambem_em": [
-            "fintechs"
+            "fintechs",
+            "pagamentos"
           ]
         },
         {
-          "titulo": "Bancos digitais viram principal porta de entrada no crédito, mas inadimplência aumenta",
+          "titulo": "Bancos digitais viram principal porta de entrada no crédito, mas inadimplência aumenta, diz estudo",
           "fonte": "Diário de Pernambuco",
           "url": "https://www.diariodepernambuco.com.br/amp/economia/2026/06/11715611-bancos-digitais-viram-principal-porta-de-entrada-no-credito-mas-inadimplencia-aumenta-diz-estudo.html",
-          "destaque": "Taxa de calotes em neobancos subiu de 7,71% em 2021 para 20,31% em 2025",
+          "destaque": "Neobancos representam 31,8% do crédito ativo em 2025 contra 11,8% em 2021, mas taxa de inadimplência em cartões subiu de 7,71% para 20,31%.",
           "categoria": "Mercado",
           "impacto": "alto",
-          "data_pub": "11/jun/2026",
+          "data_pub": "02/jun/2026",
           "tambem_em": [
             "fintechs",
-            "cartoes"
+            "cartoes",
+            "pagamentos"
           ]
         },
         {
-          "titulo": "Banco do Brasil corta projeções para 2026 com lucro 53% menor",
+          "titulo": "28ª Conferência Nacional dos Bancários discute campanha nacional e direitos dos trabalhadores",
+          "fonte": "Agência Sindical",
+          "url": "https://agenciasindical.com.br/bancarios-preparam-campanha-nacional-2026/",
+          "destaque": "Bancários reúnem-se entre 19 e 21 de junho para definir prioridades de campanha, com foco em valorização salarial, defesa de empregos e direitos, tendo fechado 31,3 mil postos desde 2020.",
+          "categoria": "Tendência",
+          "impacto": "médio",
+          "data_pub": "20/jun/2026",
+          "tambem_em": []
+        },
+        {
+          "titulo": "Banco do Brasil corta projeções para 2026 em meio a ciclo desafiador",
           "fonte": "Money Times",
           "url": "https://www.moneytimes.com.br/pior-que-esperado-banco-do-brasil-bbas3-corta-projecoes-para-2026-veja-detalhes/",
-          "destaque": "Banco do Brasil registra lucro ajustado de R$ 3,4 bilhões, queda de 53% ante mesmo período de 2025",
+          "destaque": "Banco do Brasil reporta lucro ajustado de R$ 3,4 bilhões, queda de 53% ante mesmo período de 2025, forçando revisão das projeções para 2026.",
           "categoria": "Mercado",
           "impacto": "alto",
           "data_pub": "16/mai/2026",
           "tambem_em": []
         },
         {
-          "titulo": "Open Finance Brasil prepara novas regras de consentimento para empresas em 2026",
-          "fonte": "Let's Money",
-          "url": "https://www.letsmoney.com.br/noticias/fitch-piora-perspectiva-bancos-brasil-2026",
-          "destaque": "Open Finance Brasil prepara para 2026 uma solução para desburocratizar consentimento de empresas",
+          "titulo": "Open Finance Brasil e portabilidade de crédito avançam em 2026",
+          "fonte": "Demarest",
+          "url": "https://www.demarest.com.br/boletim-de-bancos-servicos-financeiros-fintechs-e-ativos-digitais-janeiro-2026/",
+          "destaque": "Portabilidade de crédito por meio do Open Finance trará maior eficácia e eliminará assimetrias de informação, proporcionando processo automatizado e mais eficiente.",
           "categoria": "Regulatório",
           "impacto": "médio",
-          "data_pub": "12/jun/2026",
+          "data_pub": "19/fev/2026",
           "tambem_em": [
-            "fintechs"
+            "fintechs",
+            "pagamentos"
+          ]
+        },
+        {
+          "titulo": "Goldman Sachs projeta 2026 sólido para bancos brasileiros",
+          "fonte": "Contec Brasil",
+          "url": "https://contec.org.br/goldman-sachs-projeta-2026-solido-para-bancos-brasileiros-e-destaca-acoes-preferidas/",
+          "destaque": "Goldman projeta crescimento de crédito de 9,5% em 2026, com ROE de 26% para bancos, mantendo Itaú em compra e Banco do Brasil em neutra.",
+          "categoria": "Mercado",
+          "impacto": "médio",
+          "data_pub": "14/jan/2026",
+          "tambem_em": [
+            "cartoes"
           ]
         }
       ]
     },
     "fintechs": {
-      "resumo": "O setor de fintechs brasileiras consolidou crescimento significativo em 2026, impulsionado por inovação em crédito digital e tecnologias emergentes, enquanto enfrenta maior rigor regulatório e pressão por estruturas de governança corporativa robustas. Brasil mantém liderança na América Latina com mais de 1.600 fintechs ativas e projeções de crescimento anual superior a 20% no mercado global de tecnologia financeira.",
+      "resumo": "Setor de fintechs brasileiras consolida fase de maturidade com foco em governança, conformidade regulatória e tecnologia robusta. Brasil mantém liderança na América Latina com mais de 1.600 fintechs ativas enquanto mercado global cresce a 20% ao ano impulsionado por open finance, crédito digital e pagamentos integrados.",
       "termometro": "positivo",
       "noticias": [
+        {
+          "titulo": "Top 7 Fintech Startups in Brazil to Watch in 2026",
+          "fonte": "Analytics Insight",
+          "url": "https://www.analyticsinsight.net/fintech/top-7-fintech-startups-in-brazil-to-watch-in-2026",
+          "destaque": "Setor avança em embedded finance, stablecoins, conversational banking e serviços cross-border",
+          "categoria": "Mercado",
+          "impacto": "alto",
+          "data_pub": "15/jun/2026",
+          "tambem_em": [
+            "pagamentos",
+            "ia",
+            "socios"
+          ]
+        },
+        {
+          "titulo": "Fintouch 2026 - O maior evento sobre fintechs do Brasil",
+          "fonte": "ABFintechs",
+          "url": "https://fintouch.abfintechs.com.br/",
+          "destaque": "Evento reunirá lideranças do Banco Central, CVM e grandes empresas do setor financeiro em 10 de junho de 2026",
+          "categoria": "Mercado",
+          "impacto": "médio",
+          "data_pub": "10/jun/2026",
+          "tambem_em": [
+            "bancos"
+          ]
+        },
         {
           "titulo": "Fintechs crescem em 2026 sob vigilância ampliada e reforçam governança para sustentar escala",
           "fonte": "Business Leaders",
           "url": "https://www.businessleaders.com.br/post/fintechs-crescem-em-2026-sob-vigil%C3%A2ncia-ampliada-e-refor%C3%A7am-governan%C3%A7a-para-sustentar-escala",
-          "destaque": "Brasil superou marca de 1.600 fintechs ativas mantendo liderança na América Latina em número de startups financeiras",
+          "destaque": "Brasil superou marca de 1.600 fintechs ativas e mantém liderança na América Latina; crescimento global de 20% ao ano até fim da década",
           "categoria": "Mercado",
           "impacto": "alto",
           "data_pub": "09/mar/2026",
-          "tambem_em": [
-            "bancos",
-            "ia"
-          ]
-        },
-        {
-          "titulo": "Seis previsões para startups de fintech em 2026 - Forbes",
-          "fonte": "Pagamentos PIX",
-          "url": "https://www.pagamentospix.com.br/en/seis-previsoes-para-startups-de-fintech-em-2026-forbes/",
-          "destaque": "Fintechs B2B como Pismo, Dock e Belvo vão crescer fornecendo infraestrutura para empresas integrarem serviços financeiros em seus apps",
-          "categoria": "Tendência",
-          "impacto": "alto",
-          "data_pub": "28/dez/2025",
-          "tambem_em": [
-            "pagamentos",
-            "marketplace"
-          ]
-        },
-        {
-          "titulo": "Pesquisa Fintechs de Crédito Digital 2025",
-          "fonte": "PwC Brasil",
-          "url": "https://www.pwc.com.br/pt/estudos/setores-atividade/financeiro/2025/pesquisa-fintechs-de-credito-digital-2025.html",
-          "destaque": "Volume de crédito concedido pelas fintechs alcançou R$ 35,5 bilhões em 2024 com aumento de 68%, sendo 67% desenvolvendo soluções de IA",
-          "categoria": "Mercado",
-          "impacto": "alto",
-          "data_pub": "15/ago/2025",
-          "tambem_em": [
-            "pagamentos",
-            "ia"
-          ]
-        },
-        {
-          "titulo": "Fintechs em 2026: conceito, funcionamento e evolução do mercado",
-          "fonte": "Topaz Evolution",
-          "url": "https://www.topazevolution.com/blog/o-que-sao-fintechs",
-          "destaque": "Brasil com mais de 1.700 fintechs em operação representa 58,7% de todas startups financeiras da América Latina",
-          "categoria": "Mercado",
-          "impacto": "alto",
-          "data_pub": "22/abr/2026",
-          "tambem_em": [
-            "bancos"
-          ]
-        },
-        {
-          "titulo": "Top 7 Fintech Startups in Brazil to Watch in 2026",
-          "fonte": "Analytics Insight",
-          "url": "https://www.analyticsinsight.net/amp/story/fintech/top-7-fintech-startups-in-brazil-to-watch-in-2026",
-          "destaque": "Strong digital adoption, Pix e open finance continuam impulsionando crescimento de startups nos serviços financeiros com embedded finance e Banking-as-a-Service como drivers críticos",
-          "categoria": "Tendência",
-          "impacto": "médio",
-          "data_pub": "15/jun/2026",
-          "tambem_em": [
-            "pagamentos",
-            "bancos"
-          ]
+          "tambem_em": []
         },
         {
           "titulo": "O Mercado de Fintechs no Brasil em 2026: Tendências, Números e Oportunidades",
           "fonte": "CSB Fintechs",
           "url": "https://csbfin.tech/blog/mercado-fintechs-brasil-2026-tendencias/",
-          "destaque": "Brasil é maior mercado de fintechs da América Latina e 5º do mundo com mais de 1.500 empresas ativas cobrindo todos os segmentos financeiros",
+          "destaque": "Brasil é o 5º maior mercado de fintechs do mundo com 1.500+ empresas ativas; 82 operações de M&A em 2024 indicam consolidação",
           "categoria": "Mercado",
           "impacto": "alto",
           "data_pub": "05/abr/2026",
+          "tambem_em": []
+        },
+        {
+          "titulo": "Pesquisa Fintechs de Crédito Digital 2025",
+          "fonte": "PwC Brasil",
+          "url": "https://www.pwc.com.br/pt/estudos/setores-atividade/financeiro/2025/pesquisa-fintechs-de-credito-digital-2025.html",
+          "destaque": "Fintechs de crédito incrementam competitividade com taxas de juros 50-70% menores que mercado tradicional em principais categorias",
+          "categoria": "Mercado",
+          "impacto": "alto",
+          "data_pub": "31/dez/2025",
           "tambem_em": [
-            "pagamentos"
+            "cartoes"
           ]
         },
         {
-          "titulo": "Como Criar uma Fintech em 2026: tudo sobre",
-          "fonte": "Blog Paytime",
-          "url": "https://fintech.blogpaytime.com.br/post/como-abrir-uma-fintech-2026",
-          "destaque": "Modelo white label permite que empresas de médio porte lancem soluções financeiras próprias em 2026 conquistando novas linhas de receita e clientes fidelizados",
-          "categoria": "Tecnologia",
-          "impacto": "médio",
-          "data_pub": "07/jan/2026",
+          "titulo": "O que muda no setor financeiro em 2026: dez tendências regulatórias e tecnológicas",
+          "fonte": "Finsiders Brasil",
+          "url": "https://finsidersbrasil.com.br/noticias-sobre-fintechs/o-que-muda-no-setor-financeiro-em-2026-dez-tendencias-regulatorias-e-tecnologicas/",
+          "destaque": "Nubank aporta R$ 45 bilhões no Brasil em 2026 para IA, novos produtos e ampliação de crédito; regulação sofisticada redefine competição",
+          "categoria": "Mercado",
+          "impacto": "alto",
+          "data_pub": "17/abr/2026",
           "tambem_em": [
-            "marketplace",
+            "ia",
+            "bancos"
+          ]
+        },
+        {
+          "titulo": "Startups em Brasil - Notícias de Junho 2026",
+          "fonte": "Mean",
+          "url": "https://blog.mean.ceo/startups-brazil-news-june-2026/",
+          "destaque": "Fintech segue como maior setor de atuação das startups brasileiras com IA se tornando software útil; Nomad destaca-se com R$ 590M em funding",
+          "categoria": "Mercado",
+          "impacto": "médio",
+          "data_pub": "15/jun/2026",
+          "tambem_em": [
+            "ia",
             "pagamentos"
           ]
         }
       ]
     },
     "loyalty": {
-      "resumo": "Intensa atividade promocional no mercado de fidelização brasileiro com destaque para transferências bonificadas de pontos entre programas (Azul, Smiles, LATAM Pass) e compra de milhas/pontos com bônus de até 365%. O período marca o encerramento de várias campanhas com promoções agressivas voltadas para maximizar acúmulo de pontos antes do término do mês.",
+      "resumo": "Período marcado por campanhas estratégicas de bonus em programas de fidelidade, com Azul Fidelidade oferecendo até 65% de bônus em conversão de cashback Méliuz e BTG Pactual expandindo parcerias com TAP Miles&Go. Mercado reforça foco em integração omnicanal e personalização para elevar engajamento de clientes.",
       "termometro": "positivo",
       "noticias": [
-        {
-          "titulo": "Azul Fidelidade oferece até 65% de bônus ao transformar cashback do Méliuz em pontos",
-          "fonte": "Pontos pra Voar",
-          "url": "https://pontospravoar.com/azul-fidelidade-oferece-ate-65-porcento-bonus-transformar-cashback-meliuz-pontos/",
-          "destaque": "Campanha de 15 a 21 de junho com até 65% de bônus para clientes Clube Azul na conversão de cashback Méliuz em Pontos Azul",
-          "categoria": "Mercado",
-          "impacto": "alto",
-          "data_pub": "21/jun/2026",
-          "tambem_em": [
-            "cartoes",
-            "pagamentos",
-            "fintechs"
-          ]
-        },
-        {
-          "titulo": "Rumo ao hexa! Azul Fidelidade com até 15% de desconto em passagens internacionais com pontos",
-          "fonte": "Pontos pra Voar",
-          "url": "https://pontospravoar.com/rumo-hexa-azul-fidelidade-ate-15-porcento-desconto-passagens-internacionais-pontos/",
-          "destaque": "Promoção especial Copa do Mundo 2026 com até 15% de desconto no resgate de passagens internacionais, válida até 21 de junho",
-          "categoria": "Tendência",
-          "impacto": "médio",
-          "data_pub": "19/jun/2026",
-          "tambem_em": [
-            "cartoes",
-            "varejo"
-          ]
-        },
-        {
-          "titulo": "Azul Fidelidade oferece até 120% de bônus na transferência de pontos Alloyal",
-          "fonte": "Pontos pra Voar",
-          "url": "https://pontospravoar.com/azul-fidelidade-oferece-ate-120-porcento-bonus-transferencia-pontos-alloyal/",
-          "destaque": "Transferência bonificada de até 120% entre Alloyal e Azul Fidelidade, válida até 21 de junho com limite de 300 mil pontos bônus por CPF",
-          "categoria": "Mercado",
-          "impacto": "alto",
-          "data_pub": "19/jun/2026",
-          "tambem_em": [
-            "cartoes",
-            "pagamentos"
-          ]
-        },
-        {
-          "titulo": "Último dia! Assine ou faça upgrade do Clube Azul e ganhe até 168.000 pontos bônus",
-          "fonte": "Pontos pra Voar",
-          "url": "https://pontostravoar.com/ultimo-dia-assine-faca-upgrade-clube-azul-ganhe-ate-168000-pontos-bonus/",
-          "destaque": "Adesão ou upgrade ao Clube Azul com 70% de bônus até 21 de junho, gerando até 168 mil pontos extras em planos anuais",
-          "categoria": "Mercado",
-          "impacto": "alto",
-          "data_pub": "21/jun/2026",
-          "tambem_em": [
-            "cartoes",
-            "bancos"
-          ]
-        },
         {
           "titulo": "Cashback que vira viagem: Azul Fidelidade e Méliuz lançam campanha com até 65% de bônus em conversão de pontos",
           "fonte": "VOENEWS",
           "url": "https://voenews.com.br/cashback-que-vira-viagem-azul-fidelidade-e-meliuz-lancam-campanha-com-ate-65-de-bonus-em-conversao-de-pontos/",
-          "destaque": "Parceria estratégica entre Azul e Méliuz que permite converter cashback em pontos com bônus de 45% (cliente base) ou 65% (Clube Azul) entre 15 e 21 de junho",
+          "destaque": "Clientes Azul Fidelidade receberão 45% de bônus sobre pontos convertidos, enquanto assinantes do Clube Azul terão direito a 65% de bonificação entre 15 e 21 de junho",
           "categoria": "Mercado",
           "impacto": "alto",
           "data_pub": "17/jun/2026",
           "tambem_em": [
-            "fintechs",
+            "cartoes",
             "pagamentos",
-            "cartoes"
+            "socios"
           ]
         },
         {
-          "titulo": "Anuidade grátis e até 12 mil milhas bônus: aproveite a nova promoção dos cartões GOL Smiles do Bradesco",
+          "titulo": "Azul Fidelidade oferece até 65% de bônus ao transformar cashback do Méliuz em pontos",
           "fonte": "Pontos pra Voar",
-          "url": "https://pontospravoar.com/anuidade-gratis-ate-12-mil-milhas-bonus-aproveite-nova-promocao-cartoes-gol-smiles-bradesco/",
-          "destaque": "Bradesco lança promoção com isenção de anuidade por 12 meses mais até 12 mil milhas extras para cartões GOL Smiles entre 18 de junho e 31 de agosto",
+          "url": "https://pontospravoar.com/azul-fidelidade-oferece-ate-65-porcento-bonus-transformar-cashback-meliuz-pontos/",
+          "destaque": "Promoção termina em 21 de junho com bônus variável de 45% a 65% conforme categoria do cliente, incluindo cupom de 15% desconto em passagens domésticas",
           "categoria": "Mercado",
           "impacto": "alto",
-          "data_pub": "19/jun/2026",
+          "data_pub": "21/jun/2026",
           "tambem_em": [
-            "cartoes",
+            "pagamentos",
             "bancos"
           ]
         },
         {
-          "titulo": "Oferta da Smiles: até 365% de bônus para compra de milhas",
-          "fonte": "Pontos pra Voar",
-          "url": "https://pontospravoar.com/oferta-smiles-ate-365-porcento-bonus-compra-milhas/",
-          "destaque": "Campanha até 30 de junho com até 365% de bônus na compra de milhas conforme categoria do Clube Smiles, com CPM chegando a R$ 17,20",
+          "titulo": "TAP Miles&Go e BTG Pactual ampliam parceria com transferência de pontos do programa de fidelidade",
+          "fonte": "NIDDE DIGITAL",
+          "url": "https://niddedigital.com/tap-milesgo-e-btg-pactual-ampliam-parceria-com-transferencia-de-pontos-do-programa-de-fidelidade/",
+          "destaque": "BTG Pactual passa a oferecer transferência de pontos para TAP Miles&Go entre 16 e 18 de junho com 20% de bônus em milhas, com taxas de conversão variáveis por categoria",
           "categoria": "Mercado",
           "impacto": "alto",
-          "data_pub": "20/jun/2026",
+          "data_pub": "18/jun/2026",
           "tambem_em": [
-            "cartoes",
-            "varejo"
+            "bancos",
+            "socios"
           ]
         },
         {
-          "titulo": "Segue valendo! Assine o Clube Smiles 2.000 e ganhe 14 mil milhas bônus",
+          "titulo": "Azul Fidelidade e Méliuz oferecem até 65% de bônus em campanha de conversão de cashback",
+          "fonte": "Brasil Turis",
+          "url": "https://brasilturis.com.br/2026/06/18/azul-fidelidade-e-meliuz-oferecem-ate-65-de-bonus-em-campanha-de-conversao-de-cashback/",
+          "destaque": "Campanha de 15 a 21 de junho integra cashback e fidelidade com bônus progressivos e descontos especiais no Clube Azul de até 50% em planos anuais",
+          "categoria": "Mercado",
+          "impacto": "alto",
+          "data_pub": "18/jun/2026",
+          "tambem_em": [
+            "pagamentos",
+            "socios"
+          ]
+        },
+        {
+          "titulo": "TAP Miles&Go é o novo parceiro para transferência de pontos BTG Pactual – ganhe 20% de bônus por tempo limitado",
           "fonte": "Passageiro de Primeira",
-          "url": "https://passageirodeprimeira.com/ainda-da-tempo-ganhe-16-000-milhas-na-hora-com-o-plano-2-000-do-clube-smiles/",
-          "destaque": "Promoção Clube Smiles oferecendo 16 mil milhas totais (2 mil + 14 mil bônus) na primeira assinatura, válida até 25 de junho com melhor custo de R$ 17,03 por mil milhas",
+          "url": "https://passageirodeprimeira.com/novidade-tap-milesgo-novo-parceiro-transferencia-pontos-btg-pactual-ganhe-20-porcento-bonus-tempo-limitado/",
+          "destaque": "Nova parceria permite transferência de pontos BTG para TAP Miles&Go entre 16 e 18 de junho com 20% de bonificação em milhas, com conversão variável por segmento de cliente",
+          "categoria": "Competição",
+          "impacto": "médio",
+          "data_pub": "17/jun/2026",
+          "tambem_em": [
+            "bancos"
+          ]
+        },
+        {
+          "titulo": "Três ofertas de transferência bonificada de até 120% no Azul Fidelidade que terminam hoje",
+          "fonte": "Pontos pra Voar",
+          "url": "https://pontospravoar.com/tres-ofertas-transferencia-bonificada-ate-120-porcento-azul-fidelidade-terminam-hoje/",
+          "destaque": "Três campanhas de transferência bonificada de Banestes, C6 Bank e Uau CAIXA para Azul Fidelidade finalizam em 18 de junho com bônus de até 120%",
           "categoria": "Mercado",
           "impacto": "médio",
-          "data_pub": "20/jun/2026",
+          "data_pub": "18/jun/2026",
           "tambem_em": [
             "cartoes",
-            "varejo"
+            "bancos",
+            "socios"
           ]
         }
       ]
     },
     "ia": {
-      "resumo": "A inteligência artificial se consolida como infraestrutura crítica no mercado financeiro brasileiro em 2026, com instituições ampliando investimentos em soluções de detecção de fraudes, análise de dados e automação de processos. O Banco Central intensifica discussões regulatórias sobre IA, enquanto fintechs e bancos adotam agentes de IA para personalizaçao de serviços e gestão de risco.",
+      "resumo": "Inteligência artificial avança da fase de testes para escala no mercado financeiro e varejo brasileiro, com foco em governança e retorno financeiro. Banco Central e reguladores intensificam agenda de IA para 2025-2026, enquanto 67% das empresas brasileiras consideram IA prioridade estratégica.",
       "termometro": "positivo",
       "noticias": [
-        {
-          "titulo": "A inteligência artificial está mudando a forma como os mercados financeiros do Brasil tomam decisões",
-          "fonte": "Exame",
-          "url": "https://exame.com/future-of-money/a-inteligencia-artificial-esta-mudando-a-forma-como-os-mercados-financeiros-do-brasil-tomam-decisoes/",
-          "destaque": "Banco Central criou Centro de Excelência em Ciência de Dados e IA em 2024 e incluiu IA em agenda regulatória para 2025/2026",
-          "categoria": "Regulatório",
-          "impacto": "alto",
-          "data_pub": "16/mai/2026",
-          "tambem_em": [
-            "bancos",
-            "fintechs"
-          ]
-        },
         {
           "titulo": "IA avança no mercado financeiro e molda decisões de investimento",
           "fonte": "CNN Brasil",
           "url": "https://www.cnnbrasil.com.br/economia/mercado/ia-avanca-no-mercado-financeiro-e-molda-decisoes-de-investimento/",
-          "destaque": "Bancos, corretoras e plataformas digitais utilizam sistemas automatizados para recomendar aplicações e monitorar carteiras",
+          "destaque": "Bancos, corretoras e plataformas digitais utilizam sistemas automatizados para recomendar aplicações e monitorar carteiras em larga escala",
           "categoria": "Mercado",
           "impacto": "alto",
           "data_pub": "21/jun/2026",
           "tambem_em": [
             "bancos",
-            "fintechs"
-          ]
-        },
-        {
-          "titulo": "A IA já está dentro do sistema financeiro, mas quem irá vigiá-la?",
-          "fonte": "CNN Brasil",
-          "url": "https://www.cnnbrasil.com.br/blogs/thiago-godoy/economia/mercado/a-ia-ja-esta-dentro-do-sistema-financeiro-mas-quem-ira-vigia-la/",
-          "destaque": "CEO do Goldman Sachs revelou que IA já escreve 95% de prospecto de IPO em minutos, tarefa que antes levava duas semanas",
-          "categoria": "Tecnologia",
-          "impacto": "alto",
-          "data_pub": "20/jun/2026",
-          "tambem_em": [
-            "bancos"
-          ]
-        },
-        {
-          "titulo": "IA, Open Finance e 'barra mais alta': as perspectivas para fintechs em 2026",
-          "fonte": "Finsiders Brasil",
-          "url": "https://finsidersbrasil.com.br/reportagem-exclusiva-fintechs/ia-open-finance-e-baas-2026-e-o-futuro-das-fintechs/",
-          "destaque": "IA assumirá tarefas cada vez mais autônomas em fintechs, com 53,9% das instituições citando IA como base para detecção avançada de fraudes",
-          "categoria": "Tendência",
-          "impacto": "alto",
-          "data_pub": "29/dez/2025",
-          "tambem_em": [
             "fintechs",
-            "pagamentos",
-            "bancos"
+            "cartoes"
           ]
         },
         {
-          "titulo": "Fintech de agentes de IA para investimentos capta R$ 1,7 milhão",
-          "fonte": "Finsiders Brasil",
-          "url": "https://finsidersbrasil.com.br/negocios-em-fintechs/aportes/fintech-plain-usa-agentes-de-ia-na-gestao-de-patrimonio-e-capta-r-17-milhao/",
-          "destaque": "Plain capta R$ 1,7 mi em rodada pré-seed para democratizar estratégias de investimento com agentes de IA para consultores independentes",
-          "categoria": "Mercado",
-          "impacto": "médio",
-          "data_pub": "17/dez/2025",
-          "tambem_em": [
-            "fintechs"
-          ]
-        },
-        {
-          "titulo": "Planejamento financeiro 2026: por que investir em Inteligência Artificial faz sentido",
-          "fonte": "DocuSign",
-          "url": "https://www.docusign.com/pt-br/blog/planejamento-financeiro-2026-por-que-investir-em-inteligencia-artificial",
-          "destaque": "78% das empresas brasileiras planejam aumentar investimentos em IA até final de 2025; Brasil deve ultrapassar US$ 2,4 bilhões em investimentos IA",
+          "titulo": "Como a IA tem impulsionado receitas de empresas e revolucionado mercados",
+          "fonte": "CNN Brasil",
+          "url": "https://www.cnnbrasil.com.br/economia/negocios/como-a-ia-tem-impulsionado-receitas-de-empresas-e-revolucionado-mercados/",
+          "destaque": "Inter anuncia lançamento da Seven, assistente de IA, representando avanço no modelo de interação integrada com execução de tarefas automatizadas",
           "categoria": "Mercado",
           "impacto": "alto",
-          "data_pub": "03/set/2025",
-          "tambem_em": [
-            "varejo",
-            "bancos"
-          ]
-        },
-        {
-          "titulo": "Inteligência Artificial e Gestão de Risco: Como Algoritmos Estão Mudando o Mercado Financeiro em 2026",
-          "fonte": "Jornal Contábil",
-          "url": "https://stgestao.com.br/jornal-contabil-inteligencia-artificial-e-gestao-de-risco-como-algoritmos-estao-mudando-o-mercado-financeiro-em-2026-jornal-contabil-2/",
-          "destaque": "Machine learning analisa em milissegundos centenas de variáveis simultâneas para identificar operações suspeitas e gerenciar risco",
-          "categoria": "Tecnologia",
-          "impacto": "alto",
-          "data_pub": "04/mai/2026",
+          "data_pub": "19/mai/2026",
           "tambem_em": [
             "bancos",
+            "fintechs"
+          ]
+        },
+        {
+          "titulo": "A inteligência artificial está mudando a forma como os mercados financeiros do Brasil tomam decisões",
+          "fonte": "Exame",
+          "url": "https://exame.com/future-of-money/a-inteligencia-artificial-esta-mudando-a-forma-como-os-mercados-financeiros-do-brasil-tomam-decisoes/",
+          "destaque": "Banco Central criou Centro de Excelência em Ciência de Dados e IA em 2024 e incluiu uso da IA por instituições financeiras em agenda regulatória para 2025/2026",
+          "categoria": "Regulatório",
+          "impacto": "alto",
+          "data_pub": "16/mai/2026",
+          "tambem_em": [
+            "bancos"
+          ]
+        },
+        {
+          "titulo": "Inteligência artificial define cinco tendências do varejo em 2026",
+          "fonte": "Carta Capital",
+          "url": "https://www.cartacapital.com.br/do-micro-ao-macro/inteligencia-artificial-define-cinco-tendencias-do-varejo-em-2026/",
+          "destaque": "IA entra em 2026 como eixo de reorganização da indústria e varejo, passando de testes isolados para busca de escala, governança e retorno financeiro",
+          "categoria": "Tendência",
+          "impacto": "alto",
+          "data_pub": "27/dez/2025",
+          "tambem_em": [
+            "varejo",
+            "marketplace"
+          ]
+        },
+        {
+          "titulo": "Tendências de IA até 2026: Brasil avança em finanças, regulação e produtividade assistida",
+          "fonte": "Revista Kdea 360",
+          "url": "https://revistakdea360.com.br/noticia/37467/tendencias-de-ia-ate-2026-brasil-avanca-em-financas-regulacao-e-produtividade-assistida",
+          "destaque": "Open Finance com 100 milhões de consentimentos e assistentes como Bah.IA da Casas Bahia demonstram reduções de tempo de espera e ganhos em atendimento",
+          "categoria": "Mercado",
+          "impacto": "alto",
+          "data_pub": "08/dez/2025",
+          "tambem_em": [
+            "varejo",
+            "fintechs",
             "pagamentos"
+          ]
+        },
+        {
+          "titulo": "Segurança em IA: evento gratuito debate riscos, oportunidades e desafios para o Brasil",
+          "fonte": "SERPRO",
+          "url": "https://www.serpro.gov.br/menu/noticias/noticias-2026/evento-seguranca-em-ia",
+          "destaque": "Evento online no dia 25 de junho reúne especialistas para discussão de impactos da IA na sociedade, economia e governos baseado em relatório internacional",
+          "categoria": "Regulatório",
+          "impacto": "médio",
+          "data_pub": "25/jun/2026",
+          "tambem_em": []
+        },
+        {
+          "titulo": "Mercado de IA 2026: O guia de tendências, oportunidades e carreiras",
+          "fonte": "Alura",
+          "url": "https://www.alura.com.br/artigos/mercado-de-ia",
+          "destaque": "67% das empresas brasileiras consideram IA prioridade estratégica com foco em otimizar operações, reduzir custos e gerar novas receitas",
+          "categoria": "Mercado",
+          "impacto": "médio",
+          "data_pub": "15/jun/2026",
+          "tambem_em": [
+            "varejo",
+            "fintechs"
           ]
         }
       ]
     },
     "socios": {
-      "resumo": "Período apresenta consolidação de parcerias estratégicas no varejo e mobilidade, com destaque para a transformação digital e crédito no varejo. GPA enfrenta desafios financeiros enquanto Carrefour registra lucros robustos.",
+      "resumo": "Período com baixa atividade de anúncios de novas parcerias entre os principais varejistas e seus parceiros estratégicos. Casas Bahia mantém atividades promocionais com programas de pontos existentes.",
       "termometro": "neutro",
       "noticias": [
         {
-          "titulo": "ConectCar finaliza compra de iCarros do Itaú e expande ecossistema",
-          "fonte": "Let's Money",
-          "url": "https://www.letsmoney.com.br/noticias/conectcar-compra-icarros-itau/",
-          "destaque": "ConectCar fechou compra da iCarros em 11 de junho trazendo 6 milhões de visitantes mensais para seu ecossistema de mobilidade",
+          "titulo": "Casas Bahia intensifica programa de pontos Livelo com campanha de acúmulo turbinado",
+          "fonte": "Livelo",
+          "url": "https://www.livelo.com.br/juntar-pontos/parceiros/casas-bahia/CSB",
+          "destaque": "Ganhe até 4 pontos por real em categorias selecionadas válido de 17 a 21 de junho de 2026",
           "categoria": "Mercado",
+          "impacto": "médio",
+          "data_pub": "17/jun/2026",
+          "tambem_em": [
+            "loyalty",
+            "marketplace"
+          ]
+        },
+        {
+          "titulo": "Google anuncia parcerias estratégicas para transformação digital do varejo brasileiro",
+          "fonte": "Blog Google Brasil",
+          "url": "https://blog.google/intl/pt-br/novidades/tecnologia/google-for-brasil-2026/",
+          "destaque": "Google firma parceria com Sebrae, Itaú e Tera para programa Negócio em IA voltado a PMEs",
+          "categoria": "Tecnologia",
           "impacto": "alto",
-          "data_pub": "18/jun/2026",
+          "data_pub": "10/jun/2026",
+          "tambem_em": [
+            "ia"
+          ]
+        },
+        {
+          "titulo": "ConectCar consolida rede de parcerias com programa de benefícios em crescimento",
+          "fonte": "ConectCar",
+          "url": "https://conectcar.com/parcerias/",
+          "destaque": "Plataforma oferece 18 mensalidades gratuitas com Claro Clube e integração com Magalu",
+          "categoria": "Mercado",
+          "impacto": "médio",
+          "data_pub": "15/jun/2026",
           "tambem_em": [
             "tag"
-          ]
-        },
-        {
-          "titulo": "Casas Bahia participa de painel sobre Buy Now Pay Later no Crédito Digital 2026",
-          "fonte": "Jornal do Brás",
-          "url": "https://jornaldobras.com.br/noticia/108479/credito-digital-2026-vai-reunir-grandes-varejistas-para-debater-a-evolucao-do-credito-no-varejo",
-          "destaque": "Case Buy Now Pay Later da Casas Bahia e Mercado Livre apresenta partnership em crédito digital com Mercado Pago e Mapfre",
-          "categoria": "Mercado",
-          "impacto": "médio",
-          "data_pub": "25/mar/2026",
-          "tambem_em": [
-            "pagamentos",
-            "varejo",
-            "fintechs"
-          ]
-        },
-        {
-          "titulo": "Brasil e Colômbia debatem ampliação do comércio e novas parcerias bilaterais",
-          "fonte": "MDIC",
-          "url": "https://www.gov.br/mdic/pt-br/assuntos/noticias/2026/junho/brasil-e-colombia-debatem-ampliacao-do-comercio-e-novas-parcerias-bilaterais-1",
-          "destaque": "Comércio bilateral entre Brasil e Colômbia atingiu US$ 5,4 bilhões em 2025, com oportunidades em mobilidade sustentável e biocombustíveis",
-          "categoria": "Mercado",
-          "impacto": "médio",
-          "data_pub": "18/jun/2026",
-          "tambem_em": []
-        },
-        {
-          "titulo": "Baratão Combustíveis expande parcerias internacionais na América Latina",
-          "fonte": "Terra",
-          "url": "https://www.terra.com.br/noticias/baratao-combustiveis-segue-investindo-em-parcerias,5fa2c7b5c68ffd34eb615f00d70f8f6auuebiptf.html",
-          "destaque": "Empresa reunirá 40 instituições parceiras e planeja expansão gradual por Paraguai, Uruguai e Argentina em 2026",
-          "categoria": "Mercado",
-          "impacto": "alto",
-          "data_pub": "13/nov/2025",
-          "tambem_em": [
-            "varejo"
           ]
         }
       ]
