@@ -134,6 +134,11 @@
     .btn-del{background:none;border:none;color:var(--red);cursor:pointer;font-size:15px;padding:4px;}
     .btn-edit{background:none;border:none;color:var(--blue);cursor:pointer;font-size:15px;padding:4px;}
     .sick-card{border-left:3px solid var(--red);}
+    .tipo-pills{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px;}
+    .tipo-pill{border:1.5px solid var(--border);border-radius:20px;padding:6px 12px;font-size:12px;font-weight:600;cursor:pointer;font-family:inherit;background:#fff;color:var(--muted);transition:all .2s;}
+    .tipo-pill.on{background:var(--amber-l);border-color:var(--amber);color:var(--amber);}
+    .tipo-outro{display:none;margin-top:8px;}
+    .tipo-outro.show{display:block;}
     .ciclo-item{font-size:12px;color:var(--muted);padding:3px 0;display:flex;align-items:center;gap:6px;}
     .ciclo-dot{width:6px;height:6px;border-radius:50%;background:var(--muted);flex-shrink:0;}
     .sec-label{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:1px;color:var(--muted);margin:18px 0 8px;}
@@ -222,8 +227,21 @@
       <input type="date" id="inp-doenca-inicio">
       <label>Data de fim <span style="font-weight:400;color:var(--muted)">(deixe vazio se ainda está doente)</span></label>
       <input type="date" id="inp-doenca-fim">
-      <label>Condição / Sintomas</label>
-      <input type="text" id="inp-doenca-cond" placeholder="Ex: gripe, febre 38.5°C, tosse...">
+      <label>Tipo</label>
+      <div class="tipo-pills" id="tipo-pills-registro">
+        <button class="tipo-pill" onclick="selectTipo('Gripe/Resfriado',this)">🤧 Gripe/Resfriado</button>
+        <button class="tipo-pill" onclick="selectTipo('Virose',this)">🦠 Virose</button>
+        <button class="tipo-pill" onclick="selectTipo('Otite',this)">👂 Otite</button>
+        <button class="tipo-pill" onclick="selectTipo('Ortopédico',this)">🦴 Ortopédico</button>
+        <button class="tipo-pill" onclick="selectTipo('Dor de cabeça',this)">🤕 Dor de cabeça</button>
+        <button class="tipo-pill" onclick="selectTipo('Dor de barriga',this)">🤢 Dor de barriga</button>
+        <button class="tipo-pill" onclick="selectTipo('Outro',this)">➕ Outro</button>
+      </div>
+      <div class="tipo-outro" id="tipo-outro-campo">
+        <input type="text" id="inp-tipo-outro" placeholder="Descreva o tipo...">
+      </div>
+      <label>Condição / Sintomas <span style="font-weight:400">(opcional — detalhes adicionais)</span></label>
+      <input type="text" id="inp-doenca-cond" placeholder="Ex: febre 38.5°C, tosse intensa...">
       <label>Observações <span style="font-weight:400">(opcional)</span></label>
       <textarea id="inp-doenca-obs" rows="2" placeholder="Como está se sentindo, comportamento..."></textarea>
       <div style="margin-top:12px;">
@@ -301,6 +319,12 @@
         <div style="margin-top:8px;"><div class="stat-n stat-n-clara" id="stat-remedios-clara" style="font-size:20px;">—</div><div class="stat-d">remédios</div></div>
       </div>
     </div>
+
+    <div class="sec-label">Tipos de doença mais frequentes</div>
+    <div class="card" id="card-tipos-doenca"></div>
+
+    <div class="sec-label">Evolução mensal — doenças</div>
+    <div class="card" style="overflow-x:auto;" id="card-evolucao-doencas"></div>
 
     <div class="sec-label">Horário médio de dormir e acordar</div>
     <div class="card" id="card-horarios"></div>
@@ -398,11 +422,24 @@
     <div class="modal-title">✏️ Editar episódio de saúde</div>
     <input type="hidden" id="edit-doenca-child">
     <input type="hidden" id="edit-doenca-id">
+    <label>Tipo</label>
+    <div class="tipo-pills" id="tipo-pills-edit">
+      <button class="tipo-pill" onclick="selectTipoEdit('Gripe/Resfriado',this)">🤧 Gripe/Resfriado</button>
+      <button class="tipo-pill" onclick="selectTipoEdit('Virose',this)">🦠 Virose</button>
+      <button class="tipo-pill" onclick="selectTipoEdit('Otite',this)">👂 Otite</button>
+      <button class="tipo-pill" onclick="selectTipoEdit('Ortopédico',this)">🦴 Ortopédico</button>
+      <button class="tipo-pill" onclick="selectTipoEdit('Dor de cabeça',this)">🤕 Dor de cabeça</button>
+      <button class="tipo-pill" onclick="selectTipoEdit('Dor de barriga',this)">🤢 Dor de barriga</button>
+      <button class="tipo-pill" onclick="selectTipoEdit('Outro',this)">➕ Outro</button>
+    </div>
+    <div class="tipo-outro" id="tipo-outro-edit">
+      <input type="text" id="inp-tipo-outro-edit" placeholder="Descreva o tipo...">
+    </div>
     <label>Data de início</label>
     <input type="date" id="edit-doenca-inicio">
     <label>Data de fim <span style="font-weight:400">(opcional)</span></label>
     <input type="date" id="edit-doenca-fim">
-    <label>Condição / Sintomas</label>
+    <label>Condição / Sintomas <span style="font-weight:400">(opcional)</span></label>
     <input type="text" id="edit-doenca-cond">
     <label>Observações</label>
     <textarea id="edit-doenca-obs" rows="2"></textarea>
@@ -875,13 +912,48 @@ function adicionarRemedio(){const nome=document.getElementById('inp-med-nome').v
 function renderRemediosPendentes(){const el=document.getElementById('remedios-preview');el.innerHTML=window._remediosPendentes.map((m,i)=>`<div class="med-item"><div class="med-icon">💊</div><div class="med-info"><div class="med-name">${m.nome}</div><div class="med-detail">${[m.dose,m.hora,m.duracao].filter(Boolean).join(' · ')}</div></div><button class="btn-del" onclick="removerRemedioTemp(${i})">✕</button></div>`).join('');}
 function removerRemedioTemp(i){window._remediosPendentes.splice(i,1);renderRemediosPendentes();}
 
+window._tipoDoenca = null;
+
+function selectTipo(tipo, el) {
+  window._tipoDoenca = window._tipoDoenca === tipo ? null : tipo;
+  document.querySelectorAll('#tipo-pills-registro .tipo-pill').forEach(b => b.classList.remove('on'));
+  if (window._tipoDoenca) el.classList.add('on');
+  const outroEl = document.getElementById('tipo-outro-campo');
+  if (outroEl) outroEl.classList.toggle('show', window._tipoDoenca === 'Outro');
+}
+
+function selectTipoEdit(tipo, el) {
+  window._tipoDoencaEdit = window._tipoDoencaEdit === tipo ? null : tipo;
+  document.querySelectorAll('#tipo-pills-edit .tipo-pill').forEach(b => b.classList.remove('on'));
+  if (window._tipoDoencaEdit) el.classList.add('on');
+  const outroEl = document.getElementById('tipo-outro-edit');
+  if (outroEl) outroEl.classList.toggle('show', window._tipoDoencaEdit === 'Outro');
+}
+
 function registrarDoenca(){
   if(!window._saudeChild){showToast('Selecione Lucas ou Clara');return;}
-  const inicio=document.getElementById('inp-doenca-inicio').value,fim=document.getElementById('inp-doenca-fim').value,cond=document.getElementById('inp-doenca-cond').value.trim(),obs=document.getElementById('inp-doenca-obs').value.trim();
-  if(!inicio||!cond){showToast('Preencha a data e a condição');return;}
+  const inicio=document.getElementById('inp-doenca-inicio').value;
+  const fim=document.getElementById('inp-doenca-fim').value;
+  const cond=document.getElementById('inp-doenca-cond').value.trim();
+  const obs=document.getElementById('inp-doenca-obs').value.trim();
+  // Tipo: se "Outro", pega o campo aberto
+  let tipo = window._tipoDoenca;
+  if (tipo === 'Outro') {
+    const outroVal = document.getElementById('inp-tipo-outro')?.value.trim();
+    tipo = outroVal || 'Outro';
+  }
+  if(!inicio){showToast('Preencha a data de início');return;}
+  if(!tipo && !cond){showToast('Selecione um tipo ou preencha a condição');return;}
   const child=window.ST[window._saudeChild];child.doencas=child.doencas||[];
-  child.doencas.push({id:Date.now(),inicio,fim:fim||null,cond,obs,remedios:[...window._remediosPendentes],registradoPor:window._userName||null});
-  window.saveState().then(()=>{showToast('✓ Episódio salvo!');['inp-doenca-inicio','inp-doenca-fim','inp-doenca-cond','inp-doenca-obs'].forEach(id=>document.getElementById(id).value='');window._remediosPendentes=[];renderRemediosPendentes();selectSaudeChild(window._saudeChild);});
+  child.doencas.push({id:Date.now(),inicio,fim:fim||null,tipo:tipo||null,cond,obs,remedios:[...window._remediosPendentes],registradoPor:window._userName||null});
+  window.saveState().then(()=>{
+    showToast('✓ Episódio salvo!');
+    ['inp-doenca-inicio','inp-doenca-fim','inp-doenca-cond','inp-doenca-obs','inp-tipo-outro'].forEach(id=>{const el=document.getElementById(id);if(el)el.value='';});
+    window._tipoDoenca=null;
+    document.querySelectorAll('#tipo-pills-registro .tipo-pill').forEach(b=>b.classList.remove('on'));
+    document.getElementById('tipo-outro-campo')?.classList.remove('show');
+    window._remediosPendentes=[];renderRemediosPendentes();selectSaudeChild(window._saudeChild);
+  });
 }
 
 function editarDoenca(child, id) {
@@ -893,6 +965,27 @@ function editarDoenca(child, id) {
   document.getElementById('edit-doenca-fim').value    = r.fim    || '';
   document.getElementById('edit-doenca-cond').value   = r.cond   || '';
   document.getElementById('edit-doenca-obs').value    = r.obs    || '';
+  // Tipo
+  window._tipoDoencaEdit = null;
+  document.querySelectorAll('#tipo-pills-edit .tipo-pill').forEach(b => b.classList.remove('on'));
+  document.getElementById('tipo-outro-edit')?.classList.remove('show');
+  const tiposFixos = ['Gripe/Resfriado','Virose','Otite','Ortopédico','Dor de cabeça','Dor de barriga'];
+  if (r.tipo) {
+    if (tiposFixos.includes(r.tipo)) {
+      window._tipoDoencaEdit = r.tipo;
+      document.querySelectorAll('#tipo-pills-edit .tipo-pill').forEach(b => {
+        if (b.textContent.includes(r.tipo)) b.classList.add('on');
+      });
+    } else {
+      window._tipoDoencaEdit = 'Outro';
+      document.querySelectorAll('#tipo-pills-edit .tipo-pill').forEach(b => {
+        if (b.textContent.includes('Outro')) b.classList.add('on');
+      });
+      document.getElementById('tipo-outro-edit')?.classList.add('show');
+      const inpOutro = document.getElementById('inp-tipo-outro-edit');
+      if (inpOutro) inpOutro.value = r.tipo;
+    }
+  }
   document.getElementById('modal-edit-doenca').classList.add('open');
 }
 
@@ -903,10 +996,16 @@ function salvarEdicaoDoenca() {
   const fim    = document.getElementById('edit-doenca-fim').value;
   const cond   = document.getElementById('edit-doenca-cond').value.trim();
   const obs    = document.getElementById('edit-doenca-obs').value.trim();
-  if (!inicio||!cond) { showToast('Preencha data e condição'); return; }
+  let tipo = window._tipoDoencaEdit;
+  if (tipo === 'Outro') {
+    const outroVal = document.getElementById('inp-tipo-outro-edit')?.value.trim();
+    tipo = outroVal || 'Outro';
+  }
+  if (!inicio) { showToast('Preencha a data de início'); return; }
+  if (!tipo && !cond) { showToast('Selecione um tipo ou preencha a condição'); return; }
   const r = window.ST[child].doencas.find(x=>x.id===id);
   if (!r) return;
-  r.inicio=inicio; r.fim=fim||null; r.cond=cond; r.obs=obs;
+  r.inicio=inicio; r.fim=fim||null; r.tipo=tipo||null; r.cond=cond; r.obs=obs;
   window.saveState().then(()=>showToast('✓ Episódio atualizado!'));
   fecharModal('modal-edit-doenca');
 }
@@ -927,7 +1026,8 @@ function renderDoencasChild(child){
           <button class="btn-del"  onclick="deletarDoenca('${child}',${r.id})">🗑</button>
         </div>
       </div>
-      <div style="font-size:14px;font-family:'DM Serif Display',serif;">${r.cond}</div>
+      ${r.tipo?`<div style="margin-bottom:6px;"><span style="background:var(--amber-l);color:var(--amber);font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;">${tipoEmoji(r.tipo)} ${r.tipo}</span></div>`:''}
+      <div style="font-size:14px;font-family:'DM Serif Display',serif;">${r.cond||r.tipo||'Episódio de saúde'}</div>
       <div style="font-size:12px;color:var(--muted);margin:4px 0 8px;">📅 ${fmtDate(r.inicio)}${r.fim?' → '+fmtDate(r.fim):' (sem data de fim)'}</div>
       ${r.obs?`<div style="font-size:12px;color:var(--muted);margin-bottom:6px;">${r.obs}</div>`:''}
       ${r.registradoPor?`<div style="margin-bottom:6px;"><span class="meta-tag">📱 ${r.registradoPor}</span></div>`:''}
@@ -944,7 +1044,9 @@ function renderComparativo() {
   const cSono = (window.ST.clara?.sono||[]).filter(r=>inPeriodo(getNorma(r).data||getNorma(r).ciclos[0]?.dormiu,range));
 
   // Gráfico — últimos 7 dias do período
-  const dias = ultimos7dias(range.ate);
+  // Bug fix: gráfico sempre mostra os 7 dias mais recentes do período selecionado
+  const diasFim = window._periodo === 'semana' ? undefined : range.ate;
+  const dias = ultimos7dias(diasFim);
   document.getElementById('chart-comp-sono').innerHTML = dias.map(d=>{
     const lR=lSono.find(r=>(getNorma(r).data||'').startsWith(d.key)&&duracaoNorma(r));
     const cR=cSono.find(r=>(getNorma(r).data||'').startsWith(d.key)&&duracaoNorma(r));
@@ -1047,27 +1149,32 @@ function renderComparativo() {
     </div>`;
 
   // Horários médios
-  function mediaH(sono,campo){
-    const vals=sono.filter(r=>{
-      const n=getNorma(r);
-      if(campo==='dormiu') return n.ciclos[0]&&n.ciclos[0].dormiu;
-      // Para acordou: pega o último ciclo com acordou preenchido (acordar definitivo)
-      return n.ciclos.some(c=>c.acordou);
-    }).map(r=>{
-      const n=getNorma(r);
-      let horario;
-      if(campo==='dormiu'){
-        horario=n.ciclos[0].dormiu;
+  function mediaH(sono, campo) {
+    const vals = [];
+    sono.forEach(r => {
+      const n = getNorma(r);
+      let horario = null;
+      if (campo === 'dormiu') {
+        // Primeiro dormiu da noite
+        horario = n.ciclos[0]?.dormiu || null;
       } else {
-        // Último acordou da noite (não intermediário)
-        const ultCiclo=[...n.ciclos].reverse().find(c=>c.acordou);
-        horario=ultCiclo?.acordou;
+        // Último acordou DEFINITIVO da noite
+        // Percorre ciclos de trás para frente e pega o primeiro que tem acordou
+        for (let i = n.ciclos.length - 1; i >= 0; i--) {
+          if (n.ciclos[i].acordou) { horario = n.ciclos[i].acordou; break; }
+        }
       }
-      if(!horario)return null;
-      const d=new Date(horario);
-      return d.getHours()*60+d.getMinutes();
-    }).filter(v=>v!==null);
-    return vals.length?minToTime(Math.round(vals.reduce((a,b)=>a+b,0)/vals.length)):'—';
+      if (!horario) return;
+      const d = new Date(horario);
+      // Converte para minutos desde meia-noite
+      // Para acordar: se hora < 12, provavelmente é manhã do dia seguinte ao dormir
+      // Isso já está correto pois getHours() retorna a hora real
+      const mins = d.getHours() * 60 + d.getMinutes();
+      vals.push(mins);
+    });
+    if (!vals.length) return '—';
+    const media = Math.round(vals.reduce((a,b) => a+b, 0) / vals.length);
+    return minToTime(media);
   }
   document.getElementById('card-horarios').innerHTML=`<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
     <div><div style="font-size:11px;font-weight:600;color:var(--lucas);text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px;">👦 Lucas</div>
@@ -1080,6 +1187,80 @@ function renderComparativo() {
 
   // Evolução mês a mês
   renderEvolucao();
+
+  // Tipos de doença mais frequentes
+  function contarTipos(doencas) {
+    const c = {};
+    doencas.forEach(r => {
+      const t = r.tipo || (r.cond ? 'Sem tipo' : 'Sem tipo');
+      c[t] = (c[t]||0) + 1;
+    });
+    return Object.entries(c).sort((a,b)=>b[1]-a[1]);
+  }
+  const lTipos = contarTipos(lDoencas), cTipos = contarTipos(cDoencas);
+  const elTipos = document.getElementById('card-tipos-doenca');
+  if (elTipos) {
+    if (!lTipos.length && !cTipos.length) {
+      elTipos.innerHTML = '<div class="empty" style="padding:12px;"><p>Nenhum episódio registrado no período.</p></div>';
+    } else {
+      // Unir todos os tipos
+      const todostipos = [...new Set([...lTipos.map(t=>t[0]),...cTipos.map(t=>t[0])])];
+      elTipos.innerHTML = `<table class="evolucao-table">
+        <thead><tr><th>Tipo</th><th style="color:var(--lucas);">👦 Lucas</th><th style="color:var(--clara);">👧 Clara</th></tr></thead>
+        <tbody>${todostipos.map(tipo => {
+          const lV = lTipos.find(t=>t[0]===tipo)?.[1]||0;
+          const cV = cTipos.find(t=>t[0]===tipo)?.[1]||0;
+          return `<tr>
+            <td>${tipoEmoji(tipo)} ${tipo}</td>
+            <td style="color:var(--lucas);font-weight:${lV?'600':'400'};">${lV||'—'}</td>
+            <td style="color:var(--clara);font-weight:${cV?'600':'400'};">${cV||'—'}</td>
+          </tr>`;
+        }).join('')}</tbody>
+      </table>`;
+    }
+  }
+
+  // Evolução mensal de doenças
+  const allDoencas = [
+    ...(window.ST.lucas?.doencas||[]).map(r=>({...r,child:'lucas'})),
+    ...(window.ST.clara?.doencas||[]).map(r=>({...r,child:'clara'}))
+  ];
+  const mesesDoencas = {};
+  allDoencas.forEach(r => {
+    if (!r.inicio) return;
+    const mes = r.inicio.slice(0,7);
+    if (!mesesDoencas[mes]) mesesDoencas[mes] = {lucas:[],clara:[]};
+    mesesDoencas[mes][r.child].push(r);
+  });
+  const keysD = Object.keys(mesesDoencas).sort();
+  const elEvolD = document.getElementById('card-evolucao-doencas');
+  if (elEvolD) {
+    if (!keysD.length) {
+      elEvolD.innerHTML = '<div class="empty" style="padding:12px;"><p>Sem dados de doenças ainda.</p></div>';
+    } else {
+      elEvolD.innerHTML = `<table class="evolucao-table">
+        <thead><tr>
+          <th>Mês</th>
+          <th style="color:var(--lucas);">👦 Episódios</th>
+          <th style="color:var(--lucas);">Tipos</th>
+          <th style="color:var(--clara);">👧 Episódios</th>
+          <th style="color:var(--clara);">Tipos</th>
+        </tr></thead>
+        <tbody>${keysD.map(k=>{
+          const l=mesesDoencas[k].lucas, c=mesesDoencas[k].clara;
+          const lTiposStr = [...new Set(l.map(r=>r.tipo||'—'))].map(t=>tipoEmoji(t)).join(' ');
+          const cTiposStr = [...new Set(c.map(r=>r.tipo||'—'))].map(t=>tipoEmoji(t)).join(' ');
+          return `<tr>
+            <td style="font-weight:600;">${fmtMes(k)}</td>
+            <td style="color:var(--lucas);">${l.length||'—'}</td>
+            <td style="font-size:14px;">${lTiposStr||'—'}</td>
+            <td style="color:var(--clara);">${c.length||'—'}</td>
+            <td style="font-size:14px;">${cTiposStr||'—'}</td>
+          </tr>`;
+        }).join('')}</tbody>
+      </table>`;
+    }
+  }
 
   // Perfil
   document.getElementById('card-perfil').innerHTML=['lucas','clara'].map(child=>{
@@ -1119,6 +1300,7 @@ function renderEvolucao() {
 
   const fmtMes = k => { const [y,m]=k.split('-'); return new Date(y,m-1,1).toLocaleDateString('pt-BR',{month:'short',year:'2-digit'}); };
 
+  // Evolução sono mês a mês
   document.getElementById('card-evolucao').innerHTML=`<table class="evolucao-table">
     <thead><tr>
       <th>Mês</th>
@@ -1133,16 +1315,16 @@ function renderEvolucao() {
       const l=meses[k].lucas, c=meses[k].clara;
       const lM=l.count?(l.total/l.count).toFixed(1):'—';
       const cM=c.count?(c.total/c.count).toFixed(1):'—';
-      const lDes=l.totalNoites?(l.totalDespertares/l.totalNoites).toFixed(1):'—';
-      const cDes=c.totalNoites?(c.totalDespertares/c.totalNoites).toFixed(1):'—';
+      const lDes=l.totalNoites?(l.totalDespertares/l.totalNoites).toFixed(1):'0.0';
+      const cDes=c.totalNoites?(c.totalDespertares/c.totalNoites).toFixed(1):'0.0';
       return `<tr>
         <td style="font-weight:600;">${fmtMes(k)}</td>
         <td style="color:var(--lucas);">${lM!=='—'?lM+'h':'—'}</td>
         <td style="color:var(--lucas);">${l.count}</td>
-        <td style="color:var(--lucas);">${lDes!=='—'?lDes+'x':'—'}</td>
+        <td style="color:var(--lucas);">${lDes}x</td>
         <td style="color:var(--clara);">${cM!=='—'?cM+'h':'—'}</td>
         <td style="color:var(--clara);">${c.count}</td>
-        <td style="color:var(--clara);">${cDes!=='—'?cDes+'x':'—'}</td>
+        <td style="color:var(--clara);">${cDes}x</td>
       </tr>`;
     }).join('')}</tbody>
   </table>`;
@@ -1233,6 +1415,14 @@ function deletarResumo(id) {
 }
 
 // ── UTILS ─────────────────────────────────────────────
+function tipoEmoji(tipo) {
+  const map = {
+    'Gripe/Resfriado':'🤧','Virose':'🦠','Otite':'👂',
+    'Ortopédico':'🦴','Dor de cabeça':'🤕','Dor de barriga':'🤢','Outro':'➕'
+  };
+  return map[tipo] || '🏥';
+}
+
 function ultimos7dias(ate) {
   const dias=[], fim=ate?new Date(ate+'T12:00'):new Date();
   for(let i=6;i>=0;i--){
