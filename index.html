@@ -279,7 +279,7 @@ function itemHTML(n, i){
       <div class="dest">${esc(n.destaque)}</div>
       <div style="display:flex;justify-content:space-between;align-items:center;margin-top:2px">
         <div class="fonte">📰 ${esc(n.fonte)}</div>
-        <button class="btn-analisar" id="btn-${itemId}" onclick="analisarNoticia('${itemId}','${esc(n.titulo).replace(/'/g,"\'")}','${esc(n.url).replace(/'/g,"\'")}','${esc(n.destaque).replace(/'/g,"\'")}')">✦ Analisar</button>
+        <button class="btn-analisar" id="btn-${itemId}" onclick="analisarNoticia('${itemId}')">✦ Analisar</button>
       </div>
       <div class="analise-panel" id="panel-${itemId}"></div>
     </div>
@@ -581,7 +581,11 @@ const CONTEXTO_ITAU = `Você é um analista estratégico sênior do Banco Itaú 
 - 🚗 TAG: tag veicular Itaú, pedágio, mobilidade urbana, Free Flow, gestão de frota
 - 🎯 Loyalty: programa de pontos Itaú, milhas, cashback, fidelização, parcerias com aéreas e varejo`;
 
-async function analisarNoticia(itemId, titulo, url, destaque){
+async function analisarNoticia(itemId){
+  const d = (window._newsData||{})[itemId] || {};
+  const titulo = d.titulo || '';
+  const url = d.url || '';
+  const destaque = d.destaque || '';
   const btn   = document.getElementById('btn-' + itemId);
   const panel = document.getElementById('panel-' + itemId);
 
@@ -664,7 +668,7 @@ Retorne APENAS o JSON, sem markdown.`;
     }
 
     // Renderiza painel
-    panel.innerHTML = \`
+    panel.innerHTML = `
       <div class="analise-section">
         <div class="analise-label" style="color:#F9FAFB">📋 Resumo</div>
         <div class="analise-text">\${analise.resumo||''}</div>
@@ -699,13 +703,13 @@ Retorne APENAS o JSON, sem markdown.`;
         <div class="analise-label" style="color:#F59E0B">⚡ Insight Estratégico</div>
         <div class="analise-text" style="color:#F9FAFB;font-weight:500">\${analise.insights||''}</div>
       </div>
-    \`;
+    `;
 
     btn.classList.remove('loading');
     btn.textContent = '✕ Fechar';
 
   } catch(e) {
-    panel.innerHTML = \`<div style="color:#EF4444;font-size:11px;font-family:monospace">❌ Erro: \${e.message}</div>\`;
+    panel.innerHTML = `<div style="color:#EF4444;font-size:11px;font-family:monospace">❌ Erro: \${e.message}</div>`;
     btn.classList.remove('loading');
     btn.textContent = '✦ Analisar';
   }
