@@ -2,8 +2,9 @@
 Daily News — Briefing de Mercado
 Gerador Automático via GitHub Actions
 Roda: Segunda, Quarta e Sexta às 05:00 (Brasília)
-Modelo: claude-haiku-4-5-20251001
-Busca: web_search da Anthropic
+Arquitetura híbrida:
+  - Sonnet 4.6: busca notícias via web_search (qualidade alta)
+  - Haiku 4.5: formata o JSON (custo baixo)
 """
 
 import os, json, re
@@ -39,58 +40,51 @@ DIAS_PT   = {"Monday":"Segunda-feira","Tuesday":"Terça-feira","Wednesday":"Quar
 def fmt_date(d):
     return f"{d.day}/{MESES_ABR[d.month]}/{d.year}"
 
-SYSTEM = """Você é um analista sênior de mercado financeiro e varejo brasileiro.
-Pesquise as notícias mais relevantes dos últimos 2 dias sobre o tema solicitado.
-Retorne SOMENTE um objeto JSON válido, sem markdown, sem texto fora do objeto."""
 
-def build_prompt(tema_id, tema_label, tema_query, data_inicio, data_fim):
-    temas_str = ", ".join([f'"{t[0]}" ({t[1]})' for t in TEMAS])
-    return f"""Pesquise notícias publicadas entre {data_inicio} e {data_fim} sobre "{tema_label}" no Brasil.
-Query sugerida: "{tema_query}"
+# ── ETAPA 1: Sonnet busca as notícias ────────────────────────────
+SYSTEM_BUSCA = """Você é um pesquisador especializado em mercado financeiro e varejo brasileiro.
+Sua tarefa é buscar notícias reais e recentes sobre o tema solicitado.
+Busque ativamente usando a ferramenta de busca — faça múltiplas buscas se necessário.
+Retorne APENAS um JSON válido com as notícias encontradas, sem markdown."""
 
-Retorne APENAS este JSON (sem markdown):
+def sonnet_busca(tema_id, tema_label, tema_query, data_inicio, data_fim):
+    """Sonnet faz buscas reais e retorna lista de notícias encontradas."""
+
+    prompt = f"""Busque notícias publicadas nos últimos 14 dias sobre "{tema_label}" no Brasil.
+
+Faça PELO MENOS 3 buscas diferentes com queries variadas:
+1. "{tema_query} {data_fim}"
+2. "{tema_label} Brasil notícias semana"
+3. Uma query específica sobre subtema relevante
+
+Retorne APENAS este JSON com as notícias encontradas (sem markdown):
 {{
-  "resumo": "2 frases sobre o cenário do período",
-  "termometro": "positivo",
-  "noticias": [
+  "noticias_encontradas": [
     {{
-      "titulo": "Título exato da notícia conforme publicado",
+      "titulo": "Título exato da notícia",
+      "url": "https://url-exata-encontrada",
       "fonte": "Nome do veículo",
-      "url": "https://url-exata-do-artigo.com.br",
-      "destaque": "Dado ou frase mais relevante da notícia",
-      "categoria": "Mercado",
-      "impacto": "alto",
       "data_pub": "DD/mmm/YYYY",
-      "tambem_em": []
+      "trecho": "Trecho relevante da notícia"
     }}
   ]
 }}
 
-Regras OBRIGATÓRIAS:
-- Inclua SOMENTE notícias publicadas nos últimos 14 dias (entre {data_inicio} e {data_fim})
-- NÃO inclua notícias com mais de 14 dias — verifique a data antes de incluir
-- Mínimo 4, máximo 8 notícias
-- Se não encontrar notícias recentes suficientes, busque com queries diferentes
-- URL deve ser o link exato do artigo encontrado na busca
-- data_pub deve ser a data REAL de publicação no formato DD/mmm/YYYY
-- categoria: Regulatório | Mercado | Tecnologia | Competição | Tendência
-- impacto: alto | médio | baixo
-- termometro: positivo | neutro | negativo
-- tambem_em: IDs de outros temas relacionados. Disponíveis: {temas_str}
+Regras:
+- Inclua SOMENTE notícias dos últimos 14 dias (de {data_inicio} a {data_fim})
+- Se não encontrar notícias recentes, faça mais buscas com queries diferentes
+- Mínimo 4 notícias, máximo 10
+- Use a URL EXATA encontrada — não invente
 - APENAS JSON, zero texto fora"""
 
+    messages = [{"role": "user", "content": prompt}]
 
-def buscar_tema(tema_id, tema_label, tema_query, data_inicio, data_fim):
-    print(f"  [{tema_id}] {tema_label}...", end=" ", flush=True)
-
-    messages = [{"role": "user", "content": build_prompt(tema_id, tema_label, tema_query, data_inicio, data_fim)}]
-
-    for _ in range(10):
+    for _ in range(15):
         resp = client.messages.create(
-            model="claude-haiku-4-5-20251001",
-            max_tokens=3000,
-            system=SYSTEM,
-            tools=[{"type": "web_search_20250305", "name": "web_search", "max_uses": 5}],
+            model="claude-sonnet-4-6",
+            max_tokens=4000,
+            system=SYSTEM_BUSCA,
+            tools=[{"type": "web_search_20250305", "name": "web_search", "max_uses": 8}],
             messages=messages,
         )
         messages.append({"role": "assistant", "content": resp.content})
@@ -108,28 +102,112 @@ def buscar_tema(tema_id, tema_label, tema_query, data_inicio, data_fim):
 
     try:
         parsed = json.loads(text)
+        return parsed.get("noticias_encontradas", [])
+    except Exception:
+        m = re.search(r"\{[\s\S]*\}", text)
+        if m:
+            try:
+                parsed = json.loads(m.group(0))
+                return parsed.get("noticias_encontradas", [])
+            except:
+                pass
+    return []
+
+
+# ── ETAPA 2: Haiku formata o JSON final ──────────────────────────
+SYSTEM_FORMATO = """Você é um analista sênior de mercado financeiro e varejo brasileiro.
+Receberá notícias já pesquisadas e deve classificá-las e formatá-las.
+Retorne APENAS um JSON válido, sem markdown."""
+
+def haiku_formata(tema_id, tema_label, data_inicio, data_fim, noticias_raw):
+    """Haiku classifica e formata as notícias encontradas pelo Sonnet."""
+
+    temas_str = ", ".join([f'"{t[0]}" ({t[1]})' for t in TEMAS])
+
+    noticias_txt = "\n".join([
+        f"{i+1}. TÍTULO: {n.get('titulo','')}\n   URL: {n.get('url','')}\n   FONTE: {n.get('fonte','')}\n   DATA: {n.get('data_pub','')}\n   TRECHO: {n.get('trecho','')}"
+        for i, n in enumerate(noticias_raw)
+    ])
+
+    prompt = f"""Classifique e formate estas notícias sobre "{tema_label}" (período: {data_inicio} a {data_fim}):
+
+{noticias_txt}
+
+Retorne APENAS este JSON (sem markdown):
+{{
+  "resumo": "2 frases sobre o cenário do período",
+  "termometro": "positivo",
+  "noticias": [
+    {{
+      "titulo": "Título da notícia",
+      "fonte": "Nome do veículo",
+      "url": "URL exata — não modifique",
+      "destaque": "Dado ou frase mais relevante extraído do trecho",
+      "categoria": "Mercado",
+      "impacto": "alto",
+      "data_pub": "DD/mmm/YYYY",
+      "tambem_em": []
+    }}
+  ]
+}}
+
+Regras:
+- Use TODAS as notícias recebidas — não descarte
+- Use a URL EXATAMENTE como fornecida — não modifique
+- categoria: Regulatório | Mercado | Tecnologia | Competição | Tendência
+- impacto: alto | médio | baixo
+- termometro: positivo | neutro | negativo
+- tambem_em: IDs de outros temas relacionados. Disponíveis: {temas_str}
+- APENAS JSON, zero texto fora"""
+
+    resp = client.messages.create(
+        model="claude-haiku-4-5-20251001",
+        max_tokens=3000,
+        system=SYSTEM_FORMATO,
+        messages=[{"role": "user", "content": prompt}]
+    )
+
+    text = "".join(b.text for b in resp.content if b.type == "text").strip()
+
+    try:
+        parsed = json.loads(text)
     except Exception:
         m = re.search(r"\{[\s\S]*\}", text)
         if not m:
-            print("ERRO: JSON não encontrado")
             return {"resumo": "Sem dados", "termometro": "neutro", "noticias": []}
         try:
             parsed = json.loads(m.group(0))
-        except Exception as e:
-            print(f"ERRO parse: {e}")
+        except Exception:
             return {"resumo": "Erro ao processar", "termometro": "neutro", "noticias": []}
 
     # Sanitiza tambem_em
     for n in parsed.get("noticias", []):
         n["tambem_em"] = [t for t in n.get("tambem_em", []) if t in TODOS_IDS and t != tema_id]
 
-    n_not = len(parsed.get("noticias", []))
-    print(f"OK ({n_not} notícias)")
+    return parsed
+
+
+# ── Pipeline principal ────────────────────────────────────────────
+def buscar_tema(tema_id, tema_label, tema_query, data_inicio, data_fim):
+    print(f"  [{tema_id}] {tema_label}...", end=" ", flush=True)
+
+    # Etapa 1: Sonnet busca
+    noticias_raw = sonnet_busca(tema_id, tema_label, tema_query, data_inicio, data_fim)
+    print(f"Sonnet: {len(noticias_raw)} notícias encontradas...", end=" ", flush=True)
+
+    if not noticias_raw:
+        print("SEM RESULTADOS")
+        return {"resumo": "Sem dados disponíveis", "termometro": "neutro", "noticias": []}
+
+    # Etapa 2: Haiku formata
+    parsed = haiku_formata(tema_id, tema_label, data_inicio, data_fim, noticias_raw)
+    print(f"OK ({len(parsed.get('noticias', []))} notícias formatadas)")
+
     return parsed
 
 
 def main():
-    hoje      = date.today()
+    hoje         = date.today()
     quatorze_dias = hoje - timedelta(days=14)
 
     data_inicio_str = fmt_date(quatorze_dias)
@@ -137,17 +215,17 @@ def main():
     data_edicao = (f"{DIAS_PT.get(hoje.strftime('%A'), hoje.strftime('%A'))}, "
                    f"{hoje.day} de {MESES_PT.get(hoje.strftime('%B'), hoje.strftime('%B'))} de {hoje.year}")
 
-    print(f"\n{'='*58}")
+    print(f"\n{'='*60}")
     print(f"Daily News — {data_edicao}")
-    print(f"Período: {data_inicio_str} a {data_fim_str} (últimos 7 dias)")
-    print(f"Modelo: Haiku 4.5 | Busca: Anthropic web_search")
-    print(f"{'='*58}")
+    print(f"Período: {data_inicio_str} a {data_fim_str}")
+    print(f"Busca: Sonnet 4.6 | Formatação: Haiku 4.5")
+    print(f"{'='*60}")
 
     temas_data = {}
     for tid, tlabel, tquery in TEMAS:
         temas_data[tid] = buscar_tema(tid, tlabel, tquery, data_inicio_str, data_fim_str)
 
-    janela_ini = fmt_date(hoje - timedelta(days=7))
+    janela_ini = fmt_date(hoje - timedelta(days=14))
     data = {
         "data_edicao":     data_edicao,
         "data_geracao":    f"{hoje.strftime('%d/%m/%Y')} · 05:00",
