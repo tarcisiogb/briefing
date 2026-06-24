@@ -5,85 +5,117 @@
   "periodo_recente": "10/jun/2026 a 23/jun/2026",
   "temas": {
     "cartoes": {
-      "resumo": "Transações com cartões crescem 8,3% no primeiro trimestre de 2026, movimentando R$ 1,1 trilhão, com destaque para pagamentos por aproximação que representam 74,8% das operações presenciais. Mercado projeta expansão de 9,5% a 11,5% para 2026, com uso de cartões no exterior crescendo 37%.",
+      "resumo": "O mercado de cartões brasileiro registra forte crescimento em 2026, com 85% dos usuários quitando faturas em dia e transações atingindo R$ 1,1 trilhão no primeiro trimestre, alta de 8,3%. Pagamentos por aproximação dominam o varejo presencial com 74,8% das operações, consolidando a transformação digital no setor.",
       "termometro": "positivo",
       "noticias": [
+        {
+          "titulo": "Surpreendente: 85% Quitam Fatura do Cartão em Dia no Brasil 2026",
+          "fonte": "Folha Financeira",
+          "url": "https://folhafinanceira.com.br/surpreendente-85-quitam-fatura-do-cartao-em-dia-no-brasil-2026/",
+          "destaque": "85% dos brasileiros que utilizam cartões de crédito quitam suas faturas em dia em 2026, com cartões movimentando R$ 810,2 bilhões no 1T26, alta de 12,8%",
+          "categoria": "Mercado",
+          "impacto": "alto",
+          "data_pub": "18/jun/2026",
+          "tambem_em": [
+            "pagamentos",
+            "bancos"
+          ]
+        },
         {
           "titulo": "Pagamentos com cartões crescem 8,3% no primeiro trimestre de 2026 e movimentam R$ 1,1 trilhão",
           "fonte": "Panorama Abecs",
           "url": "https://panoramaabecs.com.br/numeros-do-setor-balanco-cartoes-1t26-crescimento/",
-          "destaque": "Cartão de crédito liderou movimentação com R$ 810,2 bilhões (alta de 12,8%), e tecnologia de aproximação já representa 74,8% das transações presenciais",
+          "destaque": "Transações com cartões (crédito, débito e pré-pagos) somaram R$ 1,1 trilhão no 1T26 com crescimento de 8,3%; pagamentos por aproximação já representam 74,8% das transações presenciais",
           "categoria": "Mercado",
           "impacto": "alto",
           "data_pub": "10/jun/2026",
           "tambem_em": [
-            "pagamentos",
-            "loyalty"
+            "pagamentos"
           ]
         },
         {
-          "titulo": "Pagamentos com cartões crescem no 1° tri de 2026 e movimentam R$ 1,1 trilhão",
-          "fonte": "Cantarino Brasileiro",
-          "url": "https://cantarinobrasileiro.com.br/pagamentos-com-cartoes-crescem-no-1-tri-de-2026-e-movimentam-r-11-trilhao/",
-          "destaque": "11,7 bilhões de transações realizadas no trimestre (132 milhões por dia) e uso de cartões no exterior cresceu 37% (US$ 5,3 bilhões)",
-          "categoria": "Mercado",
+          "titulo": "Pagamentos por aproximação são 3/4 das transações com cartões no Brasil",
+          "fonte": "Finsiders Brasil",
+          "url": "https://finsidersbrasil.com.br/pagamentos/abecs-pagamentos-aproximacao-cartoes-brasil/",
+          "destaque": "Pagamentos por aproximação saltaram de 8% (cinco anos atrás) para 74,8% das transações presenciais em março de 2026, movimentando R$ 504,8 bilhões com expansão de 19,3%",
+          "categoria": "Tendência",
           "impacto": "alto",
-          "data_pub": "19/jun/2026",
+          "data_pub": "11/jun/2026",
           "tambem_em": [
-            "pagamentos"
+            "pagamentos",
+            "varejo"
           ]
         },
         {
           "titulo": "Os 10 cartões de crédito que mais acumulam pontos e milhas [atualizado 2026]",
           "fonte": "Passageiro de Primeira",
           "url": "https://passageirodeprimeira.com/melhores-cartoes-pontos-milhas/",
-          "destaque": "Ranking atualizado de cartões com melhor acúmulo de pontos e milhas, baseado em pontuação padrão para compras nacionais",
-          "categoria": "Tendência",
+          "destaque": "Lista atualizada em junho de 2026 dos 10 cartões de crédito nacionais que mais acumulam pontos e milhas, refletindo dinâmica contínua de políticas e pontuações no mercado",
+          "categoria": "Competição",
           "impacto": "médio",
           "data_pub": "11/jun/2026",
           "tambem_em": [
-            "loyalty"
+            "loyalty",
+            "bancos"
           ]
         },
         {
-          "titulo": "Aproximação responde por três quartos dos pagamentos com cartões",
-          "fonte": "Finsiders Brasil",
-          "url": "https://finsidersbrasil.com.br/pagamentos/abecs-pagamentos-aproximacao-cartoes-brasil/",
-          "destaque": "Pagamentos por aproximação movimentaram R$ 27,1 bilhões (alta de 114,6% YoY) e projeção de expansão de 9,5% a 11,5% para 2026, levando setor a R$ 5 trilhões",
-          "categoria": "Tecnologia",
-          "impacto": "alto",
+          "titulo": "IOF zero em compras internacionais nos cartões Unicred Privilege e Ímpar Visa Infinite",
+          "fonte": "Cartões de Crédito ME",
+          "url": "https://www.cartoesdecredito.me/cartoes/iof-dos-cartoes-de-credito/",
+          "destaque": "Promoção de IOF zero em compras internacionais (11/06 a 19/07/2026) nos cartões Unicred Privilege e Unicred Ímpar Visa Infinite, com bancos subsidiando imposto federal de 3,5%",
+          "categoria": "Competição",
+          "impacto": "médio",
           "data_pub": "11/jun/2026",
           "tambem_em": [
+            "bancos",
             "pagamentos"
+          ]
+        },
+        {
+          "titulo": "Transações com máquinas de cartões do Sicredi crescem dois dígitos no Dia das Mães e superam R$ 2 bilhões em faturamento",
+          "fonte": "Sicredi",
+          "url": "https://www.sicredi.com.br/coop/botucarai/noticias/institucional/transacoes-com-maquinas-de-cartoes-do-sicredi-crescem-dois-digitos-no-dia-das-maes-e-superam-r-2-bilhoes-em-faturamento/",
+          "destaque": "Máquinas de cartões do Sicredi registraram R$ 20,4 bilhões em transações no 4T25 (alta de 31% anual), com faturamento anual de R$ 74,4 bilhões em adquirência",
+          "categoria": "Mercado",
+          "impacto": "alto",
+          "data_pub": "05/jun/2026",
+          "tambem_em": [
+            "pagamentos",
+            "varejo",
+            "bancos"
+          ]
+        },
+        {
+          "titulo": "Em 2026, cartões de crédito, débito e pré-pago movimentaram R$ 4,5 trilhões em 2025 com 48,1 bilhões de transações",
+          "fonte": "Genial Investimentos - Analisa",
+          "url": "https://analisa.genialinvestimentos.com.br/noticias/renda-fixa/highlights-da-semana-08-06-2026-2-2-2-2/",
+          "destaque": "Cartões movimentaram R$ 4,5 trilhões em 2025 com 48,1 bilhões de transações, evidenciando importância crescente de recebíveis em setores como varejo e delivery",
+          "categoria": "Mercado",
+          "impacto": "alto",
+          "data_pub": "08/jun/2026",
+          "tambem_em": [
+            "pagamentos",
+            "varejo",
+            "marketplace"
           ]
         }
       ]
     },
     "pagamentos": {
-      "resumo": "O Banco Central integrou o Pix por aproximação ao Open Finance, permitindo compartilhamento de saldo e limite em carteiras digitais e movimentações automáticas a partir de 23 de junho. Em paralelo, o BC eliminou o limite fixo de R$ 500 por transação, permitindo que usuários definam seus próprios limites a partir de outubro de 2026.",
+      "resumo": "O Banco Central expandiu o Pix por aproximação com integração ao Open Finance, permitindo compartilhamento de saldo e limite a partir de 23 de junho de 2026. Pagamentos com cartões cresceram 8,3% no primeiro trimestre de 2026, movimentando R$ 1,1 trilhão, consolidando a digitalização dos meios de pagamento no Brasil.",
       "termometro": "positivo",
       "noticias": [
-        {
-          "titulo": "Pix por aproximação ganha três novas funções no open finance",
-          "fonte": "ND Mais",
-          "url": "https://ndmais.com.br/tecnologia/pix-por-aproximacao-ganha-tres-novas-funcionalidades/",
-          "destaque": "Visualização de saldo disponível, limite autorizado e possibilidade de concluir pagamento antes da confirmação",
-          "categoria": "Tecnologia",
-          "impacto": "alto",
-          "data_pub": "23/jun/2026",
-          "tambem_em": [
-            "bancos"
-          ]
-        },
         {
           "titulo": "BC libera Pix por aproximação via Open Finance",
           "fonte": "Monitor Mercantil",
           "url": "https://monitormercantil.com.br/bc-libera-pix-por-aproximacao-via-open-finance/",
-          "destaque": "Compartilhamento de saldo e limite conectado no Pix por aproximação via Open Finance com vigência em 23 de junho",
+          "destaque": "Possibilidade de compartilhamento de saldo e limite ao conectar conta no Pix por aproximação via Open Finance entra em vigor",
           "categoria": "Regulatório",
           "impacto": "alto",
           "data_pub": "23/jun/2026",
           "tambem_em": [
+            "fintechs",
             "bancos"
           ]
         },
@@ -91,162 +123,126 @@
           "titulo": "Open Finance passa a exibir saldo antes do Pix por Aproximação",
           "fonte": "Finsiders Brasil",
           "url": "https://finsidersbrasil.com.br/pagamentos/open-finance-permite-compartilhamento-de-saldo-e-limite-em-pix-por-aproximacao/",
-          "destaque": "Eliminação do limite padrão de R$ 500 para transações via Pix por Aproximação, ampliando flexibilidade de uso",
+          "destaque": "Open Finance permite compartilhamento de dados de saldo e limite nas operações com Pix por Aproximação em carteiras digitais",
+          "categoria": "Tecnologia",
+          "impacto": "alto",
+          "data_pub": "23/jun/2026",
+          "tambem_em": [
+            "fintechs"
+          ]
+        },
+        {
+          "titulo": "Pix por aproximação ganha três novas funções no open finance",
+          "fonte": "ND Mais",
+          "url": "https://ndmais.com.br/tecnologia/pix-por-aproximacao-ganha-tres-novas-funcionalidades/",
+          "destaque": "Três novas funcionalidades: visualizar saldo disponível, limite autorizado para transações e conclusão do pagamento antes da confirmação",
+          "categoria": "Tecnologia",
+          "impacto": "alto",
+          "data_pub": "23/jun/2026",
+          "tambem_em": [
+            "fintechs"
+          ]
+        },
+        {
+          "titulo": "BC amplia Pix por aproximação com nova função no Open Finance",
+          "fonte": "Contábeis",
+          "url": "https://www.contabeis.com.br/noticias/77601/bc-amplia-pix-por-aproximacao-com-nova-funcao-no-open-finance/",
+          "destaque": "Expansão para pagamentos por aproximação dentro do Open Finance avança estratégia de digitalização do sistema financeiro brasileiro",
           "categoria": "Regulatório",
           "impacto": "alto",
           "data_pub": "23/jun/2026",
           "tambem_em": [
             "bancos"
-          ]
-        },
-        {
-          "titulo": "Pix por aproximação integra open finance para otimizar pagamentos",
-          "fonte": "News Rondônia",
-          "url": "https://newsrondonia.com.br/economia/2026/06/23/pix-por-aproximacao-integra-open-finance-para-otimizar-pagamentos/",
-          "destaque": "Integração de pagamentos instantâneos, carteiras digitais e serviços financeiros com protocolos de segurança rigorosos",
-          "categoria": "Mercado",
-          "impacto": "alto",
-          "data_pub": "23/jun/2026",
-          "tambem_em": [
-            "bancos",
-            "cartoes"
           ]
         },
         {
           "titulo": "Banco Central dá mais um passo na integração entre Pix e open finance",
           "fonte": "Agência Brasil / Radioagência Nacional",
           "url": "https://agenciabrasil.ebc.com.br/radioagencia-nacional/economia/audio/2026-06/banco-central-da-mais-um-passo-na-integracao-entre-pix-e-open-finance",
-          "destaque": "Jornada otimizada que reúne em uma única etapa compartilhamento de saldo e limite com movimentações automáticas",
-          "categoria": "Tecnologia",
+          "destaque": "Correntistas podem optar pelo compartilhamento de saldo e limite ao conectar conta no Pix por aproximação em carteiras digitais",
+          "categoria": "Regulatório",
           "impacto": "alto",
           "data_pub": "23/jun/2026",
           "tambem_em": [
-            "bancos"
+            "bancos",
+            "fintechs"
           ]
         },
         {
           "titulo": "Banco Central usa Pix por Aproximação para avançar pagamentos pelo Open Finance",
           "fonte": "Convergência Digital",
           "url": "https://convergenciadigital.com.br/governo/banco-central-usa-pix-por-aproximacao-para-avancar-pagamentos-pelo-open-finance/",
-          "destaque": "Jornada otimizada elimina necessidade de processo separado de compartilhamento de dados para autorizar acesso",
+          "destaque": "'Jornada otimizada' evita que correntista passe por processo duplicado de compartilhamento de dados e autorização de vinculação",
           "categoria": "Tecnologia",
           "impacto": "alto",
           "data_pub": "22/jun/2026",
           "tambem_em": [
+            "fintechs"
+          ]
+        },
+        {
+          "titulo": "Banco Central expande o PIX por aproximação com integração ao Open Finance",
+          "fonte": "Sped Brasil",
+          "url": "https://spedbrasil.com.br/pix-por-aproximacao-open-finance-bc/",
+          "destaque": "Expansão do Pix por aproximação com integração ao Open Finance promete transformar experiência de transações, tornando-as mais fluidas, seguras e personalizadas",
+          "categoria": "Tendência",
+          "impacto": "alto",
+          "data_pub": "23/jun/2026",
+          "tambem_em": [
+            "fintechs",
             "bancos"
           ]
         },
         {
-          "titulo": "BC permite que usuários definam limites para Pix por aproximação",
-          "fonte": "Poder360",
-          "url": "https://www.poder360.com.br/poder-economia/bc-permite-que-usuarios-definam-limites-para-pix-por-aproximacao/",
-          "destaque": "Instrução normativa permite que usuários solicitem aumento ou redução dos limites diários para Pix por aproximação e JSR",
-          "categoria": "Regulatório",
+          "titulo": "Pagamentos com cartões crescem 8,3% no primeiro trimestre de 2026 e movimentam R$ 1,1 trilhão",
+          "fonte": "Panorama Abecs",
+          "url": "https://panoramaabecs.com.br/numeros-do-setor-balanco-cartoes-1t26-crescimento/",
+          "destaque": "Transações com cartões somaram R$ 1,1 trilhão no 1T26, crescimento de 8,3%; cartão de crédito liderou com R$ 810,2 bilhões (+12,8%)",
+          "categoria": "Mercado",
           "impacto": "alto",
-          "data_pub": "17/jun/2026",
+          "data_pub": "10/jun/2026",
           "tambem_em": [
-            "bancos"
-          ]
-        },
-        {
-          "titulo": "BC retira limite diário de R$ 500 para Pix por aproximação; entenda mudança",
-          "fonte": "CNN Brasil",
-          "url": "https://www.cnnbrasil.com.br/economia/financas/bc-retira-limite-diario-de-r-500-para-pix-por-aproximacao-entenda-mudanca/",
-          "destaque": "Exclusão do limite diário fixo de R$ 500 por transação com vigência a partir de 1º de outubro de 2026",
-          "categoria": "Regulatório",
-          "impacto": "alto",
-          "data_pub": "17/jun/2026",
-          "tambem_em": [
-            "bancos"
-          ]
-        },
-        {
-          "titulo": "Pix por aproximação terá limite flexível a partir de outubro. Banco Central amplia autonomia dos usuários",
-          "fonte": "ADVFN News",
-          "url": "https://br.advfn.com/jornal/2026/06/pix-por-aproximacao-tera-limite-flexivel-a-partir-de-outubro-banco-central-amplia-autonomia-dos-usuarios",
-          "destaque": "Retirada do limite fixo de R$ 500 permitindo flexibilidade de limites personalizados a partir de outubro de 2026",
-          "categoria": "Regulatório",
-          "impacto": "alto",
-          "data_pub": "17/jun/2026",
-          "tambem_em": [
-            "bancos"
+            "cartoes",
+            "varejo"
           ]
         },
         {
           "titulo": "Futuro dos meios de pagamento: como preparar o seu negócio?",
-          "fonte": "Mercado Pago",
+          "fonte": "Mercado Pago Blog",
           "url": "https://www.mercadopago.com.br/blog/futuro-meios-pagamento-como-se-preparar",
-          "destaque": "Volume de transações digitais no Brasil deve mais que dobrar até 2030 com Pix automático, por aproximação e parcelado",
+          "destaque": "Quatro frentes moldam mercado: Pix com novas funcionalidades, pagamentos por aproximação via NFC, carteiras digitais e pagamentos invisíveis; volume de transações digitais deve dobrar até 2030",
           "categoria": "Tendência",
           "impacto": "médio",
           "data_pub": "11/jun/2026",
           "tambem_em": [
-            "marketplace",
+            "fintechs",
+            "marketplace"
+          ]
+        },
+        {
+          "titulo": "Pagamentos com cartões crescem no 1° tri de 2026 e movimentam R$ 1,1 trilhão",
+          "fonte": "Cantarino Brasileiro",
+          "url": "https://cantarinobrasileiro.com.br/pagamentos-com-cartoes-crescem-no-1-tri-de-2026-e-movimentam-r-11-trilhao/",
+          "destaque": "Uso de cartões no exterior totalizou US$ 5,3 bilhões (+37%); varejo cresceu principalmente em eletrônicos (+21,4%), vestuário (+13,2%) e alimentação (+12%)",
+          "categoria": "Mercado",
+          "impacto": "médio",
+          "data_pub": "19/jun/2026",
+          "tambem_em": [
+            "cartoes",
             "varejo"
           ]
         }
       ]
     },
     "marketplace": {
-      "resumo": "Grandes marketplaces como Mercado Livre, Amazon e Shopee intensificam investimentos bilionários em infraestrutura logística no Brasil durante 2026, consolidando a fragmentação de canais de venda digital. Categorias de compra recorrente ganham destaque enquanto eventos como Prime Day reforçam a importância das plataformas no varejo nacional.",
+      "resumo": "Marketplaces brasileiros consolidam força no varejo com movimentação de R$ 235,5 bilhões e crescimento de 15,3%, impulsionados por parcerias estratégicas como a entre Magalu e Amazon. Grandes plataformas dominam a distribuição de cupons e ampliam oferta de produtos, refletindo a maturidade do setor e confiança dos consumidores no canal digital.",
       "termometro": "positivo",
       "noticias": [
         {
-          "titulo": "Plenária Marketplace & Canais de venda debate o novo mapa da venda digital no Fórum ECBR 2026",
-          "fonte": "E-Commerce Brasil",
-          "url": "https://www.ecommercebrasil.com.br/noticias/plenaria-marketplace-canais-de-venda-debate-o-novo-mapa-da-venda-digital-no-forum-ecbr-2026",
-          "destaque": "Discussão sobre fragmentação de canais e orquestração de marketplaces, social commerce, retail media, afiliados, live commerce, quick commerce e plataformas algorítmicas",
-          "categoria": "Tendência",
-          "impacto": "alto",
-          "data_pub": "16/jun/2026",
-          "tambem_em": [
-            "varejo",
-            "tag"
-          ]
-        },
-        {
-          "titulo": "Categorias de compra recorrente ganham destaque nos marketplaces nacionais",
-          "fonte": "E-Commerce Brasil",
-          "url": "https://www.ecommercebrasil.com.br/marketplace",
-          "destaque": "Tendências de consumo digital apontam crescimento em categorias de compra recorrente nos marketplaces brasileiros",
-          "categoria": "Tendência",
-          "impacto": "médio",
-          "data_pub": "16/jun/2026",
-          "tambem_em": [
-            "varejo"
-          ]
-        },
-        {
-          "titulo": "Prime Day 2026: por dentro da operação da Amazon para um dos maiores eventos do varejo",
-          "fonte": "E-Commerce Brasil",
-          "url": "https://www.ecommercebrasil.com.br/forum-2026",
-          "destaque": "Detalhes sobre estrutura de fulfillment e estratégia de marketplace da Amazon no Brasil durante Prime Day 2026",
-          "categoria": "Mercado",
-          "impacto": "alto",
-          "data_pub": "15/jun/2026",
-          "tambem_em": [
-            "varejo",
-            "socios"
-          ]
-        },
-        {
-          "titulo": "Mercado Livre, Shopee e Amazon disputam galpões no Brasil",
-          "fonte": "InvestNews",
-          "url": "https://investnews.com.br/negocios/war-galpoes-mercado-livre-shopee-amazon/",
-          "destaque": "Mercado Livre investe R$ 500 milhões em complexo de 300 mil m² em Jacareí e Shopee assina maior contrato de locação com 220 mil m² em Guarulhos",
-          "categoria": "Competição",
-          "impacto": "alto",
-          "data_pub": "17/jun/2026",
-          "tambem_em": [
-            "varejo",
-            "socios"
-          ]
-        },
-        {
-          "titulo": "Grandes marketplaces concentram a maior parte dos cupons disponíveis no Brasil",
+          "titulo": "Grandes plataformas de e-commerce e marketplaces concentram a maior parte dos cupons",
           "fonte": "Mercado & Consumo",
           "url": "https://mercadoeconsumo.com.br/category/ecommerce/",
-          "destaque": "Plataformas como Netshoes, Shopee, Magazine Luiza, AliExpress e Hoteis.com concentram a maioria dos cupons disponíveis para consumidores brasileiros",
+          "destaque": "Grandes plataformas como Netshoes, Shopee, Magazine Luiza, AliExpress e Hoteis.com concentram a maior parte dos cupons disponíveis no mercado brasileiro",
           "categoria": "Mercado",
           "impacto": "médio",
           "data_pub": "11/jun/2026",
@@ -256,10 +252,37 @@
           ]
         },
         {
+          "titulo": "Em nova parceria, Magalu passa a vender produtos na Amazon Brasil",
+          "fonte": "Mercado & Consumo",
+          "url": "https://mercadoeconsumo.com.br/08/06/2026/ecommerce/em-nova-parceria-magalu-passa-a-vender-produtos-na-amazon-brasil/",
+          "destaque": "Magalu e Amazon Brasil anunciam parceria para venda de mais de 12 mil itens das marcas Magalu, KaBuM!, Época Cosméticos e Netshoes",
+          "categoria": "Competição",
+          "impacto": "alto",
+          "data_pub": "10/jun/2026",
+          "tambem_em": [
+            "varejo",
+            "socios"
+          ]
+        },
+        {
+          "titulo": "Magalu e Amazon fecham parceria para venda de produtos",
+          "fonte": "E-Commerce Brasil",
+          "url": "https://www.ecommercebrasil.com.br/noticias/magalu-e-amazon-fecham-parceria-para-venda-de-produtos",
+          "destaque": "Parceria combina ferramentas de marketplace, inteligência artificial aplicada à experiência de compra e infraestrutura logística para fortalecer oferta de bens duráveis e eletrônicos",
+          "categoria": "Tecnologia",
+          "impacto": "alto",
+          "data_pub": "10/jun/2026",
+          "tambem_em": [
+            "varejo",
+            "ia",
+            "socios"
+          ]
+        },
+        {
           "titulo": "Conheça os maiores marketplaces do Brasil e descubra onde sua empresa pode vender mais em 2026",
-          "fonte": "Agência Brabos",
+          "fonte": "Brabos Fullcommerce",
           "url": "https://agenciabrabos.com.br/maiores-marketplaces-do-brasil/",
-          "destaque": "Mercado de marketplaces movimenta R$ 235,5 bilhões com crescimento nominal de 15,3% em relação ao ano anterior",
+          "destaque": "Mercado de marketplaces movimentou R$ 235,5 bilhões com crescimento nominal de 15,3%, e 62% dos consumidores brasileiros fazem de duas a cinco compras online por mês",
           "categoria": "Mercado",
           "impacto": "alto",
           "data_pub": "10/jun/2026",
@@ -268,122 +291,60 @@
           ]
         },
         {
-          "titulo": "Brasil é aposta bilionária de Mercado Livre, Amazon e Shopee",
-          "fonte": "Mundo Logística",
-          "url": "https://mundologistica.com.br/noticias/brasil-aposta-bilionaria-mercado-livre-amazon-shopee",
-          "destaque": "Mercado Livre anuncia R$ 57 bilhões, Amazon mais de R$ 55 bilhões na última década e Shopee acelera expansão logística no Brasil",
-          "categoria": "Competição",
-          "impacto": "alto",
+          "titulo": "ExpoEcomm Blumenau conecta lojistas e fornecedores de tecnologia para debater crescimento sustentável no e-commerce",
+          "fonte": "UoouShop",
+          "url": "https://www.uoou.com.br/blog/eventos-ecommerce/",
+          "destaque": "ExpoEcomm em Blumenau (10/jun/2026) conecta lojistas, indústrias e fornecedores de tecnologia para debater estrutura, performance e crescimento sustentável no e-commerce",
+          "categoria": "Tendência",
+          "impacto": "médio",
           "data_pub": "10/jun/2026",
           "tambem_em": [
-            "varejo",
-            "socios"
+            "varejo"
           ]
         }
       ]
     },
     "varejo": {
-      "resumo": "Junho de 2026 consolida-se como mês de crescimento expressivo no varejo brasileiro, impulsionado pela Copa do Mundo, Dia dos Namorados e Festas Juninas, com movimentação estimada de R$ 22,14 bilhões. O e-commerce lidera o desempenho com crescimentos de dois dígitos, enquanto o varejo físico oscila conforme eventos esportivos, refletindo mudanças estruturais no comportamento do consumidor.",
+      "resumo": "Junho de 2026 marca um período excepcional para o varejo brasileiro, impulsionado pela convergência do Dia dos Namorados, Copa do Mundo e Festas Juninas, movimentando bilhões em vendas. O e-commerce lidera o crescimento enquanto o varejo físico experimenta oscilações comportamentais ligadas aos eventos esportivos e datas sazonais.",
       "termometro": "positivo",
       "noticias": [
         {
           "titulo": "ICVA: Varejo tem alta de 3,3% no Dia dos Namorados 2026",
-          "fonte": "Blog Cielo",
+          "fonte": "Cielo (Blog ICVA)",
           "url": "https://blog.cielo.com.br/indice-icva/vendas-varejo-dia-dos-namorados-2026/",
-          "destaque": "Varejo total cresceu 3,3% entre 6 e 12 de junho, com e-commerce avançando 13,1% enquanto lojas físicas permaneceram estáveis",
+          "destaque": "E-commerce avançou 13,1% entre 6 e 12 de junho, enquanto lojas físicas ficaram praticamente estáveis",
           "categoria": "Mercado",
           "impacto": "alto",
           "data_pub": "23/jun/2026",
           "tambem_em": [
-            "pagamentos"
+            "marketplace"
           ]
         },
         {
           "titulo": "Copa do Mundo altera hábitos e redesenha consumo no varejo brasileiro",
           "fonte": "Band",
           "url": "https://www.band.com.br/economia/noticias/copa-do-mundo-altera-habitos-e-redesenha-consumo-no-varejo-brasileiro-202606231356",
-          "destaque": "Primeiro jogo do Brasil em 13 de junho provocou incremento de 11,4% no volume de vendas em supermercados comparado a dias normais de maio e junho",
+          "destaque": "Supermercados registraram incremento de 11,4% no volume de vendas no dia do primeiro jogo do Brasil",
           "categoria": "Tendência",
           "impacto": "alto",
           "data_pub": "23/jun/2026",
           "tambem_em": []
         },
         {
-          "titulo": "Estoque é o maior risco do varejo para vendas da Copa",
-          "fonte": "CartaCapital",
-          "url": "https://www.cartacapital.com.br/do-micro-ao-macro/estoque-maior-risco-varejo-copa-2026/",
-          "destaque": "Confederação Nacional do Comércio projeta R$ 4,32 bilhões em receitas extras durante Copa; e-commerce deve movimentar R$ 259 bilhões em 2026, alta de 53% ante 2022",
+          "titulo": "Copa do Mundo reforça consumo voltado à convivência nas lojas do Grupo Uni-X",
+          "fonte": "SuperHiper (ABRAS)",
+          "url": "https://www.superhiper.com.br/copa-do-mundo-reforca-consumo-voltado-a-convivencia-nas-lojas-do-grupo-uni-x/",
+          "destaque": "Fluxo nas lojas cresce 8,3% na véspera dos jogos e 69,2% nas duas horas que antecedem as partidas",
           "categoria": "Mercado",
           "impacto": "alto",
-          "data_pub": "22/jun/2026",
-          "tambem_em": [
-            "marketplace"
-          ]
-        },
-        {
-          "titulo": "ABF Expo 2026 reúne mais de 400 marcas e destaca crescimento do setor de franquias",
-          "fonte": "Central do Varejo",
-          "url": "https://centraldovarejo.com.br/abf-expo-2026-reune-mais-de-400-marcas-e-destaca-crescimento-do-setor-de-franquias/",
-          "destaque": "33ª ABF Franchising Expo ocorre entre 24 e 27 de junho em São Paulo com mais de 400 marcas; franchising registrou expansão de 10,5% em 2025, alcançando R$ 302 bilhões",
-          "categoria": "Mercado",
-          "impacto": "médio",
-          "data_pub": "22/jun/2026",
-          "tambem_em": [
-            "socios"
-          ]
-        },
-        {
-          "titulo": "Copa do Mundo 2026 movimenta comércio de Campos e impulsiona vendas no varejo",
-          "fonte": "J3News",
-          "url": "https://j3news.com/2026/06/19/copa-do-mundo-2026-movimenta-comercio-de-campos-e-impulsiona-vendas-no-varejo/",
-          "destaque": "Pesquisa CNDL/SPC Brasil indica 99,2 milhões de consumidores com intenção de compra para Copa; principais itens: bebidas não alcoólicas, petiscos, churrasco e vestuário temático",
-          "categoria": "Tendência",
-          "impacto": "alto",
-          "data_pub": "19/jun/2026",
+          "data_pub": "23/jun/2026",
           "tambem_em": []
         },
         {
           "titulo": "Jogo do Brasil reduz fluxo no varejo físico e impulsiona e-commerce em 15,5%",
           "fonte": "Central do Varejo",
           "url": "https://centraldovarejo.com.br/jogo-de-estreia-do-brasil-reduz-fluxo-no-varejo-fisico-e-impulsiona-e-commerce-em-155/",
-          "destaque": "No dia Brasil x Marrocos, varejo total caiu 1,3%; varejo físico recuou 3,7% enquanto e-commerce avançou 15,5%; supermercados cresceram 11,3% e bares/restaurantes recuaram 14,6%",
-          "categoria": "Mercado",
-          "impacto": "alto",
-          "data_pub": "17/jun/2026",
-          "tambem_em": [
-            "pagamentos"
-          ]
-        },
-        {
-          "titulo": "ABF Franchising Week 2026: ABF lança inédita Convenção Nacional de Franqueados e destaca tendências e desafios do setor",
-          "fonte": "ABF",
-          "url": "https://abf.com.br/franchising-week-2026-abf-lanca-inedita-convencao-nacionalde-franqueados-e-destaca-tendencias-e-desafios-do-setor/",
-          "destaque": "ABF Franchising Week de 21 a 27 de junho em São Paulo inclui 1ª Convenção Nacional de Franqueados; setor superou R$ 300 bilhões em 2025",
-          "categoria": "Mercado",
-          "impacto": "médio",
-          "data_pub": "17/jun/2026",
-          "tambem_em": [
-            "socios"
-          ]
-        },
-        {
-          "titulo": "Franquias Omnichannel: Polishop Une Físico e Digital",
-          "fonte": "Portal do Franchising",
-          "url": "https://www.portaldofranchising.com.br/noticias/franquias-omnichannel-polishop-futuro-do-varejo/",
-          "destaque": "Polishop aposta em modelo omnichannel integrando lojas físicas, canais digitais, inteligência artificial e experiência do cliente para acelerar expansão por franquias",
-          "categoria": "Tecnologia",
-          "impacto": "médio",
-          "data_pub": "17/jun/2026",
-          "tambem_em": [
-            "ia",
-            "socios"
-          ]
-        },
-        {
-          "titulo": "Estreia do Brasil na Copa muda varejo: e-commerce cresce 15,5% e lojas físicas recuam",
-          "fonte": "Novo Momento",
-          "url": "https://novomomento.com.br/estreia-brasil-copa-varejo-e-commerce-cresce-15/",
-          "destaque": "Na semana antes da Copa, e-commerce de Móveis, Eletro e Departamento registrou alta de 13,1%; no dia do jogo, varejo físico recuou 3,7% e e-commerce avançou 15,5%",
+          "destaque": "No dia da partida Brasil x Marrocos, varejo total caiu 1,3% com e-commerce avançando 15,5% contra queda de 3,7% no varejo físico",
           "categoria": "Mercado",
           "impacto": "alto",
           "data_pub": "17/jun/2026",
@@ -392,10 +353,54 @@
           ]
         },
         {
+          "titulo": "Copa do Mundo 2026: as oportunidades e os desafios para o varejo alimentar",
+          "fonte": "SuperHiper (ABRAS)",
+          "url": "https://www.superhiper.com.br/copa-do-mundo-2026-as-oportunidades-e-os-desafios-para-o-varejo-alimentar/",
+          "destaque": "64% dos brasileiros pretendem comprar comidas e bebidas especiais para acompanhar o Mundial, representando mercado de 105 milhões de pessoas",
+          "categoria": "Tendência",
+          "impacto": "alto",
+          "data_pub": "17/jun/2026",
+          "tambem_em": []
+        },
+        {
+          "titulo": "ABF Franchising Expo 2026 reúne mais de 400 marcas e destaca crescimento do setor de franquias",
+          "fonte": "Central do Varejo",
+          "url": "https://centraldovarejo.com.br/abf-expo-2026-reune-mais-de-400-marcas-e-destaca-crescimento-do-setor-de-franquias/",
+          "destaque": "Franchising registrou expansão de 10,5% em 2025 com faturamento próximo de R$ 302 bilhões; ABF Expo 2026 reúne 400+ marcas com expectativa de 60 mil visitantes",
+          "categoria": "Mercado",
+          "impacto": "alto",
+          "data_pub": "22/jun/2026",
+          "tambem_em": [
+            "socios"
+          ]
+        },
+        {
+          "titulo": "Franquias Omnichannel: Polishop une físico e digital com novo modelo de expansão",
+          "fonte": "Portal do Franchising",
+          "url": "https://www.portaldofranchising.com.br/noticias/franquias-omnichannel-polishop-futuro-do-varejo/",
+          "destaque": "Polishop aposta em modelo de franquias integrado entre lojas físicas, canais digitais, inteligência artificial e experiência do cliente com 122 pontos de venda próprios",
+          "categoria": "Tecnologia",
+          "impacto": "médio",
+          "data_pub": "17/jun/2026",
+          "tambem_em": [
+            "ia"
+          ]
+        },
+        {
           "titulo": "Varejo deve movimentar R$ 22,14 bilhões com datas sazonais de junho",
           "fonte": "Central do Varejo",
           "url": "https://centraldovarejo.com.br/varejo-em-junho-dia-dos-namorados-festas-juninas-e-copa-devem-movimentar-r-2214-bilhoes/",
-          "destaque": "Projeção CNDL/SPC Brasil: Dia dos Namorados deve injetar R$ 22,14 bilhões na economia; combinação de Dia dos Namorados, Festas Juninas e Copa do Mundo cria ambiente favorável ao comércio",
+          "destaque": "Dia dos Namorados, Festas Juninas e Copa do Mundo convergem em junho para injetar R$ 22,14 bilhões na economia brasileira",
+          "categoria": "Mercado",
+          "impacto": "alto",
+          "data_pub": "10/jun/2026",
+          "tambem_em": []
+        },
+        {
+          "titulo": "Varejo pode receber R$ 22,14 bilhões com datas comemorativas de junho e a Copa do Mundo",
+          "fonte": "SEGS Portal Nacional",
+          "url": "https://www.segs.com.br/seguros/449200-varejo-pode-receber-r-22-14-bilhoes-com-datas-comemorativas-de-junho-e-a-copa-do-mundo",
+          "destaque": "Convergência entre Dia dos Namorados, Festas Juninas e Copa do Mundo projeta injeção de R$ 22,14 bilhões apenas com o Dia dos Namorados",
           "categoria": "Mercado",
           "impacto": "alto",
           "data_pub": "10/jun/2026",
@@ -404,27 +409,63 @@
       ]
     },
     "tag": {
-      "resumo": "O sistema de pedágio eletrônico free flow avança com testes nas rodovias Anchieta e Imigrantes em São Paulo, enquanto cresce a adoção de tags veiculares como solução padrão. Simultaneamente, emergem golpes fraudulentos via SMS e WhatsApp explorando o tema, exigindo maior vigilância dos motoristas.",
+      "resumo": "O sistema de pedágio eletrônico free flow entra em fase de testes nas rodovias Anchieta e Imigrantes em São Paulo, com promessa de redução tarifária para R$ 19,35 a partir de julho de 2026. A ANTT projeta expansão nacional do modelo, destacando benefícios de fluidez de tráfego e cobrança proporcional ao trecho percorrido.",
       "termometro": "positivo",
       "noticias": [
         {
-          "titulo": "FREE FLOW: PORQUE MOTORISTAS SEM TAG GASTAM MAIS TEMPO E DINHEIRO",
-          "fonte": "TV São Bernardo",
-          "url": "https://tvsaobernardo.com/free-flow-porque-motoristas-sem-tag-gastam-mais-tempo-e-dinheiro/",
-          "destaque": "Motoristas sem tag perdem descontos, enfrentam burocracia e riscos de multas, reforçando a tag veicular como melhor alternativa para free flow",
+          "titulo": "Pedágio free flow nas rodovias Imigrantes e Anchieta entra em fase de testes no litoral de São Paulo; saiba mais",
+          "fonte": "A Tribuna",
+          "url": "https://www.atribuna.com.br/cidades/pedagio-free-flow-nas-rodovias-imigrantes-e-anchieta-entra-em-fase-de-testes-no-litoral-de-s-o-paulo-saiba-mais-1.517397",
+          "destaque": "Pórticos do Siga Fácil instalados em ambos os sentidos; Ecovias Imigrantes realiza testes para liberação do pedágio automático",
           "categoria": "Mercado",
           "impacto": "alto",
-          "data_pub": "23/jun/2026",
+          "data_pub": "10/jun/2026",
           "tambem_em": [
             "pagamentos"
           ]
         },
         {
-          "titulo": "Golpe do Free Flow: falsas cobranças de pedágio se espalham por SMS, e-mail e WhatsApp",
-          "fonte": "Correio Paulista",
-          "url": "https://correiopaulista.com/golpe-do-free-flow-falsas-cobrancas-de-pedagio-se-espalham-por-sms-e-mail-e-whatsapp/",
-          "destaque": "Criminosos enviam mensagens fraudulentas informando pendências de pedágio e ameaçando multas, pontos na CNH e penalidades",
-          "categoria": "Tendência",
+          "titulo": "Pedágio Eletrônico entra em fase de testes no Sistema Anchieta-Imigrantes",
+          "fonte": "TV São Bernardo",
+          "url": "https://tvsaobernardo.com/pedagio-eletronico-entra-em-fase-de-testes-no-sistema-anchieta-imigrantes/",
+          "destaque": "Equipamentos instalados na Via Anchieta (km 33) e Rodovia dos Imigrantes (km 29) em ambos os sentidos; testes técnicos e integrações sistêmicas em andamento",
+          "categoria": "Tecnologia",
+          "impacto": "alto",
+          "data_pub": "11/jun/2026",
+          "tambem_em": [
+            "pagamentos"
+          ]
+        },
+        {
+          "titulo": "Pedágio 'free flow' começa testes na Anchieta e Imigrantes",
+          "fonte": "Diário do Grande ABC",
+          "url": "https://www.dgabc.com.br/Noticia/4328413/pedagio-free-flow-comeca-testes-na-anchieta-e-imigrantes",
+          "destaque": "Ecovias iniciou fase de testes do sistema sem cancelas no SAI; sem cobrança para motoristas durante fase de teste",
+          "categoria": "Mercado",
+          "impacto": "alto",
+          "data_pub": "11/jun/2026",
+          "tambem_em": [
+            "pagamentos"
+          ]
+        },
+        {
+          "titulo": "Pedágio 'free flow' entra em fase de testes no Sistema Anchieta-Imigrantes; promessa é mudar tarifa para R$ 19,35 por trecho",
+          "fonte": "SETCESP",
+          "url": "http://setcesp.org.br/noticias/pedagio-free-flow-entra-em-fase-de-testes-no-sistema-anchieta-imigrantes-promessa-e-mudar-tarifa-para-r-1935-por-trecho/",
+          "destaque": "Tarifa prometida de R$ 19,35 tanto na subida quanto na descida para o litoral paulista a partir de 1º de julho",
+          "categoria": "Mercado",
+          "impacto": "alto",
+          "data_pub": "11/jun/2026",
+          "tambem_em": [
+            "pagamentos"
+          ]
+        },
+        {
+          "titulo": "Na Bienal das Rodovias, ANTT projeta expansão do pedágio eletrônico no país",
+          "fonte": "ANTT (gov.br)",
+          "url": "https://www.gov.br/antt/pt-br/assuntos/ultimas-noticias/na-bienal-das-rodovias-antt-projeta-expansao-do-pedagio-eletronico-no-pais",
+          "destaque": "Painel sobre pedágio eletrônico discutiu avanços regulatórios, benefícios para usuários e desafios para consolidação do modelo nas rodovias brasileiras",
+          "categoria": "Regulatório",
           "impacto": "alto",
           "data_pub": "17/jun/2026",
           "tambem_em": [
@@ -435,32 +476,19 @@
           "titulo": "Qual a melhor tag de pedágio no Brasil?",
           "fonte": "Blog Zul+",
           "url": "https://www.zuldigital.com.br/blog/melhor-tag-pedagio/",
-          "destaque": "Tag Zul+ da Estapar é apresentada como melhor tag sem mensalidade, funcionando em todas as praças de pedágio inclusive free flow",
-          "categoria": "Competição",
+          "destaque": "Tag Zul+ da Estapar funciona em todas as praças de pedágio do país, inclusive em sistemas free flow; melhor forma de pagar pedágio free flow é ter tag instalada",
+          "categoria": "Mercado",
           "impacto": "médio",
-          "data_pub": "17/jun/2026",
-          "tambem_em": [
-            "pagamentos",
-            "socios"
-          ]
-        },
-        {
-          "titulo": "Debate reforçou benefícios do free flow como maior fluidez no tráfego, redução de acidentes e cobrança proporcional ao trecho",
-          "fonte": "ANTT (gov.br)",
-          "url": "https://www.gov.br/antt/pt-br/free-flow",
-          "destaque": "Debate institucional reforçou benefícios do free flow: maior fluidez, redução de acidentes e cobrança proporcional ao trecho percorrido",
-          "categoria": "Regulatório",
-          "impacto": "alto",
           "data_pub": "17/jun/2026",
           "tambem_em": [
             "pagamentos"
           ]
         },
         {
-          "titulo": "Em Brasília, Agência apresentou avanços em pedágio eletrônico, proteção às mulheres nas rodovias, reconstrução de infraestrutura e sustentabilidade",
+          "titulo": "Em Brasília, ANTT apresentou avanços em pedágio eletrônico, proteção às mulheres nas rodovias, reconstrução de infraestrutura e sustentabilidade",
           "fonte": "ANTT (gov.br)",
           "url": "https://www.gov.br/antt/pt-br/free-flow",
-          "destaque": "ANTT apresentou avanços em pedágio eletrônico integrado com iniciativas de proteção às mulheres, infraestrutura e sustentabilidade",
+          "destaque": "Benefícios destacados: maior fluidez no tráfego, redução de acidentes e cobrança proporcional ao trecho efetivamente percorrido",
           "categoria": "Regulatório",
           "impacto": "médio",
           "data_pub": "19/jun/2026",
@@ -469,37 +497,25 @@
           ]
         },
         {
-          "titulo": "Pedágio free flow nas rodovias Imigrantes e Anchieta entra em fase de testes no litoral de São Paulo; saiba mais",
-          "fonte": "A Tribuna",
-          "url": "https://www.atribuna.com.br/cidades/pedagio-free-flow-nas-rodovias-imigrantes-e-anchieta-entra-em-fase-de-testes-no-litoral-de-s-o-paulo-saiba-mais-1.517397",
-          "destaque": "Pórticos e equipamentos do Siga Fácil (free flow) foram instalados nas rodovias Imigrantes e Anchieta para início da operação de testes",
-          "categoria": "Tecnologia",
+          "titulo": "Free Flow: por que motoristas sem tag gastam mais tempo e dinheiro",
+          "fonte": "TV São Bernardo",
+          "url": "https://tvsaobernardo.com/free-flow-porque-motoristas-sem-tag-gastam-mais-tempo-e-dinheiro/",
+          "destaque": "Motoristas sem tag perdem descontos, enfrentam burocracia e risco de multas; tag identifica automaticamente veículo e cobra tarifa diretamente",
+          "categoria": "Tendência",
           "impacto": "alto",
-          "data_pub": "10/jun/2026",
+          "data_pub": "23/jun/2026",
           "tambem_em": [
             "pagamentos"
           ]
         },
         {
-          "titulo": "Pedágio free flow no Sistema Anchieta-Imigrantes entra em fase de testes",
-          "fonte": "Fetrabens",
-          "url": "https://www.fetrabens.com.br/noticia/pedagio-free-flow-no-sistema-anchieta-imigrantes-entra-em-fase-de-testes",
-          "destaque": "Pórticos instalados no km 33 da Via Anchieta e km 29 da Imigrantes; tarifa de R$ 38,70 será dividida em dois trechos de R$ 19,35 cada a partir de 1º/julho",
-          "categoria": "Tecnologia",
-          "impacto": "alto",
-          "data_pub": "11/jun/2026",
-          "tambem_em": [
-            "pagamentos"
-          ]
-        },
-        {
-          "titulo": "Rodovias Anchieta e Imigrantes começam testes com pedágio free flow",
-          "fonte": "Plantão Guarujá",
-          "url": "https://www.plantaoguaruja.com.br/noticia/rodovias-anchieta-e-imigrantes-comecam-testes-com-pedagio-free-flow",
-          "destaque": "Praças de pedágio nas Anchieta e Imigrantes serão substituídas por pórticos free flow com previsão de operação em 1º de julho, dependendo de confirmação Artesp",
+          "titulo": "AVISO DA AUDIÊNCIA PÚBLICA Nº 11/2026 — ANTT (Free Flow / Pedágio Eletrônico)",
+          "fonte": "ANTTlegis",
+          "url": "https://anttlegis.antt.gov.br/action/ActionDatalegis.php?acao=abrirTextoAto&tipo=AUD&numeroAto=00000011&seqAto=000&valorAno=2026&orgao=DG%2FANTT%2FMT&cod_modulo=623&cod_menu=9230",
+          "destaque": "Prazo para contribuições até 10 de agosto de 2026; sessão pública presencial e por videoconferência com transmissão ao vivo no YouTube",
           "categoria": "Regulatório",
-          "impacto": "alto",
-          "data_pub": "11/jun/2026",
+          "impacto": "médio",
+          "data_pub": "15/jun/2026",
           "tambem_em": [
             "pagamentos"
           ]
@@ -507,177 +523,174 @@
       ]
     },
     "bancos": {
-      "resumo": "O Copom continua reduzindo a taxa Selic, chegando a 14,25% ao ano, com expectativa de atingir 13,5% até o final de 2026 em contexto de inflação elevada. O cenário econômico desafiador impacta consumidores, com 81 milhões de brasileiros enfrentando inadimplência enquanto buscam alternativas de crédito com juros menores.",
+      "resumo": "O Copom reduziu a Selic para 14,25% ao ano em junho, terceira queda consecutiva, refletindo cautela diante das incertezas globais e inflação persistente. Paralelamente, bancos digitais expandem crédito agressivamente, resultando em inadimplência crescente, enquanto bancos públicos ajustam suas estratégias de risco.",
       "termometro": "neutro",
       "noticias": [
         {
-          "titulo": "Copom reduz taxa Selic para 14,25% ao ano",
+          "titulo": "Mercado financeiro eleva previsão da Selic para 13,75% ao ano",
           "fonte": "Agência Brasil",
-          "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-06/copom-reduz-taxa-selic-para-1425-ao-ano",
-          "destaque": "Selic reduzida em 0,25 ponto percentual para 14,25%, marcando a terceira redução consecutiva",
+          "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-06/mercado-financeiro-eleva-previsao-da-selic-para-1375-ao-ano",
+          "destaque": "Previsão dos analistas para os juros até final de 2026 passou de 13,5% para 13,75% ao ano, com pressões econômicas da guerra no Oriente Médio elevando IPCA pela décima quarta semana seguida",
           "categoria": "Regulatório",
           "impacto": "alto",
-          "data_pub": "17/jun/2026",
-          "tambem_em": [
-            "fintechs"
-          ]
+          "data_pub": "16/jun/2026",
+          "tambem_em": []
         },
         {
           "titulo": "Copom avalia indicadores econômicos e decide sobre Selic",
           "fonte": "Agência Brasil",
           "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-06/copom-avalia-indicadores-economicos-e-decide-sobre-selic",
-          "destaque": "Previsão de redução da Selic para 13,5% até o final de 2026, conforme boletim Focus",
+          "destaque": "Copom se reúne para decidir sobre taxa básica de juros (Selic) atualmente em 14,5%, avaliando espaço para queda ou manutenção em patamar elevado",
           "categoria": "Regulatório",
           "impacto": "alto",
           "data_pub": "16/jun/2026",
-          "tambem_em": [
-            "fintechs"
-          ]
+          "tambem_em": []
         },
         {
-          "titulo": "Consulta Nacional dos Bancários 2026 mostra força da categoria e aponta prioridades para a Campanha Nacional",
-          "fonte": "SEEB Santos e Região",
-          "url": "https://santosbancarios.com.br/artigo/consulta-nacional-dos-bancarios-2026-mostra-forca-da-categoria-e-aponta-prioridades-para-a-campanha-nacional/",
-          "destaque": "Consulta recebeu 54.952 respostas de bancários em todo o país, confirmando disposição de participação na pauta de reivindicações",
+          "titulo": "Copom reduz taxa Selic para 14,25% ao ano",
+          "fonte": "Agência Brasil",
+          "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-06/copom-reduz-taxa-selic-para-1425-ao-ano",
+          "destaque": "Terceira queda consecutiva dos juros; Copom mantém serenidade e cautela diante de incertezas sobre cessar conflitos no Oriente Médio",
+          "categoria": "Regulatório",
+          "impacto": "alto",
+          "data_pub": "17/jun/2026",
+          "tambem_em": []
+        },
+        {
+          "titulo": "Copom reduz a taxa Selic para 14,25% ao ano - O Especialista (Banco Safra)",
+          "fonte": "O Especialista - Banco Safra",
+          "url": "https://oespecialista.safra.com.br/copom-junho-2026/",
+          "destaque": "Banco Safra projeta Selic em 13,50% ao ano ao final de 2026; reforça tom cauteloso com inflação acima da meta e cenário global incerto",
           "categoria": "Mercado",
           "impacto": "médio",
-          "data_pub": "21/jun/2026",
-          "tambem_em": [
-            "socios"
-          ]
+          "data_pub": "17/jun/2026",
+          "tambem_em": []
         },
         {
-          "titulo": "Inadimplência no crédito: 81 milhões de brasileiros enfrentam dívidas em 2026",
-          "fonte": "AmdJus",
-          "url": "https://amdjus.com.br/inadimplencia-no-credito-81-milhoes-de-brasileiros-enfrentam-dividas-em-2026/",
-          "destaque": "81 milhões de pessoas em situação de inadimplência, com faixa etária de 41 a 60 anos representando 35,6% dos endividados",
+          "titulo": "Banco do Brasil (BBAS3) pisa no freio, Caixa e BNDES aceleram: o alerta da Moody's para os bancos públicos",
+          "fonte": "Seu Dinheiro",
+          "url": "https://www.seudinheiro.com/2026/empresas/banco-do-brasil-bbas3-pisa-no-freio-caixa-e-bndes-aceleram-o-alerta-da-moodys-para-os-bancos-publicos-miql/",
+          "destaque": "Banco do Brasil apertou crédito após provisões saltarem 83% entre março de 2025 e março de 2026 devido à piora da carteira rural e crédito ao consumo",
           "categoria": "Mercado",
           "impacto": "alto",
-          "data_pub": "16/jun/2026",
-          "tambem_em": [
-            "fintechs",
-            "varejo"
-          ]
-        },
-        {
-          "titulo": "Mercado financeiro eleva previsão da inflação para 5,09% este ano",
-          "fonte": "Agência Brasil",
-          "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-06/mercado-financeiro-eleva-previsao-da-inflacao-para-509-este-ano",
-          "destaque": "Previsão de IPCA elevada para 5,09% em 2026, com estimativa de Selic em 13,25% ao ano até o fim do ano",
-          "categoria": "Mercado",
-          "impacto": "alto",
-          "data_pub": "15/jun/2026",
+          "data_pub": "23/jun/2026",
           "tambem_em": [
             "fintechs"
+          ]
+        },
+        {
+          "titulo": "Bancos digitais viram principal porta de entrada no crédito, mas inadimplência aumenta, diz estudo",
+          "fonte": "Diário de Pernambuco",
+          "url": "https://www.diariodepernambuco.com.br/amp/economia/2026/06/11715611-bancos-digitais-viram-principal-porta-de-entrada-no-credito-mas-inadimplencia-aumenta-diz-estudo.html",
+          "destaque": "Taxa de calotes em cartões de crédito nos bancos digitais subiu de 7,71% em 2021 para 20,31% em 2025, segundo análise de 165 milhões de CPFs",
+          "categoria": "Tendência",
+          "impacto": "alto",
+          "data_pub": "02/jun/2026",
+          "tambem_em": [
+            "fintechs",
+            "cartoes"
+          ]
+        },
+        {
+          "titulo": "Inadimplência nos bancos digitais sobe com expansão do crédito",
+          "fonte": "Economic News Brasil",
+          "url": "https://economicnewsbrasil.com.br/2026/06/03/inadimplencia-bancos-digitais-primeiro-credito-brasil/",
+          "destaque": "Inadimplência nos bancos digitais avançou em ritmo muito superior ao crescimento da base de clientes; Nubank, PicPay e Mercado Pago expandem crédito para todo tipo de consumidor com risco proporcional",
+          "categoria": "Tendência",
+          "impacto": "alto",
+          "data_pub": "03/jun/2026",
+          "tambem_em": [
+            "fintechs",
+            "cartoes",
+            "marketplace"
           ]
         }
       ]
     },
     "fintechs": {
-      "resumo": "O Banco Central expande o modelo de open finance com a iniciativa 'Open Assets', buscando tokenizar novos ativos além de recebíveis de cartões. O setor de fintechs experimenta maior estabilização com crescimento impulsionado por Pix, open finance e soluções de IA, enquanto inovações em embedded finance e cobrança automatizada ganham destaque.",
-      "termometro": "positivo",
-      "noticias": [
-        {
-          "titulo": "Open Assets': o plano do BC para além dos recebíveis de cartões",
-          "fonte": "Finsiders Brasil",
-          "url": "https://finsidersbrasil.com.br/regulamentacao/open-assets-o-plano-do-bc-para-alem-dos-recebiveis-de-cartoes/",
-          "destaque": "BC quer expandir modelo para precatórios, títulos bancários, recebíveis imobiliários e ativos do agronegócio através da iniciativa 'Open Assets'",
-          "categoria": "Regulatório",
-          "impacto": "alto",
-          "data_pub": "11/jun/2026",
-          "tambem_em": [
-            "pagamentos"
-          ]
-        },
-        {
-          "titulo": "Top 7 Fintech Startups in Brazil to Watch in 2026",
-          "fonte": "Analytics Insight",
-          "url": "https://www.analyticsinsight.net/amp/story/fintech/top-7-fintech-startups-in-brazil-to-watch-in-2026",
-          "destaque": "Adoção digital forte, Pix e open finance continuam impulsionando crescimento de startups; empresas de embedded finance entre os destaques",
-          "categoria": "Mercado",
-          "impacto": "médio",
-          "data_pub": "17/jun/2026",
-          "tambem_em": [
-            "pagamentos"
-          ]
-        },
-        {
-          "titulo": "FrogPay apresenta soluções financeiras e modelo de microfranquia na ABF Franchising Expo 2026",
-          "fonte": "Gazeta da Semana",
-          "url": "https://gazetadasemana.com.br/noticia/286502/frogpay-apresenta-solucoes-financeiras-e-modelo-de-microfranquia-na-abf-franchising-expo-2026",
-          "destaque": "FrogPay lança modelo de microfranquia com investimento inicial a partir de R$ 5 mil e retorno previsto em três meses",
-          "categoria": "Mercado",
-          "impacto": "médio",
-          "data_pub": "23/jun/2026",
-          "tambem_em": [
-            "pagamentos",
-            "varejo"
-          ]
-        },
-        {
-          "titulo": "IA, Open Finance e Pix estarão no centro do Fintouch São Paulo 2026",
-          "fonte": "Finsiders Brasil",
-          "url": "https://finsidersbrasil.com.br/conteudo-de-marca/ia-open-finance-e-pix-estarao-no-centro-do-fintouch-sao-paulo-2026/",
-          "destaque": "Fintouch São Paulo 2026 reúne executivos e reguladores para debater Open Finance, IA, Web3, cibersegurança, embedded finance e inclusão financeira",
-          "categoria": "Tendência",
-          "impacto": "médio",
-          "data_pub": "10/jun/2026",
-          "tambem_em": [
-            "ia",
-            "pagamentos"
-          ]
-        },
-        {
-          "titulo": "Porta-voz do Banco Central defende autonomia orçamentária e diz que setor de fintechs vive 'maior estabilização'",
-          "fonte": "Finsiders Brasil",
-          "url": "https://finsidersbrasil.com.br/",
-          "destaque": "BC apresenta projeto 'Open Assets' e afirma que setor de fintechs vive 'maior estabilização'",
-          "categoria": "Regulatório",
-          "impacto": "alto",
-          "data_pub": "11/jun/2026",
-          "tambem_em": [
-            "bancos"
-          ]
-        },
-        {
-          "titulo": "Belvo lança Roberta, agente de cobrança por voz e WhatsApp, e aprimora assistente Bela para Open Finance",
-          "fonte": "Finsiders Brasil",
-          "url": "https://finsidersbrasil.com.br/",
-          "destaque": "Belvo lança Roberta, agente de cobrança por IA em voz e WhatsApp, e aprimora Bela para análise de dados em Open Finance",
-          "categoria": "Tecnologia",
-          "impacto": "alto",
-          "data_pub": "12/jun/2026",
-          "tambem_em": [
-            "ia",
-            "pagamentos"
-          ]
-        },
-        {
-          "titulo": "Fintech com licenças de SCD e IP junto ao BC confirma incidente cibernético; regulador alerta participantes do sistema",
-          "fonte": "Finsiders Brasil",
-          "url": "https://finsidersbrasil.com.br/",
-          "destaque": "Incidente cibernético em fintech regulada; BC alerta sobre novas soluções para ajuste de jornadas de verificação e prevenção à fraude em tempo real",
-          "categoria": "Regulatório",
-          "impacto": "alto",
-          "data_pub": "18/jun/2026",
-          "tambem_em": []
-        }
-      ]
+      "resumo": "Sem dados disponíveis",
+      "termometro": "neutro",
+      "noticias": []
     },
     "loyalty": {
-      "resumo": "O período de junho de 2026 registra intensificação de promoções em programas de fidelização, com ofertas de bônus na transferência de pontos entre plataformas (Azul, Smiles, Livelo e LATAM Pass) alcançando até 80% de acréscimo. Estudos comprovam o impacto positivo de programas combinados de pontos e cashback no aumento de recorrência de compras e redução de custos de aquisição para o varejo.",
+      "resumo": "O mercado de loyalty e fidelização apresenta intenso dinamismo no período, com múltiplas promoções de bônus em transferências de pontos entre programas de milhas (Azul Fidelidade, LATAM Pass, Smiles) e parcerias estratégicas com varejistas. As operadoras competem agressivamente oferecendo até 80% de bônus, sinalizando forte pressão concorrencial e busca por retenção de clientes.",
       "termometro": "positivo",
       "noticias": [
         {
           "titulo": "Azul Fidelidade oferece até 65% de bônus ao transformar cashback do Méliuz em pontos",
           "fonte": "Pontos pra Voar",
           "url": "https://pontospravoar.com/azul-fidelidade-oferece-ate-65-porcento-bonus-transformar-cashback-meliuz-pontos/",
-          "destaque": "Azul Fidelidade oferece até 65% de bônus ao transformar cashback do Méliuz em pontos, com transferências válidas até 21 de junho de 2026",
+          "destaque": "Até 65% de bônus na transformação de cashback Méliuz em pontos Azul Fidelidade, com prazo até 21 de junho de 2026",
           "categoria": "Mercado",
           "impacto": "alto",
           "data_pub": "21/jun/2026",
           "tambem_em": [
             "cartoes",
+            "fintechs",
+            "socios"
+          ]
+        },
+        {
+          "titulo": "Ganhe até 14 pontos por real em compras no Magalu com Azul Fidelidade",
+          "fonte": "Pontos pra Voar",
+          "url": "https://pontostravoar.com/ganhe-ate-14-pontos-real-compras-magalu-azul-fidelidade/",
+          "destaque": "Acúmulo de até 14 pontos por real gasto no Magalu via cartão de crédito, boleto ou pix, válido até 25 de junho de 2026",
+          "categoria": "Mercado",
+          "impacto": "alto",
+          "data_pub": "22/jun/2026",
+          "tambem_em": [
+            "marketplace",
+            "varejo",
+            "pagamentos"
+          ]
+        },
+        {
+          "titulo": "Azul Fidelidade e Camicado oferecem até 22 pontos por real gasto",
+          "fonte": "Pontos pra Voar",
+          "url": "https://pontospravoar.com/azul-fidelidade-camicado-oferecem-ate-22-pontos-real-gasto/",
+          "destaque": "Parceria oferece acúmulo de até 22 pontos por real gasto em compras no site Camicado, válida até 26 de junho de 2026",
+          "categoria": "Mercado",
+          "impacto": "médio",
+          "data_pub": "23/jun/2026",
+          "tambem_em": [
+            "varejo",
+            "socios"
+          ]
+        },
+        {
+          "titulo": "Só hoje! LATAM Pass e Livelo oferecem 25% de bônus na transferência de pontos",
+          "fonte": "Pontos pra Voar",
+          "url": "https://pontospravoar.com/so-hoje-latam-pass-livelo-oferecem-25-porcento-bonus-transferencia-pontos/",
+          "destaque": "25% de bônus em transferências Livelo para LATAM Pass em comemoração ao aniversário da Livelo, válido apenas 22 de junho de 2026",
+          "categoria": "Mercado",
+          "impacto": "alto",
+          "data_pub": "22/jun/2026",
+          "tambem_em": [
+            "socios"
+          ]
+        },
+        {
+          "titulo": "Só hoje! Latam Pass oferece 25% de bônus na transferência de pontos Livelo",
+          "fonte": "Melhores Destinos",
+          "url": "https://www.melhoresdestinos.com.br/milhas/livelo-latam-pass-jun26",
+          "destaque": "25% de bônus em transferências de pontos Livelo para LATAM Pass com validade apenas até 23h59 de 22 de junho de 2026",
+          "categoria": "Mercado",
+          "impacto": "alto",
+          "data_pub": "22/jun/2026",
+          "tambem_em": [
+            "socios"
+          ]
+        },
+        {
+          "titulo": "Milheiro por R$ 23,25! Transfira da Livelo para o Latam Pass com bônus usando pontos mais dinheiro",
+          "fonte": "Melhores Destinos",
+          "url": "https://www.melhoresdestinos.com.br/milhas/pontos-dinheiro-latam-livelo-jun26",
+          "destaque": "Opção pontos mais dinheiro com 25% de bônus permite gerar 1.000 milhas LATAM Pass a partir de R$ 23,25, válida apenas 22 de junho de 2026",
+          "categoria": "Mercado",
+          "impacto": "alto",
+          "data_pub": "22/jun/2026",
+          "tambem_em": [
+            "pagamentos",
             "socios"
           ]
         },
@@ -685,60 +698,32 @@
           "titulo": "Prorrogou! Smiles e Livelo oferecem até 80% de bônus na transferência de pontos",
           "fonte": "Pontos pra Voar",
           "url": "https://pontospravoar.com/prorrogou-smiles-livelo-oferecem-ate-80-porcento-bonus-transferencia-pontos/",
-          "destaque": "Smiles prorroga campanha oferecendo até 80% de bônus na transferência de pontos da Livelo, com diferenciais para clientes premium",
+          "destaque": "Smiles prorrogou promoção de até 80% de bônus em transferências Livelo com limite de 300 mil milhas por CPF, válida 16 de junho de 2026",
           "categoria": "Mercado",
           "impacto": "alto",
           "data_pub": "16/jun/2026",
           "tambem_em": [
-            "cartoes",
             "socios"
           ]
         },
         {
-          "titulo": "LATAM Pass – Bancos Milhas Extras: 20% de bônus na transferência de pontos (15 a 18/jun/2026)",
-          "fonte": "LATAM Pass",
-          "url": "https://latampass.latam.com/pt_br/promocao/bancos-milhas-extras",
-          "destaque": "LATAM Pass oferece 20% de milhas extras sobre transferências de pontos de bancos participantes entre 15 e 18 de junho de 2026",
+          "titulo": "Cartão GOL Smiles Bradesco com anuidade grátis e milhas bônus",
+          "fonte": "Pontos pra Voar",
+          "url": "https://pontospravoar.com/anuidade-gratis-ate-12-mil-milhas-bonus-aproveite-nova-promocao-cartoes-gol-smiles-bradesco/",
+          "destaque": "Bradesco oferece isenção de anuidade no primeiro ano e bonificação em milhas para cartões GOL Smiles Visa (Gold, Platinum, Infinite), válido de 18 de junho a 31 de agosto de 2026",
           "categoria": "Mercado",
-          "impacto": "médio",
-          "data_pub": "15/jun/2026",
+          "impacto": "alto",
+          "data_pub": "18/jun/2026",
           "tambem_em": [
             "cartoes",
-            "socios",
             "bancos"
-          ]
-        },
-        {
-          "titulo": "16 excelentes promoções de milhas, cartões e cupons para você aproveitar hoje!",
-          "fonte": "Melhores Cartões",
-          "url": "https://www.melhorescartoes.com.br/resumo-promocoes-cartoes-milhas-cupons-descontos-14jun26.html",
-          "destaque": "Consolidação de múltiplas promoções simultâneas incluindo bônus na transferência para Azul, milhas no Shopping Smiles e cashback em estabelecimentos",
-          "categoria": "Mercado",
-          "impacto": "médio",
-          "data_pub": "14/jun/2026",
-          "tambem_em": [
-            "cartoes",
-            "varejo"
-          ]
-        },
-        {
-          "titulo": "Promoções de milhas, cartões de crédito, cashback e cupons válidas hoje!",
-          "fonte": "Melhores Cartões",
-          "url": "https://www.melhorescartoes.com.br/resumo-promocoes-cartoes-credito-milhas-pontos-cashback.html",
-          "destaque": "Resumo consolidado de ofertas de milhas, cartões de crédito e cashback com atualizações diárias de promoções em vigor",
-          "categoria": "Mercado",
-          "impacto": "baixo",
-          "data_pub": "23/jun/2026",
-          "tambem_em": [
-            "cartoes",
-            "pagamentos"
           ]
         },
         {
           "titulo": "Os 10 cartões de crédito que mais acumulam pontos e milhas [atualizado junho 2026]",
           "fonte": "Passageiro de Primeira",
           "url": "https://passageirodeprimeira.com/melhores-cartoes-pontos-milhas/",
-          "destaque": "Ranking atualizado de cartões com maior potencial de acúmulo de pontos e milhas, considerando políticas em constante mudança no mercado de 2026",
+          "destaque": "Ranking atualizado em junho de 2026 dos 10 cartões de crédito nacionais que mais acumulam pontos e milhas, com aviso sobre mudanças contínuas em políticas e pontuações",
           "categoria": "Tendência",
           "impacto": "médio",
           "data_pub": "17/jun/2026",
@@ -747,169 +732,172 @@
           ]
         },
         {
-          "titulo": "Programa de Fidelidade: Guia para E-commerce e Varejo 2026",
-          "fonte": "BonifiQ",
-          "url": "https://www.bonifiq.com.br/programa-de-fidelidade/",
-          "destaque": "Lojas com programas de fidelidade combinados (pontos + cashback) aumentam recorrência de compra em 38% nos primeiros 6 meses e reduzem CAC em até 27%",
-          "categoria": "Tendência",
+          "titulo": "LATAM Pass: promoção de transferência de pontos Livelo com 25% de bônus — válida apenas em 22 de junho de 2026",
+          "fonte": "LATAM Pass",
+          "url": "https://latampass.latam.com/pt_br/promocao/livelo-milhas-extras",
+          "destaque": "LATAM Pass oferece 25% de bônus em milhas para transferências Livelo com limite de 300 mil milhas por CPF, válido apenas em 22 de junho de 2026 das 10h às 23h59",
+          "categoria": "Mercado",
           "impacto": "alto",
-          "data_pub": "15/jun/2026",
+          "data_pub": "22/jun/2026",
           "tambem_em": [
-            "varejo",
-            "marketplace",
-            "pagamentos"
+            "socios"
           ]
         }
       ]
     },
     "ia": {
-      "resumo": "A inteligência artificial avança acelerado no sistema financeiro brasileiro com investimentos expressivos em soluções de IA, big data e analytics, impulsionando eficiência operacional e redução de custos nas instituições. O setor demanda regulação flexível baseada em níveis de risco, conforme defendido pelo Ministério da Fazenda, para acompanhar a rápida evolução tecnológica sem criar obstáculos à inovação.",
+      "resumo": "Agentes de IA deixam de ser conceito teórico e passam a operar em grandes varejistas brasileiros, com destaque para aplicações em atendimento, marketing e operações. Brasil avança na regulamentação e realiza Summit internacional de IA com presença de gigantes tecnológicas como Google, NVIDIA, IBM e Microsoft.",
       "termometro": "positivo",
       "noticias": [
         {
-          "titulo": "IA em fintech: como configurar respostas automáticas com IA para dúvidas de entrega",
-          "fonte": "Mercado Pago Blog",
-          "url": "https://www.mercadopago.com.br/blog/inteligencia-artificial-em-fintech",
-          "destaque": "Configuração de respostas automáticas com IA para melhorar atendimento ao cliente em dúvidas de entrega",
-          "categoria": "Tecnologia",
-          "impacto": "médio",
-          "data_pub": "15/jun/2026",
+          "titulo": "Agentes de IA no varejo: a hora de sair da teoria já passou",
+          "fonte": "SuperHiper",
+          "url": "https://www.superhiper.com.br/agentes-de-ia-no-varejo-a-hora-de-sair-da-teoria-ja-passou/",
+          "destaque": "Walmart já trata IA agentic como parte central da arquitetura tecnológica; Bluesoft já tem agentes rodando em ERP de clientes executando tarefas que antes consumiam horas",
+          "categoria": "Mercado",
+          "impacto": "alto",
+          "data_pub": "22/jun/2026",
           "tambem_em": [
-            "fintechs",
-            "pagamentos"
+            "varejo"
           ]
         },
         {
-          "titulo": "IA para e-mail marketing: como criar campanhas personalizadas com inteligência artificial",
+          "titulo": "Summit de Inteligência Artificial Brasil 2026 discutirá impactos da IA nos negócios, na sociedade e no futuro do trabalho",
+          "fonte": "IA Brasil Notícias",
+          "url": "https://iabrasilnoticias.com.br/summit-de-inteligencia-artificial-brasil-2026-discutira-impactos-da-ia-nos-negocios-na-sociedade-e-futuro-do-trabalho/",
+          "destaque": "Summit realizado entre 18 e 20 de junho em Joinville (SC), considerado um dos principais encontros do setor na América Latina",
+          "categoria": "Mercado",
+          "impacto": "médio",
+          "data_pub": "10/jun/2026",
+          "tambem_em": []
+        },
+        {
+          "titulo": "IA para criar campanhas de e-mail marketing personalizadas e vender mais",
           "fonte": "Mercado Pago Blog",
           "url": "https://www.mercadopago.com.br/blog/inteligencia-artificial-em-fintech",
-          "destaque": "Uso de IA para criar campanhas de e-mail marketing personalizadas e aumentar vendas",
+          "destaque": "IA revoluciona o setor financeiro permitindo análises de crédito mais justas, proteção contra fraudes e gestão financeira personalizada",
           "categoria": "Tecnologia",
           "impacto": "médio",
           "data_pub": "11/jun/2026",
           "tambem_em": [
             "fintechs",
-            "marketplace"
+            "pagamentos"
           ]
         },
         {
-          "titulo": "Regulação para IA será flexível e terá níveis de risco, diz Durigan",
-          "fonte": "Agência Brasil (EBC)",
-          "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-05/regulacao-para-ia-sera-flexivel-e-tera-niveis-de-risco-diz-durigan",
-          "destaque": "Ministro da Fazenda defende modelo de regulamentação da IA baseado em níveis de risco com regras flexíveis",
+          "titulo": "Configurar respostas automáticas com IA para dúvidas de entrega melhora atendimento ao cliente",
+          "fonte": "Mercado Pago Blog",
+          "url": "https://www.mercadopago.com.br/blog/inteligencia-artificial-em-fintech",
+          "destaque": "IA aplicada no varejo e fintechs para automatizar processos de atendimento, reduzindo tempo de resposta ao consumidor",
+          "categoria": "Tecnologia",
+          "impacto": "médio",
+          "data_pub": "15/jun/2026",
+          "tambem_em": [
+            "varejo",
+            "fintechs"
+          ]
+        },
+        {
+          "titulo": "Brasil avança na regulamentação do uso de inteligência artificial na ciência e na educação",
+          "fonte": "Pós UFG",
+          "url": "https://pos.ufg.br/n/brasil-avanca-regulamentacao-uso-ia",
+          "destaque": "Portaria 2664/2026 do CNPq estabelece normas obrigatórias com foco em ética, transparência e qualidade científica; CNE discute proibição de IA para correção de dissertativas sem supervisão de professores",
           "categoria": "Regulatório",
           "impacto": "alto",
-          "data_pub": "13/mai/2026",
-          "tambem_em": [
-            "bancos",
-            "fintechs"
-          ]
+          "data_pub": "12/jun/2026",
+          "tambem_em": []
         },
         {
-          "titulo": "A inteligência artificial está mudando a forma como os mercados financeiros do Brasil tomam decisões",
-          "fonte": "Exame",
-          "url": "https://exame.com/future-of-money/a-inteligencia-artificial-esta-mudando-a-forma-como-os-mercados-financeiros-do-brasil-tomam-decisoes/",
-          "destaque": "Banco Central criou Centro de Excelência em Ciência de Dados e IA; Open Finance ultrapassou 100 milhões de autorizações",
+          "titulo": "Summit de Inteligência Artificial 2026 Brasil em Joinville reúne Google, NVIDIA, IBM e Microsoft",
+          "fonte": "Sympla / Summit de IA Brasil",
+          "url": "https://www.sympla.com.br/evento/summit-de-inteligencia-artificial-2026-brasil/3177824",
+          "destaque": "3 dias intensos com 80+ palestras nacionais e internacionais, 140+ expositores e feira inédita de robótica cognitiva no Brasil",
           "categoria": "Mercado",
           "impacto": "alto",
-          "data_pub": "16/mai/2026",
+          "data_pub": "18/jun/2026",
           "tambem_em": [
-            "bancos",
-            "pagamentos"
-          ]
-        },
-        {
-          "titulo": "IA avança no mercado financeiro e molda decisões de investimento",
-          "fonte": "CNN Brasil",
-          "url": "https://www.cnnbrasil.com.br/economia/mercado/ia-avanca-no-mercado-financeiro-e-molda-decisoes-de-investimento/",
-          "destaque": "Bancos, corretoras e plataformas digitais utilizam sistemas automatizados para recomendações e monitoramento de carteiras",
-          "categoria": "Mercado",
-          "impacto": "alto",
-          "data_pub": "27/mai/2026",
-          "tambem_em": [
-            "bancos",
-            "fintechs"
-          ]
-        },
-        {
-          "titulo": "A IA já está dentro do sistema financeiro, mas quem irá vigiá-la?",
-          "fonte": "CNN Brasil",
-          "url": "https://www.cnnbrasil.com.br/blogs/thiago-godoy/economia/mercado/a-ia-ja-esta-dentro-do-sistema-financeiro-mas-quem-ira-vigia-la/",
-          "destaque": "Bancos brasileiros investiram R$ 47,8 bilhões em tecnologia em 2025; 82% das transações bancárias ocorrem por canais digitais",
-          "categoria": "Mercado",
-          "impacto": "alto",
-          "data_pub": "24/mai/2026",
-          "tambem_em": [
-            "bancos",
-            "pagamentos"
-          ]
-        },
-        {
-          "titulo": "Fintouch São Paulo 2026: Encontro reunirá líderes do setor financeiro para debater inovações em IA e Open Finance no dia 10 de junho",
-          "fonte": "Repórter Maceió",
-          "url": "https://reportermaceio.com.br/fintouch-sao-paulo-2026-encontro-reunira-lideres-do-setor-financeiro-para-debater-inovacoes-em-inteligencia-artificial-e-open-finance-no-dia-10-de-junho/",
-          "destaque": "Fintouch São Paulo 2026 reuniu líderes da indústria para debater Open Finance, IA, cibersegurança, pagamentos instantâneos e crédito",
-          "categoria": "Tendência",
-          "impacto": "médio",
-          "data_pub": "20/mai/2026",
-          "tambem_em": [
-            "fintechs",
-            "pagamentos",
-            "bancos"
-          ]
-        },
-        {
-          "titulo": "Como a IA tem impulsionado receitas de empresas e revolucionado mercados",
-          "fonte": "CNN Brasil",
-          "url": "https://www.cnnbrasil.com.br/economia/negocios/como-a-ia-tem-impulsionado-receitas-de-empresas-e-revolucionado-mercados/",
-          "destaque": "Banco Inter lançou Seven, assistente de IA; instituições financeiras relatam 74% de redução de custos e ganho de eficiência operacional",
-          "categoria": "Mercado",
-          "impacto": "alto",
-          "data_pub": "19/mai/2026",
-          "tambem_em": [
-            "bancos",
-            "fintechs"
+            "socios"
           ]
         }
       ]
     },
     "socios": {
-      "resumo": "JHSF estrutura fundo imobiliário para ampliar participação no Shopping Cidade Jardim com captação de R$ 293,8 milhões, reforçando estratégia de consolidação no varejo de luxo. Marcas intensificam ativações e promoções de fidelidade durante período da Copa 2026, com destaque para parcerias omnichanais e acúmulo de pontos.",
+      "resumo": "O período foi marcado por intensas promoções de transferência de pontos entre plataformas de fidelidade, especialmente Livelo, Smiles, Azul Fidelidade e Latam Pass, coincidindo com o aniversário de 10 anos da Livelo. Paralelamente, o setor varejista enfrentou desafios com fraudes em e-commerce e mudanças de liderança em grandes redes.",
       "termometro": "positivo",
       "noticias": [
         {
-          "titulo": "JHSF prepara compra de fatia de R$ 454 milhões do Shopping Cidade Jardim",
-          "fonte": "InvestNews",
-          "url": "https://investnews.com.br/negocios/jhsf-compra-fatia-cidade-jardim/",
-          "destaque": "JHSF cria fundo JHSF Capital SCJ FII para comprar 16,99% do Shopping Cidade Jardim, captando R$ 293,8 milhões via Itaú BBA, com venda do XP Malls",
+          "titulo": "Livelo traz oferta especial para transferência de pontos para Azul Fidelidade e Latam Pass",
+          "fonte": "VoeNews",
+          "url": "https://voenews.com.br/livelo-traz-oferta-especial-para-transferencia-de-pontos-para-azul-fidelidade-e-latam-pass/",
+          "destaque": "Clientes do Clube Azul poderão garantir até 120% de bonificação na transferência de pontos",
           "categoria": "Mercado",
           "impacto": "alto",
-          "data_pub": "17/jun/2026",
+          "data_pub": "22/jun/2026",
           "tambem_em": [
+            "loyalty"
+          ]
+        },
+        {
+          "titulo": "No mês de aniversário, Livelo oferece bônus de até 80% na transferência de pontos para a Smiles e lança edição limitada do Clube Livelo",
+          "fonte": "VoeNews",
+          "url": "https://voenews.com.br/no-mes-de-aniversario-livelo-oferece-bonus-de-ate-80-na-transferencia-de-pontos-para-a-smiles-e-lanca-uma-edicao-limitada-do-clube-livelo/",
+          "destaque": "Transferência bonificada para Smiles e campanhas com marcas parceiras como Pontofrio e Sephora celebram 10 anos da Livelo",
+          "categoria": "Mercado",
+          "impacto": "alto",
+          "data_pub": "15/jun/2026",
+          "tambem_em": [
+            "loyalty",
             "varejo"
           ]
         },
         {
-          "titulo": "JHSF estrutura fundo para ampliar sua participação em ativo do varejo de luxo",
-          "fonte": "Portal IN",
-          "url": "https://www.portalin.com.br/negocios/jhsf-estrutura-fundo-para-ampliar-sua-participacao-em-ativo-do-varejo-de-luxo/",
-          "destaque": "Fundo JHSF Capital SCJ FII registrado na CVM buscará captar até R$ 293,8 milhões com potencial de R$ 400 milhões para aquisição de 16,99% no Shopping Cidade Jardim",
+          "titulo": "Só hoje! Smiles e Livelo oferecem até 80% de bônus na transferência de pontos",
+          "fonte": "Pontos pra Voar",
+          "url": "https://pontospravoar.com/so-hoje-smiles-e-livelo-oferecem-ate-80-de-bonus-na-transferencia-de-pontos/",
+          "destaque": "Promoção limitada a 300.000 milhas por CPF com validade de 12 meses após crédito até 30/06/2026",
           "categoria": "Mercado",
-          "impacto": "alto",
-          "data_pub": "17/jun/2026",
-          "tambem_em": [
-            "varejo"
-          ]
-        },
-        {
-          "titulo": "Copa 2026: o guia das ativações de marca presenciais no Brasil",
-          "fonte": "Promoview",
-          "url": "https://www.promoview.com.br/ativacoes-marca-copa-2026-brasil/",
-          "destaque": "CazéTV em parceria com TM1 Brand Experience cria parques de experiência em SP e RJ; Amazon Prime Video transmite 104 jogos; Guaraná Antarctica ativa Points do Torcedor em 8 cidades",
-          "categoria": "Tendência",
           "impacto": "médio",
-          "data_pub": "10/jun/2026",
+          "data_pub": "15/jun/2026",
           "tambem_em": [
+            "loyalty"
+          ]
+        },
+        {
+          "titulo": "Prorrogado! Smiles oferece até 80% de bônus nas transferências de pontos da Livelo",
+          "fonte": "Passageiro de Primeira",
+          "url": "https://passageirodeprimeira.com/prorrogado-smiles-oferece-ate-80-de-bonus-nas-transferencias-de-pontos-da-livelo/",
+          "destaque": "Prorrogação da promoção até 23h59 de 16/06/2026 demonstra alta demanda pela transferência de pontos",
+          "categoria": "Mercado",
+          "impacto": "médio",
+          "data_pub": "16/jun/2026",
+          "tambem_em": [
+            "loyalty"
+          ]
+        },
+        {
+          "titulo": "Radar PPV! Resumo das promoções de acúmulo e transferência de pontos do dia 19 de junho de 2026",
+          "fonte": "Pontos pra Voar",
+          "url": "https://pontospravoar.com/radar-ppv-resumo-promocoes-acumulo-transferencia-pontos-dia-19-junho-2026/",
+          "destaque": "Revolut passa a permitir transferências de pontos para LATAM Pass e Smiles, expandindo ecossistema de fidelidade",
+          "categoria": "Mercado",
+          "impacto": "médio",
+          "data_pub": "19/jun/2026",
+          "tambem_em": [
+            "loyalty",
+            "fintechs",
+            "pagamentos"
+          ]
+        },
+        {
+          "titulo": "Radar PPV! Resumo das promoções de acúmulo e transferência de pontos do dia 22 de junho de 2026",
+          "fonte": "Pontos pra Voar",
+          "url": "https://pontospravoar.com/radar-ppv-resumo-promocoes-acumulo-transferencia-pontos-dia-22-junho-2026/",
+          "destaque": "Consolidação de promoções com destaques de parceiros do setor de varejo e fidelidade brasileiro",
+          "categoria": "Mercado",
+          "impacto": "baixo",
+          "data_pub": "22/jun/2026",
+          "tambem_em": [
+            "loyalty",
             "varejo"
           ]
         },
@@ -917,32 +905,47 @@
           "titulo": "Radar PPV! Resumo das promoções de acúmulo e transferência de pontos do dia 23 de junho de 2026",
           "fonte": "Pontos pra Voar",
           "url": "https://pontospravoar.com/radar-ppv-resumo-promocoes-acumulo-transferencia-pontos-dia-23-junho-2026/",
-          "destaque": "Compilação de todas as promoções de acúmulo, transferência e compra de pontos de programas de fidelidade e parceiros brasileiros em 23/06/2026",
-          "categoria": "Tendência",
+          "destaque": "Síntese diária de promoções de parceiros de programas de fidelidade do mercado financeiro e varejo",
+          "categoria": "Mercado",
           "impacto": "baixo",
           "data_pub": "23/jun/2026",
           "tambem_em": [
-            "loyalty"
+            "loyalty",
+            "varejo",
+            "bancos"
           ]
         },
         {
-          "titulo": "Radar PPV! Resumo das promoções de acúmulo e transferência de pontos do dia 22 de junho de 2026",
-          "fonte": "Pontos pra Voar",
-          "url": "https://pontospravoar.com/radar-ppv-resumo-promocoes-acumulo-transferencia-pontos-dia-22-junho-2026/",
-          "destaque": "Resumo diário de promoções de acúmulo e transferência de pontos com destaques de sócios e parceiros dos principais programas de fidelidade brasileiros",
-          "categoria": "Tendência",
-          "impacto": "baixo",
-          "data_pub": "22/jun/2026",
+          "titulo": "Casas Bahia e Ponto Frio sofrem golpe de quase R$ 12 milhões com fraudes no comércio eletrônico",
+          "fonte": "Convergência Digital",
+          "url": "https://convergenciadigital.com.br/mercado/casas-bahia-e-ponto-frio-sofrem-golpe-de-quase-r-12-milhoes-com-fraudes-no-comercio-eletronico/",
+          "destaque": "Operação contra quadrilha especializada em fraudes em plataformas de e-commerce causou prejuízo de aproximadamente R$ 12 milhões",
+          "categoria": "Competição",
+          "impacto": "alto",
+          "data_pub": "10/jun/2026",
           "tambem_em": [
-            "loyalty"
+            "varejo",
+            "marketplace"
           ]
         },
         {
-          "titulo": "Casas Bahia – Promoção de pontos Livelo: campanha válida de 22 a 25/06/2026",
+          "titulo": "Ex-Carrefour e Walmart assume gigante dos supermercados de R$ 8 bilhões e muda estratégia de expansão",
+          "fonte": "Correio 24 Horas",
+          "url": "https://www.correio24horas.com.br/brasil/ex-carrefour-e-walmart-assume-gigante-dos-supermercados-de-r-8-bilhoes-e-muda-estrategia-de-expansao-0626",
+          "destaque": "José Rafael Vasquez, com experiência em Carrefour, Walmart e GPA, assume liderança do Tenda Atacado (R$ 8 bilhões de faturamento, 16ª posição no Ranking Abras 2026)",
+          "categoria": "Mercado",
+          "impacto": "alto",
+          "data_pub": "23/jun/2026",
+          "tambem_em": [
+            "varejo"
+          ]
+        },
+        {
+          "titulo": "Livelo Casas Bahia: campanha parceira com acúmulo de pontos diferenciado por categoria",
           "fonte": "Livelo",
           "url": "https://www.livelo.com.br/juntar-pontos/parceiros/casas-bahia/CSB",
-          "destaque": "Casas Bahia oferece de 5 a 1 ponto Livelo por real em categorias variadas (eletrodomésticos, beleza, eletroportáteis e marketplace) de 22 a 25/06/2026",
-          "categoria": "Tendência",
+          "destaque": "Campanha de 22 a 25/06/2026 oferece até 5 pontos por real em categorias premium (eletrodomésticos, beleza, eletroportáteis)",
+          "categoria": "Mercado",
           "impacto": "médio",
           "data_pub": "22/jun/2026",
           "tambem_em": [
