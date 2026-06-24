@@ -74,9 +74,12 @@ Retorne APENAS este JSON (sem markdown):
 }}
 
 Regras OBRIGATÓRIAS:
-- SOMENTE notícias publicadas entre {data_inicio} e {data_fim} — verifique a data de cada notícia
+- SOMENTE notícias publicadas entre {data_inicio} e {data_fim} — verifique a data
 - Se a notícia for de antes de {data_inicio}, DESCARTE
-- Mínimo 4 notícias recentes, máximo 10
+- DEDUPLICAÇÃO: quando múltiplas fontes cobrem o MESMO evento/assunto, inclua APENAS UMA — a de fonte mais relevante
+- Prioridade de fontes (ordem decrescente): Banco Central, Valor Econômico, Folha, Globo, InfoMoney, Finsiders Brasil, Let's Money, Exame, Reuters, Bloomberg
+- Busque cobrir ASSUNTOS DIFERENTES — diversidade é mais importante que volume
+- Mínimo 3, máximo 6 notícias únicas por tema
 - URL EXATA encontrada na busca — não invente
 - APENAS JSON, zero texto fora"""
 
@@ -155,7 +158,8 @@ Retorne APENAS este JSON (sem markdown):
 }}
 
 Regras:
-- Use TODAS as notícias recebidas — não descarte
+- DEDUPLICAÇÃO: se duas ou mais notícias tratam do MESMO evento/assunto, mantenha APENAS a de fonte mais confiável (Valor, Folha, Globo, InfoMoney, Finsiders, BC)
+- Após deduplicar, inclua no máximo 6 notícias
 - Use a URL EXATAMENTE como fornecida — não modifique
 - categoria: Regulatório | Mercado | Tecnologia | Competição | Tendência
 - impacto: alto | médio | baixo
