@@ -1,0 +1,485 @@
+{
+  "data_edicao": "Sexta-feira, 26 de junho de 2026",
+  "data_geracao": "26/06/2026 · 05:00",
+  "janela": "12/jun/2026–25/jun/2026",
+  "periodo_recente": "12/jun/2026 a 25/jun/2026",
+  "temas": {
+    "cartoes": {
+      "resumo": "O mercado de cartões brasileiro apresenta dinâmica positiva no primeiro trimestre de 2026, com 85% dos clientes quitando faturas em dia e movimentação total de R$ 1,1 trilhão. Tecnologias como pagamentos por aproximação (74,8% das transações) e Tap on Phone (crescimento de 114,6%) lideram a transformação digital do setor.",
+      "termometro": "positivo",
+      "noticias": [
+        {
+          "titulo": "Pagamentos com cartões crescem no 1° tri de 2026 e movimentam R$ 1,1 trilhão",
+          "fonte": "Cantarino Brasileiro",
+          "url": "https://cantarinobrasileiro.com.br/pagamentos-com-cartoes-crescem-no-1-tri-de-2026-e-movimentam-r-11-trilhao/",
+          "destaque": "Transações com cartões somaram R$ 1,1 trilhão no Q1 2026, crescimento de 8,3%; Tap on Phone cresceu 114,6%",
+          "categoria": "Mercado",
+          "impacto": "alto",
+          "data_pub": "19/jun/2026",
+          "tambem_em": [
+            "pagamentos"
+          ]
+        },
+        {
+          "titulo": "Surpreendente: 85% Quitam Fatura do Cartão em Dia no Brasil 2026",
+          "fonte": "Folha Financeira",
+          "url": "https://folhafinanceira.com.br/surpreendente-85-quitam-fatura-do-cartao-em-dia-no-brasil-2026/",
+          "destaque": "85% dos brasileiros com cartão de crédito quitam faturas em dia; cartões movimentaram R$ 810,2 bilhões no Q1 (+12,8%)",
+          "categoria": "Mercado",
+          "impacto": "alto",
+          "data_pub": "18/jun/2026",
+          "tambem_em": [
+            "pagamentos"
+          ]
+        },
+        {
+          "titulo": "Pagamentos por aproximação são 3/4 das transações com cartões no Brasil",
+          "fonte": "Finsiders Brasil",
+          "url": "https://finsidersbrasil.com.br/pagamentos/abecs-pagamentos-aproximacao-cartoes-brasil/",
+          "destaque": "Pagamentos por aproximação atingem 74,8% das transações presenciais (era 8% cinco anos atrás); R$ 504,8 bilhões no Q1 (+19,3%)",
+          "categoria": "Tendência",
+          "impacto": "alto",
+          "data_pub": "12/jun/2026",
+          "tambem_em": [
+            "pagamentos"
+          ]
+        },
+        {
+          "titulo": "Itaú mira 1 mi de maquininhas que cobram por voz até 2027",
+          "fonte": "Let's Money",
+          "url": "https://www.letsmoney.com.br/noticias/itau-maquininha-cobranca-voz-2027",
+          "destaque": "Itaú lança maquininha com IA generativa e comando de voz; 84,3% dos empresários interessados; adquirência do banco cresceu 26% no Q1",
+          "categoria": "Tecnologia",
+          "impacto": "médio",
+          "data_pub": "25/jun/2026",
+          "tambem_em": [
+            "pagamentos",
+            "bancos",
+            "ia"
+          ]
+        }
+      ]
+    },
+    "pagamentos": {
+      "resumo": "O Banco Central implementa mudanças significativas nos limites do Pix por aproximação, removendo restrições de R$ 500 a partir de outubro de 2026, enquanto o Open Finance passa a permitir compartilhamento de saldo e limite. O Pix consolidou seu domínio com movimentação de R$ 16 trilhões e 36,3 bilhões de transações nos primeiros cinco meses de 2026, representando crescimento superior a 26% ante o mesmo período do ano anterior.",
+      "termometro": "positivo",
+      "noticias": [
+        {
+          "titulo": "BC retira limite diário de R$ 500 para Pix por aproximação; entenda mudança",
+          "fonte": "CNN Brasil",
+          "url": "https://www.cnnbrasil.com.br/economia/financas/bc-retira-limite-diario-de-r-500-para-pix-por-aproximacao-entenda-mudanca/",
+          "destaque": "Instrução normativa do BC remove limites diários de R$ 500 por transação de Pix por aproximação, com vigência em 1º de outubro de 2026, permitindo aos usuários solicitar aumento ou redução do limite.",
+          "categoria": "Regulatório",
+          "impacto": "alto",
+          "data_pub": "17/jun/2026",
+          "tambem_em": []
+        },
+        {
+          "titulo": "Open Finance passa a exibir saldo antes do Pix por Aproximação",
+          "fonte": "Finsiders Brasil",
+          "url": "https://finsidersbrasil.com.br/pagamentos/open-finance-permite-compartilhamento-de-saldo-e-limite-em-pix-por-aproximacao/",
+          "destaque": "Open Finance permite compartilhamento de dados de saldo e limite em operações de Pix por Aproximação, vigente a partir de 23 de junho de 2026, sem necessidade de acessar aplicativo do banco.",
+          "categoria": "Tecnologia",
+          "impacto": "alto",
+          "data_pub": "22/jun/2026",
+          "tambem_em": []
+        },
+        {
+          "titulo": "Pix movimenta R$ 16 trilhões e bate recorde com 36,3 bilhões de transações em 2026",
+          "fonte": "Arena Remix",
+          "url": "https://portalarenaremix.com.br/pix-movimenta-r-16-trilhoes-e-bate-recorde-com-363-bilhoes-de-transacoes-em-2026/",
+          "destaque": "Pix movimentou R$ 16 trilhões entre janeiro e maio de 2026 (crescimento de 26% ante mesmo período de 2025) com 36,3 bilhões de transações, média de 3 mil operações por segundo.",
+          "categoria": "Mercado",
+          "impacto": "alto",
+          "data_pub": "22/jun/2026",
+          "tambem_em": []
+        },
+        {
+          "titulo": "O Pix e os meios de pagamentos instantâneos pelo mundo",
+          "fonte": "O Tempo",
+          "url": "https://www.otempo.com.br/opiniao/giulia-name-vieira/2026/6/10/o-pix-e-os-meios-de-pagamentos-instantaneos-pelo-mundo",
+          "destaque": "Pix consolida-se como referência global em tecnologia bancária pública desde seu lançamento em novembro de 2020, servindo como espelho para sistemas internacionais como UPI da Índia.",
+          "categoria": "Tendência",
+          "impacto": "médio",
+          "data_pub": "10/jun/2026",
+          "tambem_em": []
+        }
+      ]
+    },
+    "marketplace": {
+      "resumo": "Marketplace brasileiro intensifica competição com investimentos bilionários em logística e tecnologia, enquanto plataformas como Mercado Livre, Shopee e TikTok Shop disputam fatia de mercado. Magalu expande presença ao vender na Amazon, e categorias de compra recorrente ganham destaque estratégico nas principais plataformas.",
+      "termometro": "positivo",
+      "noticias": [
+        {
+          "titulo": "Mercado Livre, Shopee e TikTok Shop travam uma guerra bilionária. Quem paga a conta?",
+          "fonte": "Jornal Empresas & Negócios",
+          "url": "https://jornalempresasenegocios.com.br/manchete-principal/mercado-livre-shopee-e-tiktok-shop-travam-uma-guerra-bilionaria-quem-paga-a-conta/",
+          "destaque": "Mercado Livre, Shopee e TikTok Shop aceleraram investimentos bilionários em logística, tecnologia, publicidade e incentivos comerciais para ampliar participação",
+          "categoria": "Competição",
+          "impacto": "alto",
+          "data_pub": "24/jun/2026",
+          "tambem_em": [
+            "varejo"
+          ]
+        },
+        {
+          "titulo": "Magalu e Amazon fecham parceria para venda de produtos no marketplace",
+          "fonte": "Mercado & Consumo",
+          "url": "https://mercadoeconsumo.com.br/08/06/2026/ecommerce/em-nova-parceria-magalu-passa-a-vender-produtos-na-amazon-brasil/",
+          "destaque": "Magalu vende mais de 12 mil produtos no marketplace da Amazon Brasil, incluindo marcas KaBuM!, Época Cosméticos e Netshoes, com logística pelo Magalog",
+          "categoria": "Mercado",
+          "impacto": "alto",
+          "data_pub": "08/jun/2026",
+          "tambem_em": [
+            "varejo",
+            "socios"
+          ]
+        },
+        {
+          "titulo": "Plenária Marketplace & Canais de Venda debate o novo mapa da venda digital no Fórum E-Commerce Brasil 2026",
+          "fonte": "E-Commerce Brasil",
+          "url": "https://www.ecommercebrasil.com.br/forum-2026",
+          "destaque": "Executivos de Mercado Livre, Amazon, Shopee, Shein, Magazine Luiza e TikTok Shop debateram estratégias de social commerce, retail media, D2C e quick commerce",
+          "categoria": "Tendência",
+          "impacto": "médio",
+          "data_pub": "16/jun/2026",
+          "tambem_em": [
+            "varejo"
+          ]
+        },
+        {
+          "titulo": "Categorias de compra recorrente ganham destaque nos marketplaces nacionais",
+          "fonte": "E-Commerce Brasil",
+          "url": "https://www.ecommercebrasil.com.br/forum-2026",
+          "destaque": "Marketplaces destacam categorias de compra recorrente para fidelizar consumidores e aumentar frequência de pedidos",
+          "categoria": "Tendência",
+          "impacto": "médio",
+          "data_pub": "16/jun/2026",
+          "tambem_em": [
+            "loyalty"
+          ]
+        },
+        {
+          "titulo": "Amazon Prime Day 2026: 7 dias de ofertas confirmados para o marketplace no Brasil em julho",
+          "fonte": "E-Commerce Brasil",
+          "url": "https://www.ecommercebrasil.com.br/noticias/amazon-tera-7-dias-de-ofertas-no-prime-day-2026",
+          "destaque": "Prime Day 2026 da Amazon ocorre em julho com sete dias de ofertas em eletrônicos, beleza, casa, cozinha e produtos de consumo recorrente",
+          "categoria": "Mercado",
+          "impacto": "médio",
+          "data_pub": "15/jun/2026",
+          "tambem_em": [
+            "varejo"
+          ]
+        }
+      ]
+    },
+    "varejo": {
+      "resumo": "O varejo brasileiro apresenta crescimento impulsionado pelo e-commerce e eventos sazonais como Dia dos Namorados e Copa do Mundo 2026. O setor de franquias continua em expansão, com novas oportunidades em modelos B2B e varejo autônomo, especialmente em cidades médias e interior do país.",
+      "termometro": "positivo",
+      "noticias": [
+        {
+          "titulo": "ICVA: Varejo tem alta de 3,3% no Dia dos Namorados 2026",
+          "fonte": "Cielo",
+          "url": "https://blog.cielo.com.br/indice-icva/vendas-varejo-dia-dos-namorados-2026/",
+          "destaque": "Varejo total cresceu 3,3% entre 6 e 12 de junho; e-commerce avançou 13,1% enquanto lojas físicas ficaram estáveis",
+          "categoria": "Mercado",
+          "impacto": "médio",
+          "data_pub": "23/jun/2026",
+          "tambem_em": [
+            "marketplace",
+            "pagamentos"
+          ]
+        },
+        {
+          "titulo": "Copa do Mundo 2026 deve gerar R$ 4,32 bilhões ao varejo brasileiro",
+          "fonte": "XP Investimentos",
+          "url": "https://conteudos.xpi.com.br/acoes/relatorios/entrega-xp-as-principais-noticias-que-movem-o-setor-do-varejo-junho-26/",
+          "destaque": "Projeção da CNC aponta alta real de 6,5% sobre 2022, com alimentos e bebidas concentrando a maior parte das vendas",
+          "categoria": "Mercado",
+          "impacto": "alto",
+          "data_pub": "22/jun/2026",
+          "tambem_em": []
+        },
+        {
+          "titulo": "ABF Expo 2026 reúne mais de 400 marcas e destaca crescimento do setor de franquias",
+          "fonte": "Central do Varejo",
+          "url": "https://centraldovarejo.com.br/abf-expo-2026-reune-mais-de-400-marcas-e-destaca-crescimento-do-setor-de-franquias/",
+          "destaque": "33ª edição da ABF Franchising Expo com mais de 400 marcas; franchising registrou expansão de 10,5% em 2025, alcançando R$ 302 bilhões",
+          "categoria": "Mercado",
+          "impacto": "alto",
+          "data_pub": "22/jun/2026",
+          "tambem_em": [
+            "socios"
+          ]
+        },
+        {
+          "titulo": "Franquias B2B avançam no Brasil e atraem perfil empreendedor em busca de menor risco",
+          "fonte": "Portal do Franchising",
+          "url": "https://www.portaldofranchising.com.br/noticias/franquias-b2b-avancam-no-brasil/",
+          "destaque": "Setor de franquias encerrou 2025 com faturamento de R$ 301,7 bilhões, crescimento de 10,5%, com projeção de 8-10% para 2026",
+          "categoria": "Tendência",
+          "impacto": "médio",
+          "data_pub": "22/jun/2026",
+          "tambem_em": [
+            "socios"
+          ]
+        },
+        {
+          "titulo": "Franquias avançam para cidades médias e agro; vending machines viram oportunidade no interior do Brasil",
+          "fonte": "Portal do Franchising",
+          "url": "https://www.portaldofranchising.com.br/noticias/vending-machines-viram-oportunidade-no-interior-do-brasil/",
+          "destaque": "Avend projeta faturamento de R$ 45 milhões em 2026 com mais de 250 máquinas instaladas e crescimento médio de 20% ao mês",
+          "categoria": "Tendência",
+          "impacto": "médio",
+          "data_pub": "19/jun/2026",
+          "tambem_em": []
+        },
+        {
+          "titulo": "Copa 2026 impulsiona varejo alimentar com aumento de até 69% no fluxo de lojas",
+          "fonte": "Seafood Brasil",
+          "url": "https://www.seafoodbrasil.com.br/copa-2026-impulsiona-varejo-alimentar-e-consumo-no-brasil",
+          "destaque": "Scanntech revela aumento de até 69% no fluxo de lojas duas horas antes de partidas da seleção e crescimento de 8,3% no dia anterior aos jogos",
+          "categoria": "Mercado",
+          "impacto": "alto",
+          "data_pub": "15/jun/2026",
+          "tambem_em": []
+        }
+      ]
+    },
+    "tag": {
+      "resumo": "Sem dados disponíveis",
+      "termometro": "neutro",
+      "noticias": []
+    },
+    "bancos": {
+      "resumo": "Inadimplência em bancos digitais cresce 163% em quatro anos, sinalizando deterioração na qualidade do crédito entre consumidores de menor renda. Banco Central reduz Selic para 14,25%, mas presidente Gabriel Galípolo resfria expectativas de novos cortes sem sinalização para agosto.",
+      "termometro": "negativo",
+      "noticias": [
+        {
+          "titulo": "Inadimplência em bancos digitais sobe 163% em quatro anos",
+          "fonte": "Finsiders Brasil",
+          "url": "https://finsidersbrasil.com.br/bancos-digitais/inadimplencia-em-bancos-digitais-sobe-163-em-quatro-anos",
+          "destaque": "Inadimplência nos bancos digitais brasileiros cresceu 163% entre 2021 e 2025, enquanto base de clientes avançou apenas 14,95%",
+          "categoria": "Mercado",
+          "impacto": "alto",
+          "data_pub": "02/jun/2026",
+          "tambem_em": [
+            "fintechs"
+          ]
+        },
+        {
+          "titulo": "Copom reduz a taxa Selic para 14,25% ao ano",
+          "fonte": "O Especialista (Banco Safra)",
+          "url": "https://oespecialista.safra.com.br/copom-junho-2026/",
+          "destaque": "Comitê de Política Monetária reduziu Selic para 14,25% ao ano com tom cauteloso, citando inflação acima da meta e incertezas globais",
+          "categoria": "Regulatório",
+          "impacto": "alto",
+          "data_pub": "17/jun/2026",
+          "tambem_em": []
+        },
+        {
+          "titulo": "Galípolo diz que não há sinalização para agosto e esfria apostas de corte da Selic",
+          "fonte": "Seu Dinheiro",
+          "url": "https://www.seudinheiro.com/2026/economia/galipolo-diz-que-problema-do-copom-foi-de-excesso-e-nao-de-falta-de-informacao-lvgb/",
+          "destaque": "Presidente do Banco Central afirma que Copom não deu indicação sobre próxima reunião e que decisão de agosto será baseada em informações dos próximos 40 dias",
+          "categoria": "Regulatório",
+          "impacto": "alto",
+          "data_pub": "25/jun/2026",
+          "tambem_em": []
+        },
+        {
+          "titulo": "Funcionários do Banco do Brasil entregam pauta de reivindicações à direção do banco",
+          "fonte": "Sindicato dos Bancários de SP",
+          "url": "https://spbancarios.com.br/06/2026/funcionarios-do-banco-do-brasil-entregam-pauta-de-reivindicacoes-direcao-do-banco",
+          "destaque": "Representantes de funcionários entregaram minuta com reivindicações aprovadas no 36º Congresso Nacional, organizadas em quatro temas: condições de trabalho, previdência, remuneração e saúde",
+          "categoria": "Mercado",
+          "impacto": "médio",
+          "data_pub": "24/jun/2026",
+          "tambem_em": []
+        },
+        {
+          "titulo": "Reforma da SEC facilita entrada de fintechs brasileiras na bolsa",
+          "fonte": "Finsiders Brasil",
+          "url": "https://finsidersbrasil.com.br/noticias-sobre-fintechs/reforma-da-sec-facilita-entrada-de-fintechs-brasileiras-na-bolsa/",
+          "destaque": "Creditas, C6 Bank, Neon, CloudWalk, QI Tech e Ebanx poderiam se beneficiar da reforma da SEC americana para abertura de capital",
+          "categoria": "Tecnologia",
+          "impacto": "médio",
+          "data_pub": "24/jun/2026",
+          "tambem_em": [
+            "fintechs"
+          ]
+        }
+      ]
+    },
+    "fintechs": {
+      "resumo": "Banco Central reconhece riscos da IA no sistema financeiro enquanto reforma da SEC nos EUA abre oportunidades para fintechs brasileiras acessarem bolsa de valores. Período marcado por avanços regulatórios e perspectivas de IPOs no setor.",
+      "termometro": "positivo",
+      "noticias": [
+        {
+          "titulo": "Reforma da SEC facilita entrada de fintechs brasileiras na bolsa",
+          "fonte": "Finsiders Brasil",
+          "url": "https://finsidersbrasil.com.br/noticias-sobre-fintechs/reforma-da-sec-facilita-entrada-de-fintechs-brasileiras-na-bolsa/",
+          "destaque": "Proposta Release No. 2026-46 pode destravar onda de IPOs de fintechs, com Creditas como forte candidata após captar US$ 870 milhões em rodadas privadas",
+          "categoria": "Mercado",
+          "impacto": "alto",
+          "data_pub": "24/jun/2026",
+          "tambem_em": []
+        },
+        {
+          "titulo": "Fintechs à frente na era da IA",
+          "fonte": "Exame",
+          "url": "https://exame.com/colunistas/opiniao/fintechs-a-frente-na-era-da-ia/",
+          "destaque": "Banco Central reconhece explicitamente que avanços da IA podem criar novos riscos para estabilidade financeira, com potencial para explorar vulnerabilidades tecnológicas e afetar infraestruturas críticas",
+          "categoria": "Regulatório",
+          "impacto": "alto",
+          "data_pub": "21/jun/2026",
+          "tambem_em": [
+            "ia"
+          ]
+        }
+      ]
+    },
+    "loyalty": {
+      "resumo": "O mercado de loyalty e fidelização brasileiro passa por transformação estrutural, saindo de modelos tradicionais de cartão para estratégias integradas de pontos e cashback que aumentam recorrência de compra em até 38%. Promoções bonificadas de transferência de pontos entre programas se intensificam, com ofertas de até 70% de bônus, refletindo competição acirrada entre players e maior sofisticação na retenção de clientes.",
+      "termometro": "positivo",
+      "noticias": [
+        {
+          "titulo": "Como a fidelidade saiu da carteira e entrou na cultura das marcas",
+          "fonte": "Central do Varejo",
+          "url": "https://centraldovarejo.com.br/como-a-fidelidade-saiu-da-carteira-e-entrou-na-cultura-das-marcas/",
+          "destaque": "Transformação dos programas de fidelidade representa mudança estrutural no comportamento do consumidor, evoluindo de cartão plástico para estratégias integradas de marca",
+          "categoria": "Tendência",
+          "impacto": "alto",
+          "data_pub": "12/jun/2026",
+          "tambem_em": [
+            "varejo"
+          ]
+        },
+        {
+          "titulo": "Programa de Fidelidade: Guia para E-commerce e Varejo (BonifiQ)",
+          "fonte": "BonifiQ",
+          "url": "https://www.bonifiq.com.br/programa-de-fidelidade/",
+          "destaque": "Programas com mecânica combinada de pontos e cashback aumentam recorrência de compra em média 38% nos primeiros 6 meses e reduzem CAC em até 27% ao longo de 12 meses",
+          "categoria": "Mercado",
+          "impacto": "alto",
+          "data_pub": "15/jun/2026",
+          "tambem_em": [
+            "marketplace",
+            "varejo"
+          ]
+        },
+        {
+          "titulo": "Azul Fidelidade oferece até 65% de bônus ao transformar cashback do Méliuz em pontos",
+          "fonte": "Pontos pra Voar",
+          "url": "https://pontospravoar.com/azul-fidelidade-oferece-ate-65-porcento-bonus-transformar-cashback-meliuz-pontos/",
+          "destaque": "Promoção oferece até 65% de bônus em transferência de cashback para pontos, com validade de 6 meses, válida até 21 de junho de 2026",
+          "categoria": "Mercado",
+          "impacto": "médio",
+          "data_pub": "21/jun/2026",
+          "tambem_em": [
+            "cartoes",
+            "fintechs"
+          ]
+        },
+        {
+          "titulo": "Transfira pontos do BB Empresas para a Smiles e ganhe até 70% de bônus",
+          "fonte": "Pontos pra Voar",
+          "url": "https://pontospravoar.com/guia-completo-dos-beneficios-do-cartao-bradesco-aeternum-visa-infinite/",
+          "destaque": "Transferência bonificada de pontos do BB Empresas para Smiles com até 70% de bônus, direcionada a clientes pessoa jurídica",
+          "categoria": "Mercado",
+          "impacto": "médio",
+          "data_pub": "22/jun/2026",
+          "tambem_em": [
+            "bancos",
+            "cartoes"
+          ]
+        },
+        {
+          "titulo": "LATAM Pass e Livelo: promoção de transferência com 25% de bônus em 22 de junho",
+          "fonte": "LATAM Pass",
+          "url": "https://latampass.latam.com/pt_br/promocao/livelo-milhas-extras",
+          "destaque": "Transferência de pontos Livelo para LATAM Pass com 25% de milhas bônus, válida apenas em 22/06/2026 com limite de 300 mil milhas por CPF",
+          "categoria": "Mercado",
+          "impacto": "médio",
+          "data_pub": "22/jun/2026",
+          "tambem_em": [
+            "socios"
+          ]
+        },
+        {
+          "titulo": "Livelo e Postos ALE oferecem 50% de pontos bônus no abastecimento",
+          "fonte": "Passageiro de Primeira",
+          "url": "https://passageirodeprimeira.com/aproveite-para-abastecer-livelo-e-postos-ale-oferecem-50-de-pontos-bonus/",
+          "destaque": "Promoção oferece 50% de pontos extras ao abastecer em Postos ALE participantes até 26 de junho, acumulando 1 ponto a cada R$ 3 gastos",
+          "categoria": "Mercado",
+          "impacto": "médio",
+          "data_pub": "25/jun/2026",
+          "tambem_em": [
+            "socios"
+          ]
+        }
+      ]
+    },
+    "ia": {
+      "resumo": "Inteligência Artificial avança no sistema financeiro brasileiro com investimentos internacionais e reconhecimento regulatório do Banco Central sobre riscos potenciais. Discussões sobre impactos da IA nos negócios e mercado de trabalho ganham relevância com eventos especializados no país.",
+      "termometro": "positivo",
+      "noticias": [
+        {
+          "titulo": "Fintech alemã capta US$ 110 milhões e aposta no Brasil para levar IA a bancos e seguradoras",
+          "fonte": "Exame",
+          "url": "https://exame.com/negocios/fintech-alema-capta-us-110-milhoes-e-aposta-no-brasil-para-levar-ia-a-bancos-e-seguradoras/",
+          "destaque": "Taktile levanta US$ 110 milhões em rodada Series C com foco em expandir operações na América Latina, especialmente Brasil e México, para automatizar decisões operacionais e de risco em instituições financeiras",
+          "categoria": "Mercado",
+          "impacto": "alto",
+          "data_pub": "24/jun/2026",
+          "tambem_em": [
+            "fintechs",
+            "bancos"
+          ]
+        },
+        {
+          "titulo": "Fintechs à frente na era da IA",
+          "fonte": "Exame",
+          "url": "https://exame.com/colunistas/opiniao/fintechs-a-frente-na-era-da-ia/",
+          "destaque": "Banco Central do Brasil reconhece explicitamente pela primeira vez que avanços em IA podem criar novos riscos para estabilidade financeira, especialmente pela capacidade desses modelos explorarem vulnerabilidades tecnológicas e afetarem infraestruturas críticas",
+          "categoria": "Regulatório",
+          "impacto": "alto",
+          "data_pub": "21/jun/2026",
+          "tambem_em": [
+            "bancos",
+            "fintechs"
+          ]
+        },
+        {
+          "titulo": "Summit de Inteligência Artificial Brasil 2026 discutirá impactos da IA nos negócios, na sociedade e no futuro do trabalho",
+          "fonte": "IA Brasil Notícias",
+          "url": "https://iabrasilnoticias.com.br/summit-de-inteligencia-artificial-brasil-2026-discutira-impactos-da-ia-nos-negocios-na-sociedade-e-no-futuro-do-trabalho/",
+          "destaque": "Summit realizado entre 18 e 20 de junho em Joinville reuniu empresários, executivos, pesquisadores, investidores e gestores públicos para debater aplicações práticas de IA e seus impactos nos negócios, economia e mercado de trabalho",
+          "categoria": "Tendência",
+          "impacto": "médio",
+          "data_pub": "18/jun/2026",
+          "tambem_em": []
+        }
+      ]
+    },
+    "socios": {
+      "resumo": "No período de 12 a 25 de junho de 2026, destaca-se a movimentação de sócios e parceiros em iniciativas de sustentabilidade e inovação no mercado brasileiro. Apresentador da Globo integra quadro de acionistas de plataforma ambiental que busca captar recursos significativos para expansão estratégica.",
+      "termometro": "positivo",
+      "noticias": [
+        {
+          "titulo": "Aos 54 anos, apresentador da Globo é sócio de empresa sustentável que busca R$ 50 milhões",
+          "fonte": "CARAS Brasil",
+          "url": "https://caras.com.br/atualidades/aos-54-anos-apresentador-da-globo-e-socio-de-empresa-sustentavel-que-busca-r-50-milhoes.phtml",
+          "destaque": "Future Climate, com Luciano Huck e Carol Paiffer como sócios, busca captar entre R$ 30 milhões e R$ 50 milhões em nova rodada de investimentos",
+          "categoria": "Mercado",
+          "impacto": "médio",
+          "data_pub": "24/jun/2026",
+          "tambem_em": [
+            "fintechs",
+            "ia"
+          ]
+        }
+      ]
+    }
+  }
+}
